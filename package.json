@@ -11,8 +11,7 @@
     "test": "mocha dist/test",
     "build": "tsc -p .",
     "watch": "tsc -p . -w",
-    "typedoc": "typedoc --mode file --excludeNotExported --out typedoc src/index.ts typings/index.d.ts",
-    "postinstall": "typings install"
+    "typedoc": "typedoc --mode file --excludeNotExported --out typedoc src/index.ts typings/index.d.ts"
   },
   "repository": {
     "type": "git",

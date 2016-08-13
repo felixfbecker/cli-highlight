@@ -6,6 +6,10 @@ node_js:
 
 sudo: false
 
+install:
+ - npm install
+ - typings install
+
 script:
  - npm run build
  - npm test
