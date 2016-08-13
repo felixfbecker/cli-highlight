@@ -72,7 +72,7 @@ const db = new Sequelize(process.env.DB, {
 })
 ```
 
-Detailed API documenation can be found [here](cli-highlight.surge.sh).
+Detailed API documenation can be found [here](http://cli-highlight.surge.sh/).
 
 ## Contributing
 The module is written in TypeScript and can be compiled with `npm run build`.
