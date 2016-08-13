@@ -23,7 +23,6 @@ $ db-migrate --dry-run | highlight
 
 Command line options:
 ```html
-
   Usage: highlight [options] [file]
 
   Colorizes and outputs code from a file or STDIN
@@ -33,7 +32,6 @@ Command line options:
     -h, --help     output usage information
     -V, --version  output the version number
     -t, --theme    Use a theme defined in a JSON file
-
 ```
 
 ## Programmatic Usage
