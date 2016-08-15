@@ -1,9 +1,9 @@
 
 import * as path from 'path';
-import {supportsLanguage, highlight, HighlightOptions} from '../index';
+import {supportsLanguage, highlight, HighlightOptions} from './index';
 import * as fs from 'mz/fs';
 import * as tty from 'tty';
-import {parse} from '../theme';
+import {parse} from './theme';
 import yargs = require('yargs');
 
 yargs

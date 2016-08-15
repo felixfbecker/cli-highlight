@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "bin": {
-    "highlight": "dist/bin/highlight.js"
+    "highlight": "./bin/highlight"
   },
   "engines": {
     "node": ">=4.0.0"
