@@ -18,6 +18,11 @@ yargs
         nargs: 1,
         description: 'Use a theme defined in a JSON file'
     })
+    .option('language', {
+        alias: 'l',
+        nargs: 1,
+        description: 'Set the langugage explicitely. If omitted will try to auto-detect'
+    })
     .version(() => require('../../package.json').version)
     .help('help')
     .alias('help', 'h')
@@ -25,6 +30,7 @@ yargs
 
 interface Argv extends yargs.Argv {
     theme?: string;
+    language?: string;
 }
 
 const argv: Argv = yargs.argv;
@@ -69,6 +75,7 @@ Promise.all([
             options.language = ext;
         }
     }
+    options.language = argv.language;
     process.stdout.write(highlight(code, options));
 }).then(() => {
     process.exit(0);
