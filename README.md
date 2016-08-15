@@ -32,9 +32,11 @@ Usage: highlight [options] [file]
 Outputs a file or STDIN input with syntax highlighting
 
 Options:
-  --theme, -t    Use a theme defined in a JSON file
-  --version, -v  Show version number                                   [boolean]
-  --help, -h     Show help                                             [boolean]
+  --language, -l  Set the langugage explicitely
+                  If omitted will try to auto-detect
+  --theme, -t     Use a theme defined in a JSON file
+  --version, -v   Show version number                                   [boolean]
+  --help, -h      Show help                                             [boolean]
 ```
 
 ## Programmatic Usage

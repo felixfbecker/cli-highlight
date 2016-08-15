@@ -7,21 +7,21 @@ import {parse} from './theme';
 import yargs = require('yargs');
 
 yargs
+    .option('theme', {
+        alias: 't',
+        nargs: 1,
+        description: 'Use a theme defined in a JSON file'
+    })
     .usage([
         '',
         'Usage: highlight [options] [file]',
         '',
         'Outputs a file or STDIN input with syntax highlighting'
     ].join('\n'))
-    .option('theme', {
-        alias: 't',
-        nargs: 1,
-        description: 'Use a theme defined in a JSON file'
-    })
     .option('language', {
         alias: 'l',
         nargs: 1,
-        description: 'Set the langugage explicitely. If omitted will try to auto-detect'
+        description: 'Set the langugage explicitely\nIf omitted will try to auto-detect'
     })
     .version(() => require('../../package.json').version)
     .help('help')
