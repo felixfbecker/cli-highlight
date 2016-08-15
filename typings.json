@@ -2,10 +2,10 @@
   "name": "cli-highlight",
   "dependencies": {
     "bluebird": "registry:npm/bluebird#3.4.1+20160811213708",
-    "chalk": "registry:npm/chalk#1.1.1+20160812215109"
+    "chalk": "registry:npm/chalk#1.1.1+20160812215109",
+    "yargs": "registry:npm/yargs#3.31.0+20160723033700"
   },
   "globalDependencies": {
-    "commander": "registry:dt/commander#2.3.0+20160317120654",
     "es2015-promise": "registry:env/es2015-promise#1.0.0+20160526151700",
     "highlightjs": "registry:dt/highlightjs#9.1.0+20160317120654",
     "mocha": "registry:env/mocha#2.2.5+20160723033700",

@@ -1,20 +1,35 @@
 
-import program = require('commander');
 import * as path from 'path';
 import {supportsLanguage, highlight, HighlightOptions} from '../index';
 import * as fs from 'mz/fs';
 import * as tty from 'tty';
 import {parse} from '../theme';
+import yargs = require('yargs');
 
-let file: string;
+yargs
+    .usage([
+        '',
+        'Usage: highlight [options] [file]',
+        '',
+        'Outputs a file or STDIN input with syntax highlighting'
+    ].join('\n'))
+    .option('theme', {
+        alias: 't',
+        nargs: 1,
+        description: 'Use a theme defined in a JSON file'
+    })
+    .version(() => require('../../package.json').version)
+    .help('help')
+    .alias('help', 'h')
+    .alias('version', 'v');
 
-(program
-    .version(require('../../package.json').version)
-    .description('Outputs a file or STDIN input with syntax highlighting')
-    .option('-t, --theme <file>', 'Use a theme defined in a JSON file') as any)
-    .arguments('[file]')
-    .action((f: string) => file = f)
-    .parse(process.argv);
+interface Argv extends yargs.Argv {
+    theme?: string;
+}
+
+const argv: Argv = yargs.argv;
+
+const file = argv._[0];
 
 let codePromise: Promise<string>;
 if (!file && !(<tty.ReadStream>process.stdin).isTTY) {
@@ -32,14 +47,17 @@ if (!file && !(<tty.ReadStream>process.stdin).isTTY) {
             resolve(code);
         });
     });
-} else {
+} else if (file) {
     // Read file
     codePromise = fs.readFile(file, 'utf-8');
+} else {
+    yargs.showHelp();
+    process.exit(1);
 }
 
 Promise.all([
     codePromise,
-    (<any>program).theme ? fs.readFile((<any>program).theme, 'utf8') : Promise.resolve()
+    argv.theme ? fs.readFile(argv.theme, 'utf8') : Promise.resolve()
 ]).then(([code, theme]) => {
     const options: HighlightOptions = {
         ignoreIllegals: true,
