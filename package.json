@@ -14,7 +14,7 @@
     "test": "mocha dist/test",
     "build": "tsc -p .",
     "watch": "tsc -p . -w",
-    "typedoc": "typedoc --media images --mode file --excludeNotExported --out typedoc src/index.ts typings/index.d.ts"
+    "typedoc": "typedoc --media media --mode file --excludeNotExported --out typedoc src/index.ts typings/index.d.ts"
   },
   "repository": {
     "type": "git",
