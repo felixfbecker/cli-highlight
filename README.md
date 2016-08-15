@@ -12,7 +12,7 @@
 
 ## Example
 
-[![Example Test Output](images/tests.png)](https://travis-ci.org/felixfbecker/cli-highlight)
+[![Example Test Output](media/tests.png)](https://travis-ci.org/felixfbecker/cli-highlight)
 
 ## CLI Usage
 Output a file
