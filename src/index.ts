@@ -1,7 +1,7 @@
 
 import * as hljs from 'highlight.js';
+import * as he from 'he';
 import {DEFAULT_THEME, Theme, plain} from './theme';
-const he = require('he');
 
 function colorize(code: string, theme: Theme = {}): string {
     return he.decode(code.replace(
