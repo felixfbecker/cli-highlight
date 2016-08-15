@@ -4,7 +4,9 @@
   "description": "Syntax highlighting in your terminal",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "bin": "dist/bin/highlight.js",
+  "bin": {
+    "highlight": "dist/bin/highlight.js"
+  },
   "engines": {
     "node": ">=4.0.0"
   },
