@@ -10,7 +10,9 @@
 ![Node Version](http://img.shields.io/node/v/cli-highlight.svg)
 [![License](https://img.shields.io/npm/l/cli-highlight.svg)](https://github.com/felixfbecker/cli-highlight/blob/master/LICENSE.txt)
 
-![Example Test Output](images/tests.png)
+## Example
+
+[![Example Test Output](images/tests.png)](https://travis-ci.org/felixfbecker/cli-highlight)
 
 ## CLI Usage
 Output a file
@@ -25,15 +27,14 @@ $ db-migrate --dry-run | highlight
 
 Command line options:
 ```html
-  Usage: highlight [options] [file]
+Usage: highlight [options] [file]
 
-  Colorizes and outputs code from a file or STDIN
+Outputs a file or STDIN input with syntax highlighting
 
-  Options:
-
-    -h, --help     output usage information
-    -V, --version  output the version number
-    -t, --theme    Use a theme defined in a JSON file
+Options:
+  --theme, -t    Use a theme defined in a JSON file
+  --version, -v  Show version number                                   [boolean]
+  --help, -h     Show help                                             [boolean]
 ```
 
 ## Programmatic Usage
