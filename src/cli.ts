@@ -50,6 +50,10 @@ if (!file && !(<tty.ReadStream>process.stdin).isTTY) {
     });
     codePromise = new Promise(resolve => {
         process.stdin.on('end', () => {
+            const chunk = process.stdin.read();
+            if (chunk !== null) {
+                code += chunk;
+            }
             resolve(code);
         });
     });
@@ -76,7 +80,7 @@ Promise.all([
         }
     }
     options.language = argv.language;
-    process.stdout.write(highlight(code, options));
+    return new Promise((resolve, reject) => process.stdout.write(highlight(code, options), (err: any) => err ? reject(err) : resolve()));
 }).then(() => {
     process.exit(0);
 }).catch((err: any) => {
