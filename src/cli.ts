@@ -67,7 +67,7 @@ if (!file && !(<tty.ReadStream>process.stdin).isTTY) {
 
 Promise.all([
     codePromise,
-    argv.theme ? fs.readFile(argv.theme, 'utf8') : Promise.resolve()
+    argv.theme ? fs.readFile(argv.theme, 'utf8') : undefined
 ]).then(([code, theme]) => {
     const options: HighlightOptions = {
         ignoreIllegals: true,

@@ -1,8 +1,11 @@
 language: node_js
 
 node_js:
- - node
- - 4
+ - 8
+
+env:
+  global:
+   - FORCE_COLOR=1
 
 sudo: false
 
