@@ -4,6 +4,9 @@ node_js:
  - node
  - 4
 
+env:
+ - FORCE_COLOR=1
+
 sudo: false
 
 install:
