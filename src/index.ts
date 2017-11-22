@@ -3,13 +3,15 @@ import * as hljs from 'highlight.js';
 import * as he from 'he';
 import {DEFAULT_THEME, Theme, plain} from './theme';
 
+const spanRegexp = /<span class="hljs-(\w+)">([^<]*)<\/span>/
+
 function colorize(code: string, theme: Theme = {}): string {
-    return he.decode(code.replace(
-        /<span class="hljs-(\w+)">([^<]+)<\/span>/g,
-        (match: string, token: string, value: string) => {
+    while (spanRegexp.test(code)) {
+        code = code.replace(spanRegexp, (match: string, token: string, value: string) => {
             return ((<any>theme)[token] || (<any>DEFAULT_THEME)[token] || plain)(value);
-        }
-    ));
+        })
+    }
+    return he.decode(code)
 }
 
 /**
