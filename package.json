@@ -1,6 +1,6 @@
 {
   "name": "cli-highlight",
-  "version": "1.1.4",
+  "version": "0.0.0-development",
   "description": "Syntax highlighting in your terminal",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,11 +20,21 @@
     "test": "mocha dist/test",
     "build": "tsc -p .",
     "watch": "tsc -p . -w",
-    "typedoc": "typedoc --media media --mode file --excludeNotExported --out typedoc src/index.ts"
+    "typedoc": "typedoc --media media --mode file --excludeNotExported --out typedoc src/index.ts",
+    "semantic-release": "semantic-release",
+    "husky": "validate-commit-msg"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "verifyConditions": "@semantic-release/github"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/felixfbecker/cli-highlight.git"
+    "url": "https://github.com/felixfbecker/cli-highlight.git"
   },
   "keywords": [
     "terminal",
@@ -53,9 +63,13 @@
     "@types/mz": "0.0.32",
     "@types/node": "^8.0.53",
     "@types/yargs": "^8.0.2",
+    "cz-conventional-changelog": "^2.1.0",
+    "husky": "^0.14.3",
     "mocha": "^4.0.1",
+    "semantic-release": "^10.0.0",
     "tslint": "^5.8.0",
     "typedoc": "^0.9.0",
-    "typescript": "^2.6.1"
+    "typescript": "^2.6.1",
+    "validate-commit-msg": "^2.14.0"
   }
 }
