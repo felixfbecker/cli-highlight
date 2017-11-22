@@ -1,6 +1,5 @@
 
 import * as hljs from 'highlight.js';
-import * as he from 'he';
 import * as parse5 from 'parse5';
 import {DEFAULT_THEME, Theme, plain} from './theme';
 
