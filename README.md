@@ -1,14 +1,14 @@
 
-# `cli-highlight`
+# cli-highlight
 
 > Syntax highlighting in your terminal
 
-[![Version](https://img.shields.io/npm/v/cli-highlight.svg)](https://www.npmjs.com/package/cli-highlight)
-[![Downloads](https://img.shields.io/npm/dt/cli-highlight.svg)](https://www.npmjs.com/package/cli-highlight)
-[![Build Status](https://travis-ci.org/felixfbecker/cli-highlight.svg?branch=master)](https://travis-ci.org/felixfbecker/cli-highlight)
-![Dependencies](https://david-dm.org/felixfbecker/cli-highlight.svg)
-![Node Version](http://img.shields.io/node/v/cli-highlight.svg)
-[![License](https://img.shields.io/npm/l/cli-highlight.svg)](https://github.com/felixfbecker/cli-highlight/blob/master/LICENSE.txt)
+[![npm](https://img.shields.io/npm/v/cli-highlight.svg)](https://www.npmjs.com/package/cli-highlight)
+[![downloads](https://img.shields.io/npm/dt/cli-highlight.svg)](https://www.npmjs.com/package/cli-highlight)
+[![build](https://travis-ci.org/felixfbecker/cli-highlight.svg?branch=master)](https://travis-ci.org/felixfbecker/cli-highlight)
+[![dependencies](https://david-dm.org/felixfbecker/cli-highlight.svg)](https://david-dm.org/felixfbecker/cli-highlight)
+![node](http://img.shields.io/node/v/cli-highlight.svg)
+[![license](https://img.shields.io/npm/l/cli-highlight.svg)](https://github.com/felixfbecker/cli-highlight/blob/master/LICENSE.txt)
 
 ## Example
 
