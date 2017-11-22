@@ -1,17 +1,18 @@
 language: node_js
 
 node_js:
- - 8
+ - '8'
 
 env:
   global:
    - FORCE_COLOR=1
 
-sudo: false
+cache:
+  directories:
+    - $HOME/.npm
 
 install:
  - npm install
- - typings install
 
 script:
  - npm run build
