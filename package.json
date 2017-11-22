@@ -45,7 +45,7 @@
     "highlight.js": "^9.6.0",
     "mz": "^2.4.0",
     "parse5": "^3.0.3",
-    "yargs": "^4.8.1"
+    "yargs": "^10.0.3"
   },
   "devDependencies": {
     "@types/highlight.js": "^9.12.1",
