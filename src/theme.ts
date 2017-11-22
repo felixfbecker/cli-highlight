@@ -1,5 +1,5 @@
 
-import _chalk = require('chalk');
+import { default as _chalk, Chalk } from 'chalk';
 
 // Always enable colors, even if not auto-detected
 const chalk = new _chalk.constructor({enabled: true});
@@ -502,7 +502,7 @@ export function fromJson(json: JsonTheme): Theme {
 export function toJson(theme: Theme): JsonTheme {
     const jsonTheme: any = {};
     for (const key in jsonTheme) {
-        const style: _chalk.Style & {_styles: string[]} = (<any>jsonTheme)[key];
+        const style: Chalk & {_styles: string[]} = (<any>jsonTheme)[key];
         jsonTheme[key] = style._styles;
     }
     return jsonTheme;

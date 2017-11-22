@@ -1,7 +1,7 @@
 
 import * as assert from 'assert';
 import {highlight} from '../index';
-import c = require('chalk');
+import c from 'chalk';
 
 class HighlightAssertionError extends assert.AssertionError {
     constructor(actual: string, expected: string) {

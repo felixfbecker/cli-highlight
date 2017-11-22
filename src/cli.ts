@@ -28,12 +28,12 @@ yargs
     .alias('help', 'h')
     .alias('version', 'v');
 
-interface Argv extends yargs.Argv {
+interface Arguments extends yargs.Arguments {
     theme?: string;
     language?: string;
 }
 
-const argv: Argv = yargs.argv;
+const argv: Arguments = yargs.argv;
 
 const file = argv._[0];
 
