@@ -4,8 +4,9 @@
 > Syntax highlighting in your terminal
 
 [![npm](https://img.shields.io/npm/v/cli-highlight.svg)](https://www.npmjs.com/package/cli-highlight)
-[![downloads](https://img.shields.io/npm/dt/cli-highlight.svg)](https://www.npmjs.com/package/cli-highlight)
+[![downloads](https://img.shields.io/npm/dm/cli-highlight.svg)](https://www.npmjs.com/package/cli-highlight)
 [![build](https://travis-ci.org/felixfbecker/cli-highlight.svg?branch=master)](https://travis-ci.org/felixfbecker/cli-highlight)
+[![codecov](https://codecov.io/gh/felixfbecker/cli-highlight/branch/master/graph/badge.svg)](https://codecov.io/gh/felixfbecker/cli-highlight)
 [![dependencies](https://david-dm.org/felixfbecker/cli-highlight.svg)](https://david-dm.org/felixfbecker/cli-highlight)
 ![node](http://img.shields.io/node/v/cli-highlight.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
