@@ -1,7 +1,7 @@
 
 import * as assert from 'assert';
 import {highlight} from '../index';
-import c = require('chalk');
+import c from 'chalk';
 
 class HighlightAssertionError extends assert.AssertionError {
     constructor(actual: string, expected: string) {
@@ -54,4 +54,28 @@ test('JSON', `
             ${c.cyan('"description"')}: {${c.cyan('"text"')}: ${c.red('"..."')}, ${c.cyan('"sensitive"')}: ${c.blue('false')}}
         }
     ]
+`);
+
+test('HTML', `
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Hello World!</title>
+        </head>
+        <body>
+            <h1>Foo</h1>
+            <div>Bar</div>
+        </body>
+    </html>
+`, `
+    ${c.grey('<!DOCTYPE html>')}
+    ${c.grey(`<${c.blue('html')}>`)}
+        ${c.grey(`<${c.blue('head')}>`)}
+            ${c.grey(`<${c.blue('title')}>`)}Hello World!${c.grey(`</${c.blue('title')}>`)}
+        ${c.grey(`</${c.blue('head')}>`)}
+        ${c.grey(`<${c.blue('body')}>`)}
+            ${c.grey(`<${c.blue('h1')}>`)}Foo${c.grey(`</${c.blue('h1')}>`)}
+            ${c.grey(`<${c.blue('div')}>`)}Bar${c.grey(`</${c.blue('div')}>`)}
+        ${c.grey(`</${c.blue('body')}>`)}
+    ${c.grey(`</${c.blue('html')}>`)}
 `);

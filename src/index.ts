@@ -1,15 +1,24 @@
 
 import * as hljs from 'highlight.js';
-import * as he from 'he';
+import * as parse5 from 'parse5';
 import {DEFAULT_THEME, Theme, plain} from './theme';
 
+function colorizeNode(node: parse5.AST.HtmlParser2.Node, theme: Theme = {}): string {
+    if (node.type === 'text') {
+        return (node as parse5.AST.HtmlParser2.TextNode).data;
+    } else if (node.type === 'tag') {
+        const hljsClass = /hljs-(\w+)/.exec((node as parse5.AST.HtmlParser2.Element).attribs.class);
+        const token = hljsClass[1];
+        const nodeData = (node as parse5.AST.HtmlParser2.Element).childNodes.map(node => colorizeNode(node)).join('');
+        return ((<any>theme)[token] || (<any>DEFAULT_THEME)[token] || plain)(nodeData);
+    }
+}
+
 function colorize(code: string, theme: Theme = {}): string {
-    return he.decode(code.replace(
-        /<span class="hljs-(\w+)">([^<]+)<\/span>/g,
-        (match: string, token: string, value: string) => {
-            return ((<any>theme)[token] || (<any>DEFAULT_THEME)[token] || plain)(value);
-        }
-    ));
+    const fragment = parse5.parseFragment(code, {
+        treeAdapter: parse5.treeAdapters.htmlparser2
+    }) as parse5.AST.HtmlParser2.DocumentFragment;
+    return fragment.childNodes.map(node => colorizeNode(node, theme)).join('');
 }
 
 /**

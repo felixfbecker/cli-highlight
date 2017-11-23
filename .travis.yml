@@ -1,26 +1,37 @@
 language: node_js
 
 node_js:
- - 8
+ - '8'
 
 env:
   global:
    - FORCE_COLOR=1
 
-sudo: false
+cache:
+  directories:
+    - $HOME/.npm
 
 install:
  - npm install
- - typings install
 
 script:
  - npm run build
  - npm test
 
-before_deploy:
- - npm run typedoc
-deploy:
-  skip_cleanup: true
-  provider: surge
-  project: ./typedoc/
-  domain: cli-highlight.surge.sh
+jobs:
+  include:
+    - stage: release
+      script:
+        - npm run semantic-release
+      before_deploy:
+        - npm run typedoc
+      deploy:
+        skip_cleanup: true
+        provider: surge
+        project: ./typedoc/
+        domain: cli-highlight.surge.sh
+
+stages:
+  - test
+  - name: release
+    if: branch = master AND type = push AND fork = false
