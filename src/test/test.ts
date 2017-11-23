@@ -10,8 +10,10 @@ function test(language: string, code: string): void {
     })
 }
 
-test('SQL', fs.readFileSync(`${__dirname}/__fixtures__/SQL.sql`, 'utf8'))
+const fixtures = fs.readdirSync(`${__dirname}/__fixtures__`)
 
-test('JSON', fs.readFileSync(`${__dirname}/__fixtures__/JSON.json`, 'utf8'))
+for (const fixture of fixtures) {
+    const [language] = fixture.split('.')
 
-test('HTML', fs.readFileSync(`${__dirname}/__fixtures__/HTML.html`, 'utf8'))
+    test(language, fs.readFileSync(`${__dirname}/__fixtures__/${fixture}`, 'utf8'))
+}
