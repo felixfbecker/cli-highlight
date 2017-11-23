@@ -1,8 +1,6 @@
 
 # cli-highlight
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/felixfbecker/cli-highlight.svg)](https://greenkeeper.io/)
-
 > Syntax highlighting in your terminal
 
 [![npm](https://img.shields.io/npm/v/cli-highlight.svg)](https://www.npmjs.com/package/cli-highlight)
