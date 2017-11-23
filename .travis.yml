@@ -25,6 +25,7 @@ after_success:
 
 jobs:
   include:
+    - stage: test
     - stage: release
       script:
         - npm run semantic-release
@@ -40,3 +41,7 @@ stages:
   - test
   - name: release
     if: branch = master AND type = push AND fork = false
+
+branches:
+  except:
+   - /^v\d+\.\d+\.\d+$/
