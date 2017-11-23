@@ -1,4 +1,5 @@
 import c from 'chalk'
+import * as fs from 'fs'
 import { highlight } from '../index'
 
 function test(language: string, code: string): void {
@@ -9,43 +10,8 @@ function test(language: string, code: string): void {
     })
 }
 
-test(
-    'SQL',
-    `
-    -- Create a table
-    CREATE TABLE "topic" (
-        "id" serial NOT NULL PRIMARY KEY,
-        "forum_id" integer NOT NULL,
-        "subject" varchar(255) NOT NULL
-    );
-`
-)
+test('SQL', fs.readFileSync(`${__dirname}/__fixtures__/SQL.sql`, 'utf8'))
 
-test(
-    'JSON',
-    `
-    [
-        {
-            "title": "apples",
-            "count": [12000, 20000],
-            "description": {"text": "...", "sensitive": false}
-        }
-    ]
-`
-)
+test('JSON', fs.readFileSync(`${__dirname}/__fixtures__/JSON.json`, 'utf8'))
 
-test(
-    'HTML',
-    `
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Hello World!</title>
-        </head>
-        <body>
-            <h1>Foo</h1>
-            <div>Bar</div>
-        </body>
-    </html>
-`
-)
+test('HTML', fs.readFileSync(`${__dirname}/__fixtures__/HTML.html`, 'utf8'))
