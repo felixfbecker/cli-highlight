@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should color HTML correctly 1`] = `
+"
+    [90m<!DOCTYPE html>[39m
+    [90m<[34mhtml[90m>[39m
+        [90m<[34mhead[90m>[39m
+            [90m<[34mtitle[90m>[39mHello World![90m</[34mtitle[90m>[39m
+        [90m</[34mhead[90m>[39m
+        [90m<[34mbody[90m>[39m
+            [90m<[34mh1[90m>[39mFoo[90m</[34mh1[90m>[39m
+            [90m<[34mdiv[90m>[39mBar[90m</[34mdiv[90m>[39m
+        [90m</[34mbody[90m>[39m
+    [90m</[34mhtml[90m>[39m
+"
+`;
+
+exports[`should color JSON correctly 1`] = `
+"
+    [
+        {
+            [36m\\"title\\"[39m: [31m\\"apples\\"[39m,
+            [36m\\"count\\"[39m: [[32m12000[39m, [32m20000[39m],
+            [36m\\"description\\"[39m: {[36m\\"text\\"[39m: [31m\\"...\\"[39m, [36m\\"sensitive\\"[39m: [34mfalse[39m}
+        }
+    ]
+"
+`;
+
+exports[`should color SQL correctly 1`] = `
+"
+    [32m-- Create a table[39m
+    [34mCREATE[39m [34mTABLE[39m [31m\\"topic\\"[39m (
+        [31m\\"id\\"[39m [36mserial[39m [34mNOT[39m [34mNULL[39m PRIMARY [34mKEY[39m,
+        [31m\\"forum_id\\"[39m [36minteger[39m [34mNOT[39m [34mNULL[39m,
+        [31m\\"subject\\"[39m [36mvarchar[39m([32m255[39m) [34mNOT[39m [34mNULL[39m
+    );
+"
+`;
