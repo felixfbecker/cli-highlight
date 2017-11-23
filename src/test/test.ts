@@ -6,6 +6,10 @@ function test(language: string, code: string): void {
     it(`should color ${language} correctly`, () => {
         const highlighted = highlight(code)
 
+        if (process.env.VERBOSE) {
+            console.log(highlighted)
+        }
+
         expect(highlighted).toMatchSnapshot()
     })
 }
@@ -13,7 +17,11 @@ function test(language: string, code: string): void {
 const fixtures = fs.readdirSync(`${__dirname}/__fixtures__`)
 
 for (const fixture of fixtures) {
-    const [language] = fixture.split('.')
+    const fixturePath = `${__dirname}/__fixtures__/${fixture}`
 
-    test(language, fs.readFileSync(`${__dirname}/__fixtures__/${fixture}`, 'utf8'))
+    if (fs.statSync(fixturePath).isFile()) {
+        const [language] = fixture.split('.')
+
+        test(language, fs.readFileSync(fixturePath, 'utf8'))
+    }
 }
