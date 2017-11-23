@@ -2,3 +2,5 @@ package.json
 *.md
 dist/
 typedoc/
+.nyc_output/
+coverage/

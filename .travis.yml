@@ -17,10 +17,15 @@ install:
 script:
   - npm run lint
   - npm run build
-  - npm test
+  - npm run cover
+
+after_success:
+  - nyc report --reporter=json
+  - bash <(curl -s https://codecov.io/bash)
 
 jobs:
   include:
+    - stage: test
     - stage: release
       script:
         - npm run semantic-release
@@ -36,3 +41,7 @@ stages:
   - test
   - name: release
     if: branch = master AND type = push AND fork = false
+
+branches:
+  except:
+   - /^v\d+\.\d+\.\d+$/
