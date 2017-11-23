@@ -1,24 +1,25 @@
-
-import * as hljs from 'highlight.js';
-import * as parse5 from 'parse5';
-import {DEFAULT_THEME, Theme, plain} from './theme';
+import * as hljs from 'highlight.js'
+import * as parse5 from 'parse5'
+import { DEFAULT_THEME, plain, Theme } from './theme'
 
 function colorizeNode(node: parse5.AST.HtmlParser2.Node, theme: Theme = {}): string {
     if (node.type === 'text') {
-        return (node as parse5.AST.HtmlParser2.TextNode).data;
+        return (node as parse5.AST.HtmlParser2.TextNode).data
     } else if (node.type === 'tag') {
-        const hljsClass = /hljs-(\w+)/.exec((node as parse5.AST.HtmlParser2.Element).attribs.class);
-        const token = hljsClass[1];
-        const nodeData = (node as parse5.AST.HtmlParser2.Element).childNodes.map(node => colorizeNode(node)).join('');
-        return ((<any>theme)[token] || (<any>DEFAULT_THEME)[token] || plain)(nodeData);
+        const hljsClass = /hljs-(\w+)/.exec((node as parse5.AST.HtmlParser2.Element).attribs.class)
+        const token = hljsClass[1]
+        const nodeData = (node as parse5.AST.HtmlParser2.Element).childNodes
+            .map(node => colorizeNode(node, theme))
+            .join('')
+        return ((theme as any)[token] || (DEFAULT_THEME as any)[token] || plain)(nodeData)
     }
 }
 
 function colorize(code: string, theme: Theme = {}): string {
     const fragment = parse5.parseFragment(code, {
-        treeAdapter: parse5.treeAdapters.htmlparser2
-    }) as parse5.AST.HtmlParser2.DocumentFragment;
-    return fragment.childNodes.map(node => colorizeNode(node, theme)).join('');
+        treeAdapter: parse5.treeAdapters.htmlparser2,
+    }) as parse5.AST.HtmlParser2.DocumentFragment
+    return fragment.childNodes.map(node => colorizeNode(node, theme)).join('')
 }
 
 /**
@@ -28,13 +29,13 @@ export interface HighlightOptions {
     /**
      * Can be a name, file extension, alias etc. If omitted, tries to auto-detect language.
      */
-    language?: string;
+    language?: string
 
     /**
      *  When present and evaluates to a true value, forces highlighting to finish even in case of
      *  detecting illegal syntax for the language instead of throwing an exception.
      */
-    ignoreIllegals?: boolean;
+    ignoreIllegals?: boolean
 
     /**
      * The continuation is an optional mode stack representing unfinished parsing. When present,
@@ -42,18 +43,18 @@ export interface HighlightOptions {
      *
      * See http://highlightjs.readthedocs.io/en/latest/api.html
      */
-    continuation?: any;
+    continuation?: any
 
     /**
      * Optional array of language names and aliases restricting detection to only those languages.
      */
-    languageSubset?: string[];
+    languageSubset?: string[]
 
     /**
      * Supply a custom theme where you override language tokens with own formatter functions. Every
      * token that is not overriden falls back to the [[DEFAULT_THEME]]
      */
-    theme?: Theme;
+    theme?: Theme
 }
 
 /**
@@ -74,20 +75,20 @@ export interface HighlightOptions {
  * @param options Optional options
  */
 export function highlight(code: string, options: HighlightOptions = {}): string {
-    let html: string;
+    let html: string
     if (options.language) {
-        html = hljs.highlight(options.language, code, options.ignoreIllegals, options.continuation).value;
+        html = hljs.highlight(options.language, code, options.ignoreIllegals, options.continuation).value
     } else {
-        html = hljs.highlightAuto(code, options.languageSubset).value;
+        html = hljs.highlightAuto(code, options.languageSubset).value
     }
-    return colorize(html, options.theme);
+    return colorize(html, options.theme)
 }
 
 /**
  * Returns all supported languages
  */
 export function listLanguages(): string[] {
-    return hljs.listLanguages();
+    return hljs.listLanguages()
 }
 
 /**
@@ -95,8 +96,8 @@ export function listLanguages(): string[] {
  * @param name A language name, alias or file extension
  */
 export function supportsLanguage(name: string): boolean {
-    return !!hljs.getLanguage(name);
+    return !!hljs.getLanguage(name)
 }
 
-export default highlight;
-export * from './theme';
+export default highlight
+export * from './theme'

@@ -18,11 +18,14 @@
   },
   "scripts": {
     "test": "mocha dist/test",
+    "lint": "npm run tslint && npm run prettier",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "prettier": "prettier --write --list-different '**/{*.ts,*.json,.prettierrc}'",
     "build": "tsc -p .",
     "watch": "tsc -p . -w",
     "typedoc": "typedoc --media media --mode file --excludeNotExported --out typedoc src/index.ts",
     "semantic-release": "semantic-release",
-    "husky": "validate-commit-msg"
+    "commitmsg": "validate-commit-msg"
   },
   "config": {
     "commitizen": {
@@ -58,6 +61,8 @@
     "yargs": "^10.0.3"
   },
   "devDependencies": {
+    "@sourcegraph/prettierrc": "^2.0.0",
+    "@sourcegraph/tslint-config": "^9.0.2",
     "@types/highlight.js": "^9.12.1",
     "@types/mocha": "^2.2.44",
     "@types/mz": "0.0.32",
@@ -66,6 +71,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.3",
     "mocha": "^4.0.1",
+    "prettier": "1.8.2",
     "semantic-release": "^10.0.0",
     "tslint": "^5.8.0",
     "typedoc": "^0.9.0",

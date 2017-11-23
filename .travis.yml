@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
- - '8'
+  - '8'
 
 env:
   global:
@@ -12,11 +12,12 @@ cache:
     - $HOME/.npm
 
 install:
- - npm install
+  - npm install
 
 script:
- - npm run build
- - npm test
+  - npm run lint
+  - npm run build
+  - npm test
 
 jobs:
   include:
