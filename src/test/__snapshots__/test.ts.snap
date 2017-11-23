@@ -243,6 +243,74 @@ exports[`should color Arduino correctly 1`] = `
 }"
 `;
 
+exports[`should color AsciiDoc correctly 1`] = `
+"Hello, World!
+============
+Author Name, <author@domain.foo>
+
+you can write text [4mhttp://example.com[24m[[31mwith links[39m], optionally
+using an explicit link:[4mhttp://example.com[24m[[31mlink prefix[39m].
+
+* single quotes around a phrase place [3m'emphasis'[23m
+** alternatively, you can put underlines around a phrase to add [3m_emphasis_[23m
+* astericks around a phrase make the text [1m*bold*[22m
+* pluses around a phrase make it +monospaced+
+* [31m\`smart'[39m quotes using a leading backtick and trailing single quote
+** use two of each for double [31m\`\`smart''[39m quotes
+
+- escape characters are supported
+- you can escape a quote inside emphasized text like [3m'here\\\\'s johnny!'[23m
+
+term:: definition
+ another term:: another definition
+
+[32m// this is just a comment[39m
+
+Let's make a break.
+
+'''
+
+[32m////[39m
+[32mwe'll be right with you[39m
+[32m[39m
+[32mafter this brief interruption.[39m
+[32m////[39m
+
+== We're back!
+
+Want to see a image::[4mimages/tiger.png[24m[[31mTiger[39m]?
+
+.Nested highlighting
+++++
+[90m<[34mthis_is[90m [36minline[90m=[31m\\"xml\\"[90m>[39m[90m</[34mthis_is[90m>[39m
+++++
+
+____
+asciidoc is so powerful.
+____
+
+another quote:
+
+[90m[quote, Sir Arthur Conan Doyle, The Adventures of Sherlock Holmes][39m
+____
+When you have eliminated all which is impossible, then whatever remains, however improbable, must be the truth.
+____
+
+Getting Literal
+---------------
+
+ want to get literal? prefix a line with a space.
+
+....
+I'll join that party, too.
+....
+
+. one thing (yeah!)
+. two thing \`i can write code\`, and \`more\` wipee!
+
+NOTE: AsciiDoc is quite cool, you should try it."
+`;
+
 exports[`should color AspectJ correctly 1`] = `
 "[34mpackage[39m com.aspectj.syntax;
 [34mimport[39m org.aspectj.lang.annotation.AdviceName;
@@ -767,6 +835,17 @@ exports[`should color clojure correctly 1`] = `
 "
 `;
 
+exports[`should color clojure-repl correctly 1`] = `
+"[90muser=>[39m ([34mdefn[39m f [x y]
+[90m  #_=>[39m   ([34m+[39m x y))
+#'user/f
+[90muser=>[39m ([34mf[39m [32m5[39m [32m7[39m)
+12
+[90muser=>[39m [34mnil[39m
+nil
+"
+`;
+
 exports[`should color cmake correctly 1`] = `
 "[34mcmake_minimum_required[39m(VERSION [32m2.8[39m.[32m8[39m)
 [34mproject[39m(cmake_example)
@@ -849,6 +928,31 @@ exports[`should color coq correctly 1`] = `
 [32m     step: typing the term built using tactics and save it as[39m
 [32m     a witness of the theorem. *)[39m
 [34mQed[39m.
+"
+`;
+
+exports[`should color cos correctly 1`] = `
+"[34m#dim[39m test [34mas[39m [36m%Library.Integer[39m
+[34mSET[39m test = [32m123.099[39m
+[34mset[39m ^global = [36m%request.Content[39m
+[34mWrite[39m [31m\\"Current date \\"\\"\\"[39m, [36m$ztimestamp[39m, [31m\\"\\"\\", result: \\"[39m, test + ^global = [32m125.099[39m
+[34mdo[39m [34m##class[39m(Cinema.Utils).AddShow([31m\\"test\\"[39m) [32m// class method call[39m
+[34mdo[39m [34m##super[39m() [32m; another one-line comment[39m
+[34md[39m:(^global = [32m2[39m) [36m..thisClassMethod[39m([32m1[39m, [32m2[39m, [31m\\"test\\"[39m)
+[32m/*[39m
+[32m * Sub-languages support:[39m
+[32m */[39m
+&sql( [34mSELECT[39m * [34mFROM[39m Cinema.Film [34mWHERE[39m [34mLength[39m > [32m2[39m )
+&js<[34mfor[39m ([34mvar[39m i = [32m0[39m; i < [36mString[39m([31m\\"test\\"[39m).split([31m\\"\\"[39m).length); ++i) {
+    [36mconsole[39m.log(i);
+}>
+&html[90m<<![36mDOCTYPE[90m [36mhtml[90m>[39m
+[90m<[34mhtml[90m>[39m
+[90m<[34mhead[90m>[39m [90m<[34mmeta[90m [36mname[90m=[31m\\"test\\"[90m/>[39m [90m</[34mhead[90m>[39m
+[90m<[34mbody[90m>[39mTest[90m</[34mbody[90m>[39m
+[90m</[34mhtml[90m>[39m>
+
+[34mquit[39m [36m$$$OK[39m
 "
 `;
 
@@ -1071,6 +1175,46 @@ exports[`should color d correctly 1`] = `
 "
 `;
 
+exports[`should color dart correctly 1`] = `
+"[34mlibrary[39m app;
+[34mimport[39m [31m'dart:html'[39m;
+
+[34mpart[39m [31m'app2.dart'[39m;
+
+[32m/**[39m
+[32m * Class description and [[31mlink[32m]([4mhttp://dartlang.org/[24m).[39m
+[32m */[39m
+[90m@Awesome[39m([31m'it works!'[39m)
+[34m[34mclass[34m SomeClass<S [34mextends[34m Iterable> [34mextends[34m BaseClass<S> [34mimplements[34m Comparable [39m{
+  [34mfactory[39m SomeClass([36mnum[39m param);
+  SomeClass._internal([36mint[39m q) : [34msuper[39m() {
+    [34massert[39m(q != [32m1[39m);
+    [36mdouble[39m z = [32m0.0[39m;
+  }
+
+  [32m/// [1m**Sum**[22m function[39m
+  [36mint[39m sum([36mint[39m a, [36mint[39m b) => a + b;
+
+  [36mElementList[39m els() => [36mquerySelectorAll[39m([31m'.dart'[39m);
+}
+
+[36mString[39m str = [31m' (\${[31m'parameter'[31m + [31m'zxc'[31m})'[39m;
+[36mString[39m str = [31m\\" (\${[34mtrue[31m ? [32m2[31m + [32m2[31m / [32m2[31m : [34mnull[31m})\\"[39m;
+[36mString[39m str = [31mr'\\\\nraw\\\\'[39m;
+[36mString[39m str = [31mr\\"\\\\nraw\\\\\\"[39m;
+[34mvar[39m str = [31m'''[39m
+[31mSomething \${[32m2[31m+[32m3[31m}[39m
+[31m'''[39m;
+[34mvar[39m str = [31mr\\"\\"\\"[39m
+[31mSomething \${2+3}[39m
+[31m\\"\\"\\"[39m;
+
+checkVersion() [34masync[39m {
+  [34mvar[39m version = [34mawait[39m lookUpVersion();
+}
+"
+`;
+
 exports[`should color delphi correctly 1`] = `
 "TList = [34mClass[39m(TObject)
 [34mPrivate[39m
@@ -1139,6 +1283,25 @@ exports[`should color diff correctly 1`] = `
 "
 `;
 
+exports[`should color django correctly 1`] = `
+"{% [34m[34mif[34m[39m articles|[34mlength[39m %}
+{% [34m[34mfor[34m[39m article [34min[39m articles %}
+
+{% [34mcustom[39m %}
+
+[32m{# Striped table #}[39m
+[90m<[34mtr[90m [36mclass[90m=[31m\\"[90m[39m{% [34m[34mcycle[34m[39m odd,even %}[90m[31m\\"[90m>[39m
+  [90m<[34mtd[90m>[39m{{ article|[34mdefault[39m:[31m\\"Hi... \\"[39m }}[90m</[34mtd[90m>[39m
+  [90m<[34mtd[90m [39m{% [34m[34mif[34m[39m article.today %}[90m[36mclass[90m=[31m\\"today\\"[90m[39m{% [34m[34mendif[34m[39m %}[90m>[39m
+    Published on {{ article.date }}
+  [90m</[34mtd[90m>[39m
+[90m</[34mtr[90m>[39m
+
+{% [34m[34mendfor[34m[39m %}
+{% [34m[34mendif[34m[39m %}
+"
+`;
+
 exports[`should color dns correctly 1`] = `
 "[90m$ORIGIN[39m example.com.    [32m; designates the start of this zone file in the namespace[39m
 [90m$TTL[39m [32m1h[39m                 [32m; default expiration time of all resource records without their own TTL value[39m
@@ -1157,6 +1320,66 @@ wwwtest       [34mIN[39m  [34mCNAME[39m www                   [32m; wwwtest
 mail          [34mIN[39m  [34mA[39m     [32m192.0.2.3[39m             [32m; IPv4 address for mail.example.com[39m
 mail2         [34mIN[39m  [34mA[39m     [32m192.0.2.4[39m             [32m; IPv4 address for mail2.example.com[39m
 mail3         [34mIN[39m  [34mA[39m     [32m192.0.2.5[39m             [32m; IPv4 address for mail3.example.com[39m
+"
+`;
+
+exports[`should color dockerfile correctly 1`] = `
+"[32m# Example instructions from https://docs.docker.com/reference/builder/[39m
+[34mFROM[39m ubuntu:[32m14.04[39m
+
+[34mMAINTAINER[39m example@example.com
+
+[34mENV[39m foo /bar
+[34mWORKDIR[39m \${foo}   [32m# WORKDIR /bar[39m
+[34mADD[39m . $foo       [32m# ADD . /bar[39m
+[34mCOPY[39m \\\\$foo /quux [32m# COPY $foo /quux[39m
+[34mARG[39m   VAR=FOO
+
+[34mRUN[39m apt-get update && apt-get install -y software-properties-common\\\\
+    zsh curl wget git htop\\\\
+    unzip vim telnet
+[34mRUN[39m [[31m\\"/bin/bash\\"[39m, [31m\\"-c\\"[39m, [31m\\"echo hello \${USER}\\"[39m]
+
+[34mCMD[39m [[31m\\"executable\\"[39m,[31m\\"param1\\"[39m,[31m\\"param2\\"[39m]
+[34mCMD[39m [36mcommand[39m param1 param2
+
+[34mEXPOSE[39m [32m1337[39m
+
+[34mENV[39m myName=[31m\\"John Doe\\"[39m myDog=Rex\\\\ The\\\\ Dog \\\\
+    myCat=fluffy
+
+[34mENV[39m myName John Doe
+[34mENV[39m myDog Rex The Dog
+[34mENV[39m myCat fluffy
+
+[34mADD[39m hom* /mydir/        [32m# adds all files starting with \\"hom\\"[39m
+[34mADD[39m hom?.txt /mydir/    [32m# ? is replaced with any single character[39m
+
+[34mCOPY[39m hom* /mydir/        [32m# adds all files starting with \\"hom\\"[39m
+[34mCOPY[39m hom?.txt /mydir/    [32m# ? is replaced with any single character[39m
+[34mCOPY[39m --from=foo / .
+
+[34mENTRYPOINT[39m [[31m\\"executable\\"[39m, [31m\\"param1\\"[39m, [31m\\"param2\\"[39m]
+[34mENTRYPOINT[39m [36mcommand[39m param1 param2
+
+[34mVOLUME[39m [[31m\\"/data\\"[39m]
+
+[34mUSER[39m daemon
+
+[34mLABEL[39m com.example.label-with-value=[31m\\"foo\\"[39m
+[34mLABEL[39m version=[31m\\"1.0\\"[39m
+[34mLABEL[39m description=[31m\\"This text illustrates \\\\[39m
+[31mthat label-values can span multiple lines.\\"[39m
+
+[34mWORKDIR[39m /path/to/workdir
+
+[34mONBUILD[39m [34mADD[39m . /app/src
+
+[34mSTOPSIGNAL[39m SIGKILL
+
+[34mHEALTHCHECK[39m --retries=3 cat /health
+
+[34mSHELL[39m [[31m\\"/bin/bash\\"[39m, [31m\\"-c\\"[39m]
 "
 `;
 
@@ -1289,6 +1512,17 @@ exports[`should color dts correctly 1`] = `
 "
 `;
 
+exports[`should color dust correctly 1`] = `
+"[90m<[34mh3[90m>[39mHours[90m</[34mh3[90m>[39m
+
+[90m<[34mul[90m>[39m
+  {#[34musers[39m}
+  [90m<[34mli[90m [39m{hello}[90m>[39m{firstName}[90m</[34mli[90m>[39m{~n}
+  {/[34musers[39m}
+[90m</[34mul[90m>[39m
+"
+`;
+
 exports[`should color ebnf correctly 1`] = `
 "[32m(* line comment *)[39m
 
@@ -1374,6 +1608,20 @@ main =
 view model =
     div [] [ div [] [ text (toString model) ]
            , button [ onClick [36m[2mIncrement[22m[39m ] [ text [31m\\"+\\"[39m ] ]
+"
+`;
+
+exports[`should color erb correctly 1`] = `
+"[32m<%# this is a comment %>[39m
+
+[90m<[34m%[90m[39m @posts.each [34mdo[39m |post| [90m%>[39m
+  [90m<[34mp[90m>[39m[90m<[34m%=[90m[39m link_to post.title, post [90m%>[39m[90m</[34mp[90m>[39m
+[90m<[34m%[90m[39m [34mend[39m [90m%>[39m
+
+[90m<[34m%-[90m[39m available_things = things.select(&:available?) [90m[36m-[90m%>[39m
+[90m<[34m%%[90m[39m- x = [32m1[39m + [32m2[39m -[90m%%>[39m
+[90m<[34m%%[90m[39m value = [31m'real string #{@value}'[39m [90m%%>[39m
+[90m<[34m%%[90m[39m= available_things.inspect [90m%%>[39m
 "
 `;
 
@@ -1964,6 +2212,34 @@ exports[`should color groovy correctly 1`] = `
 "
 `;
 
+exports[`should color haml correctly 1`] = `
+"[90m!!! XML[39m
+[90m%html[39m
+[90m  %body[39m
+[90m    %h1.jumbo{[36m:id[90m=>[31m\\"a\\"[90m, [36m:style[90m=>[31m'font-weight: normal'[90m, [36m:title[90m=>title}[39m highlight.js
+[32m    /html comment[39m
+[32m    -# ignore this line[39m
+[90m    %ul([36mstyle[90m=[31m'margin: 0'[90m)[39m
+    -items.each [34mdo[39m |i|
+[90m      %i[39m= i
+    = variable
+    =variable2
+    ~ variable3
+    ~variable4
+    The current year is #{DataTime.now.year}.
+"
+`;
+
+exports[`should color handlebars correctly 1`] = `
+"[90m<[34mdiv[90m [36mclass[90m=[31m\\"entry\\"[90m>[39m
+  [32m{{!-- only show if author exists --}}[39m
+  {{#[34mif[39m author}}
+    [90m<[34mh1[90m>[39m{{firstName}} {{lastName}}[90m</[34mh1[90m>[39m
+  {{/[34mif[39m}}
+[90m</[34mdiv[90m>[39m
+"
+`;
+
 exports[`should color haskell correctly 1`] = `
 "[90m{-# LANGUAGE TypeSynonymInstances #-}[39m
 [34mmodule[39m Network.UDP
@@ -2175,6 +2451,36 @@ exports[`should color hsp correctly 1`] = `
 		[34mdialog[39m [31m\\"error\\"[39m, [32m1[39m
 	}
 	[34mstop[39m
+"
+`;
+
+exports[`should color htmlbars correctly 1`] = `
+"[90m<[34mdiv[90m [36mclass[90m=[31m\\"entry\\"[90m>[39m
+  [32m{{!-- only output this author names if an author exists --}}[39m
+  {{#[34mif[39m author}}
+    {{#[34mplaywright-wrapper[39m [36mplaywright[39m=author [36maction[39m=([36mmut[39m author) [34mas[39m |playwright|}}
+    [90m<[34mh1[90m>[39m{{playwright.firstName}} {{playwright.lastName}}[90m</[34mh1[90m>[39m
+    {{/[34mplaywright-wrapper[39m}}
+  {{/[34mif[39m}}
+  {{[36myield[39m}}
+[90m</[34mdiv[90m>[39m
+"
+`;
+
+exports[`should color http correctly 1`] = `
+"[34mPOST[39m [31m/task?id=1[39m HTTP/1.1
+Host: example.org
+Content-Type: application/json; charset=utf-8
+Content-Length: 137
+
+{
+  [36m\\"status\\"[39m: [31m\\"ok\\"[39m,
+  [36m\\"extended\\"[39m: [34mtrue[39m,
+  [36m\\"results\\"[39m: [
+    {[36m\\"value\\"[39m: [32m0[39m, [36m\\"type\\"[39m: [31m\\"int64\\"[39m},
+    {[36m\\"value\\"[39m: [32m1.0e+3[39m, [36m\\"type\\"[39m: [31m\\"decimal\\"[39m}
+  ]
+}
 "
 `;
 
@@ -2527,6 +2833,46 @@ exports[`should color julia correctly 1`] = `
 
     [34mreturn[39m [32m5[39ms / [32m2[39m
 [34mend[39m
+"
+`;
+
+exports[`should color julia-repl correctly 1`] = `
+"[90mjulia>[39m [34mfunction[39m foo(x) x + [32m1[39m [34mend[39m
+foo (generic function with 1 method)
+
+[90mjulia>[39m foo([32m42[39m)
+43
+
+[90mjulia>[39m foo([32m42[39m) === [32m43.[39m
+false
+
+
+Here we match all three lines of code:
+
+[90mjulia>[39m [34mfunction[39m foo(x::[36mFloat64[39m)
+           [32m42.[39m - x
+       [34mend[39m
+foo (generic function with 2 methods)
+
+[90mjulia>[39m [34mfor[39m x [34min[39m [36mAny[39m[[32m1[39m, [32m2[39m, [32m3.4[39m]
+          println([31m\\"foo($x) = $(foo(x))\\"[39m)
+       [34mend[39m
+foo(1) = 2
+foo(2) = 3
+foo(3.4) = 38.6
+
+
+... unless it is not properly indented:
+
+[90mjulia>[39m [34mfunction[39m foo(x)
+    x + 1
+end
+
+
+Ordinary Julia code does not get highlighted:
+
+Pkg.add(\\"Combinatorics\\")
+abstract type Foo end
 "
 `;
 
@@ -2917,6 +3263,33 @@ clean:
 "
 `;
 
+exports[`should color markdown correctly 1`] = `
+"# hello world
+
+you can write text [[31mwith links[39m]([4mhttp://example.com[24m) inline or [[31mlink references[39m][1].
+
+* one [3m_thing_[23m has [3m*em*[23mphasis
+* two [1m__things__[22m are [1m**bold**[22m
+
+[1]: [4mhttp://example.com[24m
+
+---
+
+hello world
+===========
+
+[90m<[34mthis_is[90m [36minline[90m=[31m\\"xml\\"[90m>[39m[90m</[34mthis_is[90m>[39m
+
+> markdown is so cool
+
+    so are code segments
+
+1. one thing (yeah!)
+2. two thing \`i can write code\`, and \`more\` wipee!
+
+"
+`;
+
 exports[`should color mathematica correctly 1`] = `
 "[32m(* ::Package:: *)[39m
 
@@ -3215,6 +3588,30 @@ A6: v1 is_a_proper_prefix_of v [34mby[39m TREES_1:def 2;
   [34mby[39m A3,TARSKI:def 1,TREES_1:def 2;
   [34mhence[39m [34mthesis[39m [34mby[39m A4;
 [34mend[39m;"
+`;
+
+exports[`should color mojolicious correctly 1`] = `
+"%layout [31m'bootstrap'[39m;
+% title [31m\\"Import your subs\\"[39m;
+%= form_for [31m'/settings/import'[39m => ([31mmethod =>[39m [31m'post'[39m, [31menctype =>[39m [31m'multipart/form-data'[39m) => begin
+     %= file_field [31m'opmlfile'[39m => [31mmultiple =>[39m [31m'true'[39m
+     %= submit_button [31m'Import'[39m, [31m'class'[39m => [31m'btn'[39m
+% end
+[90m<[34mdiv[90m>[39m
+% [34mif[39m ($subs) {
+[90m<[34mdl[90m>[39m
+% [34mfor[39m [34mmy[39m $item (@$subs) {
+% [34mmy[39m ($dir, $align) = ($item->{rtl}) ? ([31m'rtl'[39m, [31m'right'[39m) : ([31m'ltr'[39m, [31m'left'[39m);
+[90m<[34mdt[90m [36malign[90m=[31m\\"<%=[90m[39m $align [90m[31m%>\\"[90m>[39m[90m<[34ma[90m [36mhref[90m=[31m\\"<%=[90m[39m $item->{[31m'xmlUrl'[39m} [90m[31m%>\\"[90m>[39m[90m<[34mi[90m [36mclass[90m=[31m\\"icon-rss\\"[90m>[39m[90m</[34mi[90m>[39m rss[90m</[34ma[90m>[39m
+[90m<[34ma[90m [36mdir[90m=[31m\\"<%=[90m[39m $dir [90m[31m%>\\"[90m [36mhref[90m=[31m\\"<%=[90m[39m $item->{htmlUrl} [90m[31m%>\\"[90m>[39m[90m<[34m%==[90m[39m $item->{title} [90m%>[39m[90m</[34ma[90m>[39m
+[90m</[34mdt[90m>[39m
+[90m<[34mdd[90m>[39m[90m<[34mb[90m>[39mCategories[90m</[34mb[90m>[39m
+%= [34mjoin[39m [31mq{, }[39m, [34msort[39m @{ $item->{categories} || [] };
+[90m</[34mdd[90m>[39m
+[90m</[34mdl[90m>[39m
+% }
+[90m</[34mdiv[90m>[39m
+"
 `;
 
 exports[`should color monkey correctly 1`] = `
@@ -3587,6 +3984,89 @@ exports[`should color oxygene correctly 1`] = `
 
 [34mend[39m.
 "
+`;
+
+exports[`should color parser3 correctly 1`] = `
+"[90m@CLASS[39m
+base
+
+[90m@USE[39m
+module.p
+
+[90m@BASE[39m
+class
+
+[32m# Comment for code[39m
+@create[aParam1;aParam2][local1;local2]
+  [34m^connect[39m[mysql://host/database?ClientCharset=windows[32m-1251[39m]
+  [34m^for[39m[i]([32m1[39m;[32m10[39m){
+    [90m<[34mp[90m [36mclass[90m=[31m\\"paragraph\\"[90m>[39m[34m^eval[39m($i+[32m10[39m)[90m</[34mp[90m>[39m
+    [34m^connect[39m[mysql://host/database]{
+      $tab[[34m^table::sql[39m{select * from \`table\` where a='[32m1[39m'}]
+      $var_Name[some\${value}]
+    }
+  }
+
+  [32m^rem{[39m
+[32m    Multiline comment with code: $var[39m
+[32m    ^while(true)[32m{[32m[39m
+[32m[32m      ^for[i](1;10)[32m{[32m[32m[39m
+[32m[32m[32m        ^sleep[][32m[32m[39m
+[32m[32m[32m      }[32m[32m[39m
+[32m[32m    }[32m[39m
+[32m  }[39m
+  [34m^taint[39m[[32m^#0A[39m]
+
+@GET_base[]
+[32m## Comment for code[39m
+  # Isn't comment
+  $result[$.hash_item1[one] $.hash_item2[two]]
+"
+`;
+
+exports[`should color perl correctly 1`] = `
+"[32m# loads object[39m
+[33m[34msub[33m load[39m
+[33m[39m{
+  [34mmy[39m $flds = $c->db_load($id,@_) || [34mdo[39m {
+    Carp::carp [31m\\"Can\`t load (class: $c, id: $id): '$!'\\"[39m; [34mreturn[39m [34mundef[39m
+  };
+  [34mmy[39m $o = $c->_perl_new();
+  $id12 = $id / [32m24[39m / [32m3600[39m;
+  $o->{[31m'ID'[39m} = $id12 + [32m123[39m;
+  [32m#$o->{'SHCUT'} = $flds->{'SHCUT'};[39m
+  [34mmy[39m $p = $o->props;
+  [34mmy[39m $vt;
+  $string =~ [31mm/^sought_text$/[39m;
+  $items = [34msplit[39m [31m//[39m, [31m'abc'[39m;
+  $string //= [31m\\"bar\\"[39m;
+  [34mfor[39m [34mmy[39m $key ([34mkeys[39m %$p)
+  {
+    [34mif[39m(\${$vt.[31m'::property'[39m}) {
+      $o->{$key . [31m'_real'[39m} = $flds->{$key};
+      [34mtie[39m $o->{$key}, [31m'CMSBuilder::Property'[39m, $o, $key;
+    }
+  }
+  $o->save [34mif[39m [34mdelete[39m $o->{[31m'_save_after_load'[39m};
+
+  [32m# GH-117[39m
+  [34mmy[39m $g = [34mglob[39m([31m\\"/usr/bin/*\\"[39m);
+
+  [34mreturn[39m $o;
+}
+
+[90m__DATA__[39m
+[32m@@ layouts/default.html.ep[39m
+[90m<!DOCTYPE html>[39m
+[90m<[34mhtml[90m>[39m
+  [90m<[34mhead[90m>[39m[90m<[34mtitle[90m>[39m[90m<[34m%=[90m[39m title [90m%>[39m[90m</[34mtitle[90m>[39m[90m</[34mhead[90m>[39m
+  [90m<[34mbody[90m>[39m[90m<[34m%=[90m[39m content [90m%>[39m[90m</[34mbody[90m>[39m
+[90m</[34mhtml[90m>[39m
+[90m__END__[39m
+
+[32m=head1 NAME[39m
+[32mPOD till the end of file[39m
+[32m[39m"
 `;
 
 exports[`should color pf correctly 1`] = `
@@ -4428,6 +4908,21 @@ a {
 }"
 `;
 
+exports[`should color shell correctly 1`] = `
+"[90m$[39m [36mecho[39m $EDITOR
+vim
+[90m$[39m git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+[90m$[39m git push
+Everything up-to-date
+[90m$[39m [36mecho[39m [31m'All[39m
+[90m>[39m[31m done!'[39m
+All
+done!
+"
+`;
+
 exports[`should color smali correctly 1`] = `
 "[34m.class[39m[34m public[39m [34mLcom/test/Preferences;[39m
 [34m.super[39m [34mLandroid/preference/PreferenceActivity;[39m
@@ -5107,6 +5602,31 @@ L [36mP[[32m1[36m][39m [32m100mm/sec[39m [34mCNT[39m[32m100[39m [34mV
 "
 `;
 
+exports[`should color twig correctly 1`] = `
+"{% [34m[34mif[34m[39m posts|[34mlength[39m %}
+  {% [34m[34mfor[34m[39m article in articles %}
+  &lt;div&gt;
+  {{ article.title|[34mupper[39m() }}
+
+  [32m{# outputs 'WELCOME' #}[39m
+  &lt;/div&gt;
+  {% [34m[34mendfor[34m[39m %}
+{% [34m[34mendif[34m[39m %}
+
+{% [34m[34mset[34m[39m user = json_encode(user) %}
+
+{{ [34mrandom[39m(['apple', 'orange', 'citrus']) }}
+
+{{ [34minclude[39m(template_from_string(\\"Hello {{ name }}\\")) }}
+
+
+[32m{#[39m
+[32mComments may be long and multiline.[39m
+[32mMarkup is &lt;em&gt;not&lt;/em&gt; highlighted within comments.[39m
+[32m#}[39m
+"
+`;
+
 exports[`should color typescript correctly 1`] = `
 "[34mclass[39m MyClass {
   [34mpublic[39m [34mstatic[39m myValue: [36mstring[39m;
@@ -5251,6 +5771,17 @@ exports[`should color vbscript correctly 1`] = `
       [34mend[39m [34mif[39m
     [34mend[39m [34mif[39m
 [34mnext[39m"
+`;
+
+exports[`should color vbscript-html correctly 1`] = `
+"[90m<[34mbody[90m>[39m
+<%
+[34mIf[39m i <  [32m10[39m [34mThen[39m
+  [36mresponse[39m.write([31m\\"Good morning!\\"[39m)
+[34mEnd[39m [34mIf[39m
+%>
+[90m</[34mbody[90m>[39m
+"
 `;
 
 exports[`should color verilog correctly 1`] = `
@@ -5454,6 +5985,23 @@ exports[`should color xl correctly 1`] = `
                         translate ([36mtime[39m + N) * [32m0.02[39m [36mmod[39m [32m1[39m, [32m0[39m, [32m0[39m
                         scale [32m0.2[39m, [32m0.3[39m, [32m0.3[39m
                     [36mrectangle[39m [32m0[39m, [32m0[39m, [32m100000[39m, [32m1154[39m
+"
+`;
+
+exports[`should color xml correctly 1`] = `
+"[90m<!DOCTYPE html>[39m
+[90m<[34mtitle[90m>[39mTitle[90m</[34mtitle[90m>[39m
+
+[90m<[34mstyle[90m>[39mbody {width: [32m500px[39m;}[90m</[34mstyle[90m>[39m
+
+[90m<[34mscript[90m [36mtype[90m=[31m\\"application/javascript\\"[90m>[39m
+  [33m[34mfunction[33m $init() [39m{[34mreturn[39m [34mtrue[39m;}
+[90m</[34mscript[90m>[39m
+
+[90m<[34mbody[90m>[39m
+  [90m<[34mp[90m [36mchecked[90m [36mclass[90m=[31m\\"title\\"[90m [36mid[90m=[31m'title'[90m>[39mTitle[90m</[34mp[90m>[39m
+  [32m<!-- here goes the rest of the page -->[39m
+[90m</[34mbody[90m>[39m
 "
 `;
 
