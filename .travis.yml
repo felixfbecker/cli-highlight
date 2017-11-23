@@ -16,11 +16,9 @@ install:
 
 script:
   - npm run lint
-  - npm run build
-  - npm run cover
+  - npm run test
 
 after_success:
-  - nyc report --reporter=json
   - bash <(curl -s https://codecov.io/bash)
 
 jobs:
