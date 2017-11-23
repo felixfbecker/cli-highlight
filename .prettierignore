@@ -1,0 +1,4 @@
+package.json
+*.md
+dist/
+typedoc/

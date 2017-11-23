@@ -1,218 +1,216 @@
-
-import { default as _chalk, Chalk } from 'chalk';
+import { Chalk, default as _chalk } from 'chalk'
 
 // Always enable colors, even if not auto-detected
-const chalk = new _chalk.constructor({enabled: true});
+const chalk = new _chalk.constructor({ enabled: true })
 
 /**
  * A generic interface that holds all available language tokens.
  */
 export interface Tokens<T> {
-
     /**
      * keyword in a regular Algol-style language
      */
-    keyword?: T;
+    keyword?: T
 
     /**
      * built-in or library object (constant, class, function)
      */
-    built_in?: T;
+    built_in?: T
 
     /**
      * user-defined type in a language with first-class syntactically significant types, like Haskell
      */
-    type?: T;
+    type?: T
 
     /**
      * special identifier for a built-in value ("true", "false", "null")
      */
-    literal?: T;
+    literal?: T
 
     /**
      * number, including units and modifiers, if any.
      */
-    number?: T;
+    number?: T
 
     /**
      * literal regular expression
      */
-    regexp?: T;
+    regexp?: T
 
     /**
      * literal string, character
      */
-    string?: T;
+    string?: T
 
     /**
      * parsed section inside a literal string
      */
-    subst?: T;
+    subst?: T
 
     /**
      * symbolic constant, interned string, goto label
      */
-    symbol?: T;
+    symbol?: T
 
     /**
      * class or class-level declaration (interfaces, traits, modules, etc)
      */
-    class?: T;
+    class?: T
 
     /**
      * function or method declaration
      */
-    function?: T;
+    function?: T
 
     /**
      * name of a class or a function at the place of declaration
      */
-    title?: T;
+    title?: T
 
     /**
      * block of function arguments (parameters) at the place of declaration
      */
-    params?: T;
+    params?: T
 
     /**
      * comment
      */
-    comment?: T;
+    comment?: T
 
     /**
      * documentation markup within comments
      */
-    doctag?: T;
+    doctag?: T
 
     /**
      * flags, modifiers, annotations, processing instructions, preprocessor directive, etc
      */
-    meta?: T;
+    meta?: T
 
     /**
      * keyword or built-in within meta construct
      */
-    'meta-keyword'?: T;
+    'meta-keyword'?: T
 
     /**
      * string within meta construct
      */
-    'meta-string'?: T;
+    'meta-string'?: T
 
     /**
      * heading of a section in a config file, heading in text markup
      */
-    section?: T;
+    section?: T
 
     /**
      * XML/HTML tag
      */
-    tag ?: T;
+    tag?: T
 
     /**
      * name of an XML tag, the first word in an s-expression
      */
-    name?: T;
+    name?: T
 
     /**
      * s-expression name from the language standard library
      */
-    'builtin-name'?: T;
+    'builtin-name'?: T
 
     /**
      * name of an attribute with no language defined semantics (keys in JSON, setting names in .ini), also sub-attribute within another highlighted object, like XML tag
      */
-    attr?: T;
+    attr?: T
 
     /**
      * name of an attribute followed by a structured value part, like CSS properties
      */
-    attribute?: T;
+    attribute?: T
 
     /**
      * variable in a config or a template file, environment var expansion in a script
      */
-    variable?: T;
+    variable?: T
 
     /**
      * list item bullet in text markup
      */
-    bullet?: T;
+    bullet?: T
 
     /**
      * code block in text markup
      */
-    code?: T;
+    code?: T
 
     /**
      * emphasis in text markup
      */
-    emphasis?: T;
+    emphasis?: T
 
     /**
      * strong emphasis in text markup
      */
-    strong?: T;
+    strong?: T
 
     /**
      * mathematical formula in text markup
      */
-    formula?: T;
+    formula?: T
 
     /**
      * hyperlink in text markup
      */
-    link?: T;
+    link?: T
 
     /**
      * quotation in text markup
      */
-    quote?: T;
+    quote?: T
 
     /**
      * tag selector in CSS
      */
-    'selector-tag'?: T;
+    'selector-tag'?: T
 
     /**
      * #id selector in CSS
      */
-    'selector-id'?: T;
+    'selector-id'?: T
 
     /**
      * .class selector in CSS
      */
-    'selector-class'?: T;
+    'selector-class'?: T
 
     /**
      * [attr] selector in CSS
      */
-    'selector-attr'?: T;
+    'selector-attr'?: T
 
     /**
      * :pseudo selector in CSS
      */
-    'selector-pseudo'?: T;
+    'selector-pseudo'?: T
 
     /**
      * tag of a template language
      */
-    'template-tag'?: T;
+    'template-tag'?: T
 
     /**
      * variable in a template language
      */
-    'template-variable'?: T;
+    'template-variable'?: T
 
     /**
      * added or changed line in a diff
      */
-    addition?: T;
+    addition?: T
 
     /**
      * deleted line in a diff
      */
-    deletion?: T;
+    deletion?: T
 }
 
 /**
@@ -220,9 +218,32 @@ export interface Tokens<T> {
  * See the [chalk](https://github.com/chalk/chalk) module for more information.
  * `plain` means no styling.
  */
-export type Style = 'reset' | 'bold' | 'dim' | 'italic' | 'underline' | 'inverse' | 'hidden' | 'strikethrough'
-| 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 'cyan' | 'white' | 'gray' | 'bgBlack'
-| 'bgRed' | 'bgGreen' | 'bgYellow' | 'bgBlue' | 'bgMagenta' | 'bgCyan' | 'plain';
+export type Style =
+    | 'reset'
+    | 'bold'
+    | 'dim'
+    | 'italic'
+    | 'underline'
+    | 'inverse'
+    | 'hidden'
+    | 'strikethrough'
+    | 'black'
+    | 'red'
+    | 'green'
+    | 'yellow'
+    | 'blue'
+    | 'magenta'
+    | 'cyan'
+    | 'white'
+    | 'gray'
+    | 'bgBlack'
+    | 'bgRed'
+    | 'bgGreen'
+    | 'bgYellow'
+    | 'bgBlue'
+    | 'bgMagenta'
+    | 'bgCyan'
+    | 'plain'
 
 /**
  * The schema of a JSON file defining a custom scheme. The key is a language token, while the value
@@ -265,13 +286,12 @@ export interface Theme extends Tokens<(codePart: string) => string> {}
  * Identity function for tokens that should not be styled (returns the input string as-is).
  * See [[Theme]] for an example.
  */
-export const plain = (codePart: string) => codePart;
+export const plain = (codePart: string) => codePart
 
 /**
  * The default theme. It is possible to override just individual keys.
  */
 export const DEFAULT_THEME: Theme = {
-
     /**
      * keyword in a regular Algol-style language
      */
@@ -371,7 +391,7 @@ export const DEFAULT_THEME: Theme = {
     /**
      * XML/HTML tag
      */
-    tag : chalk.grey,
+    tag: chalk.grey,
 
     /**
      * name of an XML tag, the first word in an s-expression
@@ -477,35 +497,38 @@ export const DEFAULT_THEME: Theme = {
     /**
      * deleted line in a diff
      */
-    deletion: chalk.red
-};
+    deletion: chalk.red,
+}
 
 /**
  * Converts a [[JsonTheme]] with string values to a [[Theme]] with formatter functions. Used by [[parse]].
  */
 export function fromJson(json: JsonTheme): Theme {
-    const theme: Theme = {};
-    for (const key in json) {
-        const style: string | string[] = (<any>json)[key];
+    const theme: Theme = {}
+    for (const key of Object.keys(json)) {
+        const style: string | string[] = (json as any)[key]
         if (Array.isArray(style)) {
-            (<any>theme)[key] = style.reduce((prev: typeof chalk, curr: string) => curr === 'plain' ? plain : (<any>prev)[curr], chalk);
+            ;(theme as any)[key] = style.reduce(
+                (prev: typeof chalk, curr: string) => (curr === 'plain' ? plain : (prev as any)[curr]),
+                chalk
+            )
         } else {
-            (<any>theme)[key] = (<any>chalk)[style];
+            ;(theme as any)[key] = (chalk as any)[style]
         }
     }
-    return theme;
+    return theme
 }
 
 /**
  * Converts a [[Theme]] with formatter functions to a [[JsonTheme]] with string values. Used by [[stringify]].
  */
 export function toJson(theme: Theme): JsonTheme {
-    const jsonTheme: any = {};
-    for (const key in jsonTheme) {
-        const style: Chalk & {_styles: string[]} = (<any>jsonTheme)[key];
-        jsonTheme[key] = style._styles;
+    const jsonTheme: any = {}
+    for (const key of Object.keys(jsonTheme)) {
+        const style: Chalk & { _styles: string[] } = (jsonTheme as any)[key]
+        jsonTheme[key] = style._styles
     }
-    return jsonTheme;
+    return jsonTheme
 }
 
 /**
@@ -530,7 +553,7 @@ export function toJson(theme: Theme): JsonTheme {
  * ```
  */
 export function stringify(theme: Theme): string {
-    return JSON.stringify(toJson(theme));
+    return JSON.stringify(toJson(theme))
 }
 
 /**
@@ -548,5 +571,5 @@ export function stringify(theme: Theme): string {
  * ```
  */
 export function parse(json: string): Theme {
-    return fromJson(JSON.parse(json));
+    return fromJson(JSON.parse(json))
 }
