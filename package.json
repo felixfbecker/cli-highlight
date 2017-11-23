@@ -72,7 +72,7 @@
   },
   "devDependencies": {
     "@sourcegraph/prettierrc": "^2.0.0",
-    "@sourcegraph/tslint-config": "^9.0.2",
+    "@sourcegraph/tslint-config": "^9.0.3",
     "@types/highlight.js": "^9.12.1",
     "@types/mocha": "^2.2.44",
     "@types/mz": "0.0.32",
