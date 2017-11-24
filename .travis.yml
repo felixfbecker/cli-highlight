@@ -28,6 +28,7 @@ jobs:
     - stage: test
     - stage: release
       script:
+        - npm run build
         - npm run semantic-release
       before_deploy:
         - npm run typedoc
