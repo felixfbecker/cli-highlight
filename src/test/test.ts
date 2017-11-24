@@ -6,8 +6,8 @@ function test(language: string, code: string): void {
     it(`should color ${language} correctly`, () => {
         const highlighted = highlight(code)
 
-        if (process.env.VERBOSE) {
-            console.log(highlighted)
+        if (process.env.OUTPUT_CODE_SAMPLES) {
+            console.log(language + ':\n\n' + highlighted)
         }
 
         expect(highlighted).toMatchSnapshot()
