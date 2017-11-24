@@ -35,6 +35,7 @@
     },
     "testRegex": "(/test/.*|/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "testPathIgnorePatterns": ["/node_modules/", "/src/test/__fixtures__/"],
+    "coverageReporters": ["json", "text"],
     "moduleFileExtensions": [
       "ts",
       "tsx",
