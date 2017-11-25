@@ -6,6 +6,7 @@ node_js:
 env:
   global:
    - FORCE_COLOR=1
+   - OUTPUT_CODE_SAMPLES=1
 
 cache:
   directories:
@@ -17,10 +18,9 @@ install:
 script:
   - npm run lint
   - npm run build
-  - npm run cover
+  - npm run test
 
 after_success:
-  - nyc report --reporter=json
   - bash <(curl -s https://codecov.io/bash)
 
 jobs:

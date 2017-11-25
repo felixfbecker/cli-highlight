@@ -76,8 +76,8 @@ The theme is combined with the [default theme](http://cli-highlight.surge.sh/glo
 The default theme is still not colored a lot or optimized for many languages, PRs welcome!
 
 ## Supported Languages
-In theory, [all languages of highlight.js](https://highlightjs.org/static/demo/) are supported - I just did not adapt
-the default theme and wrote tests for all languages yet. My primary use case was SQL so that is supported well.
+[All languages of highlight.js](https://highlightjs.org/static/demo/) are supported.
+Check a [CI build](https://travis-ci.org/felixfbecker/cli-highlight) for examples of all the different languages and their highlighting.
 
 ## Contributing
 The module is written in TypeScript and can be compiled with `npm run build`.

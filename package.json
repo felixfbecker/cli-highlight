@@ -17,8 +17,7 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "test": "mocha dist/test",
-    "cover": "nyc --all mocha dist/test",
+    "test": "jest",
     "lint": "npm run tslint && npm run prettier",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
     "prettier": "prettier --write --list-different '**/{*.ts,*.json,.prettierrc}'",
@@ -28,13 +27,21 @@
     "semantic-release": "semantic-release",
     "commitmsg": "validate-commit-msg"
   },
-  "nyc": {
-    "include": [
-      "dist/**/*.js"
-    ],
-    "exclude": [
-      "dist/test/**/*.js",
-      "dist/cli.js"
+  "jest": {
+    "collectCoverage": true,
+    "mapCoverage": true,
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/test/.*|/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testPathIgnorePatterns": ["/node_modules/", "/src/test/__fixtures__/"],
+    "coverageReporters": ["json", "text"],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
     ]
   },
   "config": {
@@ -74,16 +81,16 @@
     "@sourcegraph/prettierrc": "^2.0.0",
     "@sourcegraph/tslint-config": "^9.0.3",
     "@types/highlight.js": "^9.12.1",
-    "@types/mocha": "^2.2.44",
+    "@types/jest": "^21.1.8",
     "@types/mz": "0.0.32",
     "@types/node": "^8.0.53",
     "@types/yargs": "^8.0.2",
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.3",
-    "mocha": "^4.0.1",
-    "nyc": "^11.3.0",
+    "jest": "^21.2.1",
     "prettier": "1.8.2",
     "semantic-release": "^10.0.0",
+    "ts-jest": "^21.2.3",
     "tslint": "^5.8.0",
     "typedoc": "^0.9.0",
     "typescript": "^2.6.1",
