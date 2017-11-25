@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should color 1C Enterprise correctly 1`] = `
+exports[`highlight() should color 1C Enterprise correctly 1`] = `
 "[90m#[90mЗагрузитьИзФайла[90m ext_module.txt [32m// директива 7.7[90m[39m
 [90m#[90mЕсли[90m [90mКлиент[90m [90mИЛИ[90m [90mНаКлиенте[90m [90mТогда[90m [32m// инструкции препроцессора[90m[39m
 	[90m&[90mНаКлиентеНаСервереБезКонтекста[90m [32m// директивы компиляции[90m[39m
@@ -33,7 +33,7 @@ exports[`should color 1C Enterprise correctly 1`] = `
 [90m#[90mКонецЕсли[90m[39m"
 `;
 
-exports[`should color ABNF correctly 1`] = `
+exports[`highlight() should color ABNF correctly 1`] = `
 "[32m; line comment[39m
 
 ruleset     =   [optional] *(group1 / group2 / [34mSP[39m) [34mCRLF[39m [32m; trailing comment[39m
@@ -59,7 +59,7 @@ insensitive =   %i[31m\\"case-insensitive string\\"[39m
 "
 `;
 
-exports[`should color ARM Assembly correctly 1`] = `
+exports[`highlight() should color ARM Assembly correctly 1`] = `
 ".text
 
 .global connect
@@ -99,7 +99,7 @@ server_port:            [90m.hword[39m [32m0x0b1a[39m
 "
 `;
 
-exports[`should color AVR Assembly correctly 1`] = `
+exports[`highlight() should color AVR Assembly correctly 1`] = `
 "[32m;* Title:       Block Copy Routines[39m
 [32m;* Version:     1.1[39m
 
@@ -122,12 +122,12 @@ flash2ram:
 "
 `;
 
-exports[`should color Access Log correctly 1`] = `
+exports[`highlight() should color Access Log correctly 1`] = `
 "[32m20.164.151.111[39m - - [31m[20/Aug/2015:22:20:18 -0400][39m [31m\\"[34mGET[31m /mywebpage/index.php HTTP/1.1\\"[39m [32m403[39m [32m772[39m [31m\\"-\\"[39m [31m\\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.220 Safari/535.1\\"[39m
 "
 `;
 
-exports[`should color ActionScript correctly 1`] = `
+exports[`highlight() should color ActionScript correctly 1`] = `
 "[34m[34mpackage[34m org.example.dummy {[39m
     [90m[90mimport[90m org.dummy.*;[39m
 
@@ -154,7 +154,7 @@ exports[`should color ActionScript correctly 1`] = `
 }"
 `;
 
-exports[`should color Ada correctly 1`] = `
+exports[`highlight() should color Ada correctly 1`] = `
 "[34mpackage[39m [34mbody[39m Sqlite.Simple [34mis[39m
 
       Foo : [36m[2mint[22m[39m := int'Size;
@@ -175,7 +175,7 @@ exports[`should color Ada correctly 1`] = `
 "
 `;
 
-exports[`should color ApacheConf correctly 1`] = `
+exports[`highlight() should color ApacheConf correctly 1`] = `
 "[32m# rewrite\`s rules for wordpress pretty url[39m
 LoadModule rewrite_module  modules/mod_rewrite.so
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -198,7 +198,7 @@ Allow from [34mAll[39m
 "
 `;
 
-exports[`should color AppleScript correctly 1`] = `
+exports[`highlight() should color AppleScript correctly 1`] = `
 "[34mrepeat[39m [32m5[39m [34mtimes[39m
     [34mif[39m foo [34mis[39m [34mgreater than[39m bar [34mthen[39m
         [36mdisplay dialog[39m [31m\\"Hello there\\"[39m
@@ -216,7 +216,7 @@ exports[`should color AppleScript correctly 1`] = `
 "
 `;
 
-exports[`should color Arduino correctly 1`] = `
+exports[`highlight() should color Arduino correctly 1`] = `
 "[32m/*[39m
 [32m  Blink[39m
 [32m  Turns on an LED on for one second, then off for one second, repeatedly.[39m
@@ -243,7 +243,7 @@ exports[`should color Arduino correctly 1`] = `
 }"
 `;
 
-exports[`should color AsciiDoc correctly 1`] = `
+exports[`highlight() should color AsciiDoc correctly 1`] = `
 "Hello, World!
 ============
 Author Name, <author@domain.foo>
@@ -311,7 +311,7 @@ I'll join that party, too.
 NOTE: AsciiDoc is quite cool, you should try it."
 `;
 
-exports[`should color AspectJ correctly 1`] = `
+exports[`highlight() should color AspectJ correctly 1`] = `
 "[34mpackage[39m com.aspectj.syntax;
 [34mimport[39m org.aspectj.lang.annotation.AdviceName;
 
@@ -337,7 +337,7 @@ exports[`should color AspectJ correctly 1`] = `
 }"
 `;
 
-exports[`should color AutoHotkey correctly 1`] = `
+exports[`highlight() should color AutoHotkey correctly 1`] = `
 "[32m; hotkeys and hotstrings[39m
 #a::WinSet, AlwaysOnTop, Toggle, [34mA[39m
 #Space::
@@ -365,7 +365,7 @@ label1:
 "
 `;
 
-exports[`should color AutoIt correctly 1`] = `
+exports[`highlight() should color AutoIt correctly 1`] = `
 "[90m#[90mNoTrayIcon[90m[39m
 [90m#AutoIt3Wrapper_Run_Tidy=Y[39m
 [90m#[90minclude[90m [90m<Misc.au3>[90m[39m
@@ -384,7 +384,7 @@ example([32m0[39m, [32m10[39m)
 [34mEndFunc[39m   [32m;==>example[39m"
 `;
 
-exports[`should color Awk correctly 1`] = `
+exports[`highlight() should color Awk correctly 1`] = `
 "[34mBEGIN[39m {
   POPService  = [31m\\"/inet/tcp/0/emailhost/pop3\\"[39m
   RS = ORS = [31m\\"\\\\r\\\\n\\"[39m
@@ -404,7 +404,7 @@ exports[`should color Awk correctly 1`] = `
 "
 `;
 
-exports[`should color BASIC correctly 1`] = `
+exports[`highlight() should color BASIC correctly 1`] = `
 "10 [34mCLS[39m
 20 [34mFOR[39m I = [32m0[39m [34mTO[39m [32m15[39m
 22 [34mFOR[39m J = [32m0[39m [34mTO[39m [32m7[39m
@@ -430,7 +430,7 @@ exports[`should color BASIC correctly 1`] = `
 "
 `;
 
-exports[`should color BNF correctly 1`] = `
+exports[`highlight() should color BNF correctly 1`] = `
 "<syntax>         ::= <rule> | <rule> <syntax>
 <rule>           ::= <opt-whitespace> [31m\\"<\\"[39m <rule-name> [31m\\">\\"[39m <opt-whitespace> [31m\\"::=\\"[39m <opt-whitespace> <expression> <line-end>
 <opt-whitespace> ::= [31m\\" \\"[39m <opt-whitespace> | [31m\\"\\"[39m
@@ -442,7 +442,7 @@ exports[`should color BNF correctly 1`] = `
 "
 `;
 
-exports[`should color Bash correctly 1`] = `
+exports[`highlight() should color Bash correctly 1`] = `
 "[90m#!/bin/bash[39m
 [90m[39m
 [32m###### CONFIG[39m
@@ -461,7 +461,7 @@ BE_VERBOSE=[34mfalse[39m
 "
 `;
 
-exports[`should color Brainfuck correctly 1`] = `
+exports[`highlight() should color Brainfuck correctly 1`] = `
 "[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m
 [ [32m3*10[39m [32mand[39m [32m10*10[39m
   [34m-[39m>[34m+[39m[34m+[39m[34m+[39m>[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m<<
@@ -482,7 +482,7 @@ exports[`should color Brainfuck correctly 1`] = `
 "
 `;
 
-exports[`should color HTML correctly 1`] = `
+exports[`highlight() should color HTML correctly 1`] = `
 "[90m<!DOCTYPE html>[39m
 [90m<[34mhtml[90m>[39m
     [90m<[34mhead[90m>[39m
@@ -496,7 +496,7 @@ exports[`should color HTML correctly 1`] = `
 "
 `;
 
-exports[`should color JSON correctly 1`] = `
+exports[`highlight() should color JSON correctly 1`] = `
 "[
   {
     [36m\\"title\\"[39m: [31m\\"apples\\"[39m,
@@ -507,7 +507,7 @@ exports[`should color JSON correctly 1`] = `
 "
 `;
 
-exports[`should color SQL correctly 1`] = `
+exports[`highlight() should color SQL correctly 1`] = `
 "[32m-- Create a table[39m
 [34mCREATE[39m [34mTABLE[39m [31m\\"topic\\"[39m (
     [31m\\"id\\"[39m [36mserial[39m [34mNOT[39m [34mNULL[39m PRIMARY [34mKEY[39m,
@@ -517,7 +517,7 @@ exports[`should color SQL correctly 1`] = `
 "
 `;
 
-exports[`should color XQuery correctly 1`] = `
+exports[`highlight() should color XQuery correctly 1`] = `
 "[34mdeclare[39m [34moption[39m output:method [31m'json'[39m;
 
 (
@@ -541,7 +541,7 @@ exports[`should color XQuery correctly 1`] = `
 "
 `;
 
-exports[`should color YAML correctly 1`] = `
+exports[`highlight() should color YAML correctly 1`] = `
 "[90m---[39m
 [32m# comment[39m
 [36mstring_1:[39m [31m\\"Bar\\"[39m
@@ -584,7 +584,7 @@ exports[`should color YAML correctly 1`] = `
 "
 `;
 
-exports[`should color Zephir correctly 1`] = `
+exports[`highlight() should color Zephir correctly 1`] = `
 "[33m[34mfunction[33m testBefore(<Test> a, var b = [32m5[33m, int c = [32m10[33m)[39m
 [33m[39m{
     a->method1();
@@ -643,7 +643,7 @@ exports[`should color Zephir correctly 1`] = `
 "
 `;
 
-exports[`should color axapta correctly 1`] = `
+exports[`highlight() should color axapta correctly 1`] = `
 "[34m[34mclass[34m ExchRateLoadBatch [34mextends[34m RunBaseBatch [39m{
   ExchRateLoad rbc;
   [34mcontainer[39m currencies;
@@ -679,7 +679,7 @@ exports[`should color axapta correctly 1`] = `
 "
 `;
 
-exports[`should color cal correctly 1`] = `
+exports[`highlight() should color cal correctly 1`] = `
 "[34mOBJECT[39m Codeunit [32m11[39m Gen. Jnl.-Check Line
 {
   OBJECT-PROPERTIES
@@ -716,7 +716,7 @@ exports[`should color cal correctly 1`] = `
 "
 `;
 
-exports[`should color capnproto correctly 1`] = `
+exports[`highlight() should color capnproto correctly 1`] = `
 "[90m@0xdbb9ad1f14bf0b36;[39m  [32m# unique file ID, generated by \`capnp id\`[39m
 
 [34m[34mstruct[34m Person [39m{
@@ -774,7 +774,7 @@ exports[`should color capnproto correctly 1`] = `
 }"
 `;
 
-exports[`should color ceylon correctly 1`] = `
+exports[`highlight() should color ceylon correctly 1`] = `
 "[34mshared[39m [34mvoid[39m run() {
     print([31m\\"Hello, \`\` process.arguments.first [34melse[31m [31m\\"World\\"[31m \`\`!\\"[39m);
 }
@@ -786,7 +786,7 @@ exports[`should color ceylon correctly 1`] = `
 "
 `;
 
-exports[`should color clean correctly 1`] = `
+exports[`highlight() should color clean correctly 1`] = `
 "[34mmodule[39m fsieve
 
 [34mimport[39m StdClass; [32m// RWS[39m
@@ -820,7 +820,7 @@ Start = select [[32m2[39m, [32m3[39m : primes] NrOfPrimes
 "
 `;
 
-exports[`should color clojure correctly 1`] = `
+exports[`highlight() should color clojure correctly 1`] = `
 "([34mdef[39m ^:dynamic chunk-size [32m17[39m)
 
 ([34mdefn[39m next-chunk [rdr]
@@ -835,7 +835,7 @@ exports[`should color clojure correctly 1`] = `
 "
 `;
 
-exports[`should color clojure-repl correctly 1`] = `
+exports[`highlight() should color clojure-repl correctly 1`] = `
 "[90muser=>[39m ([34mdefn[39m f [x y]
 [90m  #_=>[39m   ([34m+[39m x y))
 #'user/f
@@ -846,7 +846,7 @@ nil
 "
 `;
 
-exports[`should color cmake correctly 1`] = `
+exports[`highlight() should color cmake correctly 1`] = `
 "[34mcmake_minimum_required[39m(VERSION [32m2.8[39m.[32m8[39m)
 [34mproject[39m(cmake_example)
 
@@ -869,7 +869,7 @@ exports[`should color cmake correctly 1`] = `
 "
 `;
 
-exports[`should color coffeescript correctly 1`] = `
+exports[`highlight() should color coffeescript correctly 1`] = `
 "[33mgrade = (student, period=([34mif[33m b? [34mthen[33m [32m7[33m [34melse[33m [32m6[33m)) ->[39m
   [34mif[39m student.excellentWork
     [31m\\"A+\\"[39m
@@ -886,7 +886,7 @@ exports[`should color coffeescript correctly 1`] = `
 "
 `;
 
-exports[`should color coq correctly 1`] = `
+exports[`highlight() should color coq correctly 1`] = `
 "[34mInductive[39m seq : nat -> [34mSet[39m :=
 | [36m[2mniln[22m[39m : seq [32m0[39m
 | [36m[2mconsn[22m[39m : [34mforall[39m n : nat, nat -> seq n -> seq (S n).
@@ -931,7 +931,7 @@ exports[`should color coq correctly 1`] = `
 "
 `;
 
-exports[`should color cos correctly 1`] = `
+exports[`highlight() should color cos correctly 1`] = `
 "[34m#dim[39m test [34mas[39m [36m%Library.Integer[39m
 [34mSET[39m test = [32m123.099[39m
 [34mset[39m ^global = [36m%request.Content[39m
@@ -956,7 +956,7 @@ exports[`should color cos correctly 1`] = `
 "
 `;
 
-exports[`should color cpp correctly 1`] = `
+exports[`highlight() should color cpp correctly 1`] = `
 "[90m#[90minclude[90m [90m<iostream>[90m[39m
 
 [33m[34mint[33m main([34mint[33m argc, [34mchar[33m *argv[]) [39m{
@@ -974,7 +974,7 @@ exports[`should color cpp correctly 1`] = `
 "
 `;
 
-exports[`should color cpp-comment correctly 1`] = `
+exports[`highlight() should color cpp-comment correctly 1`] = `
 "[32m/*[39m
 [32mTo use this program, compile it -- if you can -- and then type something like:[39m
 [32m[39m
@@ -994,7 +994,7 @@ exports[`should color cpp-comment correctly 1`] = `
 "
 `;
 
-exports[`should color crmsh correctly 1`] = `
+exports[`highlight() should color crmsh correctly 1`] = `
 "[34mnode[39m webui
 [34mnode[39m 168633611: node1
 [34mrsc_template[39m web-server apache \\\\
@@ -1046,7 +1046,7 @@ exports[`should color crmsh correctly 1`] = `
 "
 `;
 
-exports[`should color crystal correctly 1`] = `
+exports[`highlight() should color crystal correctly 1`] = `
 "[34m[34mclass[34m Person[39m
   [33m[34mdef[33m initialize[39m(@name : String)
   [34mend[39m
@@ -1079,7 +1079,7 @@ s = [31m<<-'STR'[39m
 "
 `;
 
-exports[`should color cs correctly 1`] = `
+exports[`highlight() should color cs correctly 1`] = `
 "[34musing[39m System.IO.Compression;
 
 [90m#[90mpragma[90m [90mwarning[90m disable 414, 3021[39m
@@ -1099,7 +1099,7 @@ exports[`should color cs correctly 1`] = `
 "
 `;
 
-exports[`should color csp correctly 1`] = `
+exports[`highlight() should color csp correctly 1`] = `
 "Content-Security-Policy:
     [34mdefault-src[39m [31m'self'[39m;
     [34mstyle-src[39m [31m'self'[39m css.example.com;
@@ -1108,7 +1108,7 @@ exports[`should color csp correctly 1`] = `
 "
 `;
 
-exports[`should color css correctly 1`] = `
+exports[`highlight() should color css correctly 1`] = `
 "@[34mfont-face[39m {
   font-family: Chunkfive; src: [36murl[39m([31m'Chunkfive.otf'[39m);
 }
@@ -1127,7 +1127,7 @@ body, .usertext {
 "
 `;
 
-exports[`should color d correctly 1`] = `
+exports[`highlight() should color d correctly 1`] = `
 "[90m#!/usr/bin/rdmd[39m
 [32m// Computes average line length for standard input.[39m
 [34mimport[39m std.stdio;
@@ -1175,7 +1175,7 @@ exports[`should color d correctly 1`] = `
 "
 `;
 
-exports[`should color dart correctly 1`] = `
+exports[`highlight() should color dart correctly 1`] = `
 "[34mlibrary[39m app;
 [34mimport[39m [31m'dart:html'[39m;
 
@@ -1215,7 +1215,7 @@ checkVersion() [34masync[39m {
 "
 `;
 
-exports[`should color delphi correctly 1`] = `
+exports[`highlight() should color delphi correctly 1`] = `
 "TList = [34mClass[39m(TObject)
 [34mPrivate[39m
   Some: [34mString[39m;
@@ -1249,7 +1249,7 @@ exports[`should color delphi correctly 1`] = `
 "
 `;
 
-exports[`should color diff correctly 1`] = `
+exports[`highlight() should color diff correctly 1`] = `
 "[32mIndex: languages/ini.js[39m
 [32m===================================================================[39m
 [32m--- languages/ini.js    (revision 199)[39m
@@ -1283,7 +1283,7 @@ exports[`should color diff correctly 1`] = `
 "
 `;
 
-exports[`should color django correctly 1`] = `
+exports[`highlight() should color django correctly 1`] = `
 "{% [34m[34mif[34m[39m articles|[34mlength[39m %}
 {% [34m[34mfor[34m[39m article [34min[39m articles %}
 
@@ -1302,7 +1302,7 @@ exports[`should color django correctly 1`] = `
 "
 `;
 
-exports[`should color dns correctly 1`] = `
+exports[`highlight() should color dns correctly 1`] = `
 "[90m$ORIGIN[39m example.com.    [32m; designates the start of this zone file in the namespace[39m
 [90m$TTL[39m [32m1h[39m                 [32m; default expiration time of all resource records without their own TTL value[39m
 example.com.  [34mIN[39m  [34mSOA[39m   ns.example.com. username.example.com. ( [32m2007120710[39m [32m1d[39m [32m2h[39m [32m4w[39m [32m1h[39m )
@@ -1323,7 +1323,7 @@ mail3         [34mIN[39m  [34mA[39m     [32m192.0.2.5[39m             [32
 "
 `;
 
-exports[`should color dockerfile correctly 1`] = `
+exports[`highlight() should color dockerfile correctly 1`] = `
 "[32m# Example instructions from https://docs.docker.com/reference/builder/[39m
 [34mFROM[39m ubuntu:[32m14.04[39m
 
@@ -1383,7 +1383,7 @@ exports[`should color dockerfile correctly 1`] = `
 "
 `;
 
-exports[`should color dos correctly 1`] = `
+exports[`highlight() should color dos correctly 1`] = `
 "[36mcd[39m \\\\
 [36mcopy[39m a b
 [36mping[39m [32m192[39m.[32m168[39m.[32m0[39m.[32m1[39m
@@ -1411,7 +1411,7 @@ sfc /SCANNOW
 "
 `;
 
-exports[`should color dsconfig correctly 1`] = `
+exports[`highlight() should color dsconfig correctly 1`] = `
 "[32m# Create client connection policies[39m
 [34mdsconfig[39m [36mcreate-client-connection-policy[39m \\\\
   [36m--policy-name[39m [31m\\"Restrictive Client Connection Policy\\"[39m \\\\
@@ -1437,7 +1437,7 @@ exports[`should color dsconfig correctly 1`] = `
 "
 `;
 
-exports[`should color dts correctly 1`] = `
+exports[`highlight() should color dts correctly 1`] = `
 "[32m/*[39m
 [32m *  Copyright (C) 2011 - 2014 Xilinx[39m
 [32m *[39m
@@ -1512,7 +1512,7 @@ exports[`should color dts correctly 1`] = `
 "
 `;
 
-exports[`should color dust correctly 1`] = `
+exports[`highlight() should color dust correctly 1`] = `
 "[90m<[34mh3[90m>[39mHours[90m</[34mh3[90m>[39m
 
 [90m<[34mul[90m>[39m
@@ -1523,7 +1523,7 @@ exports[`should color dust correctly 1`] = `
 "
 `;
 
-exports[`should color ebnf correctly 1`] = `
+exports[`highlight() should color ebnf correctly 1`] = `
 "[32m(* line comment *)[39m
 
 rule        =   [optional] , symbol , { letters } , ( digit | symbol ) ;
@@ -1539,7 +1539,7 @@ letter      =   [31m\\"A\\"[39m | [31m\\"B\\"[39m | [31m\\"C\\"[39m | [31
 "
 `;
 
-exports[`should color elixir correctly 1`] = `
+exports[`highlight() should color elixir correctly 1`] = `
 "[34m[34mdefrecord[34m Person[39m, first_name: [34mnil[39m, last_name: [31m\\"Dudington\\"[39m [34mdo[39m
   [33m[34mdef[33m name[39m record [34mdo[39m [32m# huh ?[39m
     [31m\\"#{record.first_name} #{record.last_name}\\"[39m
@@ -1592,7 +1592,7 @@ greeter.([31m\\"Bob\\"[39m)
 "
 `;
 
-exports[`should color elm correctly 1`] = `
+exports[`highlight() should color elm correctly 1`] = `
 "[34mimport[39m Html [34mexposing[39m (div, button, text)
 [34mimport[39m Html.App [34mexposing[39m (beginnerProgram)
 [34mimport[39m Html.Events [34mexposing[39m (onClick)
@@ -1611,7 +1611,7 @@ view model =
 "
 `;
 
-exports[`should color erb correctly 1`] = `
+exports[`highlight() should color erb correctly 1`] = `
 "[32m<%# this is a comment %>[39m
 
 [90m<[34m%[90m[39m @posts.each [34mdo[39m |post| [90m%>[39m
@@ -1625,7 +1625,7 @@ exports[`should color erb correctly 1`] = `
 "
 `;
 
-exports[`should color erlang correctly 1`] = `
+exports[`highlight() should color erlang correctly 1`] = `
 "[34m-module[39m(ssh_cli).
 
 [34m-behaviour[39m(ssh_channel).
@@ -1689,7 +1689,7 @@ exports[`should color erlang correctly 1`] = `
 "
 `;
 
-exports[`should color erlang-repl correctly 1`] = `
+exports[`highlight() should color erlang-repl correctly 1`] = `
 "[90m1> [39mStr = [31m\\"abcd\\"[39m.
 [31m\\"abcd\\"[39m
 [90m2> [39mL = test:length(Str).
@@ -1720,16 +1720,16 @@ ok
 "
 `;
 
-exports[`should color excel correctly 1`] = `"=[36mIF[39m(C10 <= [32m275.5[39m, [31m\\"Unprofitable\\"[39m, [31m\\"Profitable\\"[39m)"`;
+exports[`highlight() should color excel correctly 1`] = `"=[36mIF[39m(C10 <= [32m275.5[39m, [31m\\"Unprofitable\\"[39m, [31m\\"Profitable\\"[39m)"`;
 
-exports[`should color fix correctly 1`] = `
+exports[`highlight() should color fix correctly 1`] = `
 "[36m8[39m=[31mFIX.4.2[39m␁[36m9[39m=[31m0[39m␁[36m35[39m=[31m8[39m␁[36m49[39m=[31mSENDERTEST[39m␁[36m56[39m=[31mTARGETTEST[39m␁[36m34[39m=[31m00000001526[39m␁[36m52[39m=[31m20120429-13:30:08.137[39m␁[36m1[39m=[31mABC12345[39m␁[36m11[39m=[31m2012abc1234[39m␁[36m14[39m=[31m100[39m␁[36m17[39m=[31m201254321[39m␁[36m20[39m=[31m0[39m␁[36m30[39m=[31mNYSE[39m␁[36m31[39m=[31m108.20[39m␁[36m32[39m=[31m100[39m␁[36m38[39m=[31m100[39m␁[36m39[39m=[31m2[39m␁[36m40[39m=[31m1[39m␁[36m47[39m=[31mA[39m␁[36m54[39m=[31m5[39m␁[36m55[39m=[31mBRK[39m␁[36m59[39m=[31m2[39m␁[36m60[39m=[31m20120429-13:30:08.000[39m␁[36m65[39m=[31mB[39m␁[36m76[39m=[31mBROKER[39m␁[36m84[39m=[31m0[39m␁[36m100[39m=[31mNYSE[39m␁[36m111[39m=[31m100[39m␁[36m150[39m=[31m2[39m␁[36m151[39m=[31m0[39m␁[36m167[39m=[31mCS[39m␁[36m377[39m=[31mN[39m␁[36m10000[39m=[31mSampleCustomTag[39m␁[36m10[39m=[31m123[39m␁[36m[39m
 [36m[39m
 [36m8[39m=[31mFIX.4.2[39m[36m9[39m=[31m0[39m[36m35[39m=[31m8[39m[36m49[39m=[31mSENDERTEST[39m[36m56[39m=[31mTARGETTEST[39m[36m34[39m=[31m00000001526[39m[36m52[39m=[31m20120429-13:30:08.137[39m[36m1[39m=[31mABC12345[39m[36m11[39m=[31m2012abc1234[39m[36m14[39m=[31m100[39m[36m17[39m=[31m201254321[39m[36m20[39m=[31m0[39m[36m30[39m=[31mNYSE[39m[36m31[39m=[31m108.20[39m[36m32[39m=[31m100[39m[36m38[39m=[31m100[39m[36m39[39m=[31m2[39m[36m40[39m=[31m1[39m[36m47[39m=[31mA[39m[36m54[39m=[31m5[39m[36m55[39m=[31mBRK[39m[36m59[39m=[31m2[39m[36m60[39m=[31m20120429-13:30:08.000[39m[36m65[39m=[31mB[39m[36m76[39m=[31mBROKER[39m[36m84[39m=[31m0[39m[36m100[39m=[31mNYSE[39m[36m111[39m=[31m100[39m[36m150[39m=[31m2[39m[36m151[39m=[31m0[39m[36m167[39m=[31mCS[39m[36m377[39m=[31mN[39m[36m10000[39m=[31mSampleCustomTag[39m[36m10[39m=[31m123[39m
 [31m[39m"
 `;
 
-exports[`should color flix correctly 1`] = `
+exports[`highlight() should color flix correctly 1`] = `
 "[32m/**[39m
 [32m * An example of Flix for syntax highlighting.[39m
 [32m */[39m
@@ -1782,7 +1782,7 @@ exports[`should color flix correctly 1`] = `
 "
 `;
 
-exports[`should color fortran correctly 1`] = `
+exports[`highlight() should color fortran correctly 1`] = `
 "[33m[34msubroutine[33m[39m test_sub(k)
     [34mimplicit[39m [34mnone[39m
 
@@ -1808,7 +1808,7 @@ exports[`should color fortran correctly 1`] = `
 "
 `;
 
-exports[`should color fsharp correctly 1`] = `
+exports[`highlight() should color fsharp correctly 1`] = `
 "[34mopen[39m System
 
 [32m// Single line comment...[39m
@@ -1860,7 +1860,7 @@ exports[`should color fsharp correctly 1`] = `
 "
 `;
 
-exports[`should color gams correctly 1`] = `
+exports[`highlight() should color gams correctly 1`] = `
 "[34mSETS[39m
     I   [32mcanning plants[39m   / SEATTLE, SAN-DIEGO /
     J   [32mmarkets[39m          / NEW-YORK, CHICAGO, TOPEKA / ;
@@ -1895,7 +1895,7 @@ exports[`should color gams correctly 1`] = `
 "
 `;
 
-exports[`should color gauss correctly 1`] = `
+exports[`highlight() should color gauss correctly 1`] = `
 "[32m// This is a test[39m
 [90m#[90minclude[90m pv.sdf[39m
 
@@ -1927,7 +1927,7 @@ s = [31m\\"{% test string %}\\"[39m;
 "
 `;
 
-exports[`should color gcode correctly 1`] = `
+exports[`highlight() should color gcode correctly 1`] = `
 "[90mO003[39m [32m(DIAMOND SQUARE)[39m
 N2 [34mG54[39m [34mG90[39m [34mG49[39m [34mG80[39m
 N3 [34mM6[39m T[32m1[39m [32m(1.ENDMILL)[39m
@@ -1962,7 +1962,7 @@ N28 [36mVZOFZ[39m=[32m652.9658[39m
 "
 `;
 
-exports[`should color gherkin correctly 1`] = `
+exports[`highlight() should color gherkin correctly 1`] = `
 "[32m# language: en[39m
 [34mFeature[39m: Addition
   In order to avoid silly mistakes
@@ -1991,7 +1991,7 @@ exports[`should color gherkin correctly 1`] = `
 "
 `;
 
-exports[`should color glsl correctly 1`] = `
+exports[`highlight() should color glsl correctly 1`] = `
 "[32m// vertex shader[39m
 [90m#version 150[39m
 [34min[39m  [36m[2mvec2[22m[39m in_Position;
@@ -2032,7 +2032,7 @@ exports[`should color glsl correctly 1`] = `
 "
 `;
 
-exports[`should color go correctly 1`] = `
+exports[`highlight() should color go correctly 1`] = `
 "[34mpackage[39m main
 
 [34mimport[39m [31m\\"fmt\\"[39m
@@ -2048,7 +2048,7 @@ exports[`should color go correctly 1`] = `
 "
 `;
 
-exports[`should color go-swift-like correctly 1`] = `
+exports[`highlight() should color go-swift-like correctly 1`] = `
 "[33m[34mfunc[33m makeRequest(method [34mstring[33m, url [34mstring[33m, cb [34mfunc[33m(error, io.ReadCloser))[39m {
     req, _ := http.NewRequest(method, url, [34mnil[39m)
     resp, err := http.DefaultClient.Do(req)
@@ -2067,7 +2067,7 @@ exports[`should color go-swift-like correctly 1`] = `
 "
 `;
 
-exports[`should color golo correctly 1`] = `
+exports[`highlight() should color golo correctly 1`] = `
 "[34mmodule[39m hello
 
 [34mfunction[39m dyno = -> [34mDynamicObject[39m()
@@ -2086,7 +2086,7 @@ exports[`should color golo correctly 1`] = `
 "
 `;
 
-exports[`should color gradle correctly 1`] = `
+exports[`highlight() should color gradle correctly 1`] = `
 "
 apply plugin: [31m'android'[39m
 
@@ -2152,7 +2152,7 @@ android {
 "
 `;
 
-exports[`should color groovy correctly 1`] = `
+exports[`highlight() should color groovy correctly 1`] = `
 "[90m#!/usr/bin/env groovy[39m
 [34mpackage[39m model
 
@@ -2212,7 +2212,7 @@ exports[`should color groovy correctly 1`] = `
 "
 `;
 
-exports[`should color haml correctly 1`] = `
+exports[`highlight() should color haml correctly 1`] = `
 "[90m!!! XML[39m
 [90m%html[39m
 [90m  %body[39m
@@ -2230,7 +2230,7 @@ exports[`should color haml correctly 1`] = `
 "
 `;
 
-exports[`should color handlebars correctly 1`] = `
+exports[`highlight() should color handlebars correctly 1`] = `
 "[90m<[34mdiv[90m [36mclass[90m=[31m\\"entry\\"[90m>[39m
   [32m{{!-- only show if author exists --}}[39m
   {{#[34mif[39m author}}
@@ -2240,7 +2240,7 @@ exports[`should color handlebars correctly 1`] = `
 "
 `;
 
-exports[`should color haskell correctly 1`] = `
+exports[`highlight() should color haskell correctly 1`] = `
 "[90m{-# LANGUAGE TypeSynonymInstances #-}[39m
 [34mmodule[39m Network.UDP
 ( [36m[2mDataPacket(..)[22m[39m
@@ -2282,7 +2282,7 @@ pingUDPPort s a = sendTo s ([36m[2mStrict[22m[39m.singleton [32m0[39m) a >
 "
 `;
 
-exports[`should color haxe correctly 1`] = `
+exports[`highlight() should color haxe correctly 1`] = `
 "[34mpackage[39m my.[34mpackage[39m;
 
 [90m#[90mif[90m js[39m
@@ -2427,7 +2427,7 @@ exports[`should color haxe correctly 1`] = `
 }"
 `;
 
-exports[`should color hsp correctly 1`] = `
+exports[`highlight() should color hsp correctly 1`] = `
 "[90m#[90minclude[90m [90m\\"foo.hsp\\"[90m[39m
 
 	[32m// line comment[39m
@@ -2454,7 +2454,7 @@ exports[`should color hsp correctly 1`] = `
 "
 `;
 
-exports[`should color htmlbars correctly 1`] = `
+exports[`highlight() should color htmlbars correctly 1`] = `
 "[90m<[34mdiv[90m [36mclass[90m=[31m\\"entry\\"[90m>[39m
   [32m{{!-- only output this author names if an author exists --}}[39m
   {{#[34mif[39m author}}
@@ -2467,7 +2467,7 @@ exports[`should color htmlbars correctly 1`] = `
 "
 `;
 
-exports[`should color http correctly 1`] = `
+exports[`highlight() should color http correctly 1`] = `
 "[34mPOST[39m [31m/task?id=1[39m HTTP/1.1
 Host: example.org
 Content-Type: application/json; charset=utf-8
@@ -2484,7 +2484,7 @@ Content-Length: 137
 "
 `;
 
-exports[`should color hy correctly 1`] = `
+exports[`highlight() should color hy correctly 1`] = `
 "[90m#!/usr/bin/env hy[39m
 
 ([34mimport[39m os.path)
@@ -2525,7 +2525,7 @@ exports[`should color hy correctly 1`] = `
 "
 `;
 
-exports[`should color inform7 correctly 1`] = `
+exports[`highlight() should color inform7 correctly 1`] = `
 "Book 1 - Language Definition Testing File
 
 [32m[Comments in Inform 7 can be [32m[nested][32m inside one another][39m
@@ -2552,7 +2552,7 @@ lua       [31m\\"Embedded scripting\\"[39m
 erlang    [31m\\"High-concurrency server applications\\"[39m"
 `;
 
-exports[`should color ini correctly 1`] = `
+exports[`highlight() should color ini correctly 1`] = `
 "[32m; boilerplate[39m
 [package]
 [36mname[39m = [31m\\"some_name\\"[39m
@@ -2568,7 +2568,7 @@ exports[`should color ini correctly 1`] = `
 "
 `;
 
-exports[`should color irpf90 correctly 1`] = `
+exports[`highlight() should color irpf90 correctly 1`] = `
 " [34mBEGIN_PROVIDER[39m [ [34minteger[39m(bit_kind), psi_det_sorted_bit, (N_int,[32m2[39m,psi_det_size) ]
 &[34mBEGIN_PROVIDER[39m [ [34mdouble[39m [34mprecision[39m, psi_coef_sorted_bit, (psi_det_size,N_states) ]
  [34mimplicit[39m [34mnone[39m
@@ -2609,7 +2609,7 @@ exports[`should color irpf90 correctly 1`] = `
 "
 `;
 
-exports[`should color java correctly 1`] = `
+exports[`highlight() should color java correctly 1`] = `
 "[32m/**[39m
 [32m * [32m@author[32m John Smith <john.smith@example.com>[39m
 [32m*/[39m
@@ -2629,7 +2629,7 @@ exports[`should color java correctly 1`] = `
 "
 `;
 
-exports[`should color javascript correctly 1`] = `
+exports[`highlight() should color javascript correctly 1`] = `
 "[33m[34mfunction[33m $initHighlight(block, cls) [39m{
   [34mtry[39m {
     [34mif[39m (cls.search([31m/\\\\bno\\\\-highlight\\\\b/[39m) != [32m-1[39m)
@@ -2648,7 +2648,7 @@ exports[`should color javascript correctly 1`] = `
 "
 `;
 
-exports[`should color javascript-sample1 correctly 1`] = `
+exports[`highlight() should color javascript-sample1 correctly 1`] = `
 "[32m// This was mis-detected as HSP and Perl because parsing of[39m
 [32m// keywords in those languages allowed adjacent dots[39m
 
@@ -2672,7 +2672,7 @@ exports[`should color javascript-sample1 correctly 1`] = `
 "
 `;
 
-exports[`should color javascript-short-plain correctly 1`] = `
+exports[`highlight() should color javascript-short-plain correctly 1`] = `
 "[34mconst[39m cluster = [36mrequire[39m([31m'cluster'[39m);
 [34mconst[39m numCPUs = [36mrequire[39m([31m'os'[39m).cpus().length;
 
@@ -2684,7 +2684,7 @@ exports[`should color javascript-short-plain correctly 1`] = `
 "
 `;
 
-exports[`should color jboss-cli correctly 1`] = `
+exports[`highlight() should color jboss-cli correctly 1`] = `
 "[34mjms-queue[39m add --queue-address=myQueue --entries=queue/myQueue
 
 [34mdeploy[39m [31m/path/to/file.war[39m
@@ -2712,7 +2712,7 @@ exports[`should color jboss-cli correctly 1`] = `
 "
 `;
 
-exports[`should color json correctly 1`] = `
+exports[`highlight() should color json correctly 1`] = `
 "[
   {
     [36m\\"title\\"[39m: [31m\\"apples\\"[39m,
@@ -2728,7 +2728,7 @@ exports[`should color json correctly 1`] = `
 "
 `;
 
-exports[`should color julia correctly 1`] = `
+exports[`highlight() should color julia correctly 1`] = `
 "[32m### Types[39m
 
 [32m# Old-style definitions[39m
@@ -2836,7 +2836,7 @@ exports[`should color julia correctly 1`] = `
 "
 `;
 
-exports[`should color julia-repl correctly 1`] = `
+exports[`highlight() should color julia-repl correctly 1`] = `
 "[90mjulia>[39m [34mfunction[39m foo(x) x + [32m1[39m [34mend[39m
 foo (generic function with 1 method)
 
@@ -2876,7 +2876,7 @@ abstract type Foo end
 "
 `;
 
-exports[`should color kotlin correctly 1`] = `
+exports[`highlight() should color kotlin correctly 1`] = `
 "[34mimport[39m kotlin.lang.test
 
 [34m[34mtrait[34m A [39m{
@@ -2892,7 +2892,7 @@ exports[`should color kotlin correctly 1`] = `
 "
 `;
 
-exports[`should color lasso correctly 1`] = `
+exports[`highlight() should color lasso correctly 1`] = `
 "[90m<?LassoScript[39m
 [32m/* Lasso 8 */[39m
   [36mlocal[39m([31m'query'[39m = [31m'SELECT * FROM \`'[39m+[36mvar[39m:[31m'table'[39m+[31m'\` WHERE \`id\` > 10[39m
@@ -2944,7 +2944,7 @@ exports[`should color lasso correctly 1`] = `
 "
 `;
 
-exports[`should color ldif correctly 1`] = `
+exports[`highlight() should color ldif correctly 1`] = `
 "[32m# Example LDAP user[39m
 dn: uid=user.0,ou=People,dc=example,dc=com
 objectClass: top
@@ -2972,7 +2972,7 @@ description: This is the description for Morris Day.
 "
 `;
 
-exports[`should color leaf correctly 1`] = `
+exports[`highlight() should color leaf correctly 1`] = `
 "[33m[34m#[33mempty(friends)[39m {
     Try adding some friends!
 } [33m[34m##[33mloop(friends, [31m\\"friend\\"[33m)[39m {
@@ -2997,7 +2997,7 @@ exports[`should color leaf correctly 1`] = `
 "
 `;
 
-exports[`should color less correctly 1`] = `
+exports[`highlight() should color less correctly 1`] = `
 "[34m@import[39m [31m\\"fruits\\"[39m;
 
 @rhythm: [32m1.5em[39m;
@@ -3028,7 +3028,7 @@ section > .foo + #bar:hover [href*=\\"less\\"] {
 "
 `;
 
-exports[`should color lisp correctly 1`] = `
+exports[`highlight() should color lisp correctly 1`] = `
 "[90m#!/usr/bin/env csi[39m
 
 ([34mdefun[39m prompt-for-cd ()
@@ -3053,7 +3053,7 @@ exports[`should color lisp correctly 1`] = `
   )"
 `;
 
-exports[`should color livecodeserver correctly 1`] = `
+exports[`highlight() should color livecodeserver correctly 1`] = `
 "[90m<?rev[39m
 
 [36mglobal[39m gControllerHandlers, gData
@@ -3087,7 +3087,7 @@ exports[`should color livecodeserver correctly 1`] = `
 "
 `;
 
-exports[`should color livescript correctly 1`] = `
+exports[`highlight() should color livescript correctly 1`] = `
 "[32m# take the first n objects from a list[39m
 [33mtake = (n, [x, ...xs]:list) -->[39m
   | n <= [32m0[39m     => []
@@ -3129,7 +3129,7 @@ t2 =
 "
 `;
 
-exports[`should color llvm correctly 1`] = `
+exports[`highlight() should color llvm correctly 1`] = `
 "[32m; ModuleID = 'test.c'[39m
 [32m[39m[34mtarget[39m [34mdatalayout[39m = [31m\\"e-m:e-i64:64-f80:128-n8:16:32:64-S128\\"[39m
 [34mtarget[39m [34mtriple[39m = [31m\\"x86_64-unknown-linux-gnu\\"[39m
@@ -3194,7 +3194,7 @@ exports[`should color llvm correctly 1`] = `
 "
 `;
 
-exports[`should color lsl correctly 1`] = `
+exports[`highlight() should color lsl correctly 1`] = `
 "default
 {
     state_entry()
@@ -3210,7 +3210,7 @@ exports[`should color lsl correctly 1`] = `
 "
 `;
 
-exports[`should color lua correctly 1`] = `
+exports[`highlight() should color lua correctly 1`] = `
 "[32m--[[[39m
 [32mSimple signal/slot implementation[39m
 [32m]][39m
@@ -3246,7 +3246,7 @@ signal:emit([31m'Answer to Life, the Universe, and Everything:'[39m, [32m42[
 "
 `;
 
-exports[`should color makefile correctly 1`] = `
+exports[`highlight() should color makefile correctly 1`] = `
 "[32m# Makefile[39m
 
 BUILDDIR      = _build
@@ -3263,7 +3263,7 @@ clean:
 "
 `;
 
-exports[`should color markdown correctly 1`] = `
+exports[`highlight() should color markdown correctly 1`] = `
 "# hello world
 
 you can write text [[31mwith links[39m]([4mhttp://example.com[24m) inline or [[31mlink references[39m][1].
@@ -3290,7 +3290,7 @@ hello world
 "
 `;
 
-exports[`should color mathematica correctly 1`] = `
+exports[`highlight() should color mathematica correctly 1`] = `
 "[32m(* ::Package:: *)[39m
 
 [32m(* Mathematica Package *)[39m
@@ -3308,7 +3308,7 @@ SomeFn[ns_List] := [34mFold[39m[[34mFunction[39m[{x, y}, x + y], [32m0[39m
 "
 `;
 
-exports[`should color matlab correctly 1`] = `
+exports[`highlight() should color matlab correctly 1`] = `
 "n = [32m20[39m; [32m% number of points[39m
 points = [random([31m'unid'[39m, [32m100[39m, n, [32m1[39m), random([31m'unid'[39m, [32m100[39m, n, [32m1[39m)];
 len = [36mzeros[39m([32m1[39m, n - [32m1[39m);
@@ -3357,7 +3357,7 @@ flattenedcell = [36mcat[39m([32m1[39m, cell2flatten{:});
 "
 `;
 
-exports[`should color maxima correctly 1`] = `
+exports[`highlight() should color maxima correctly 1`] = `
 "[32m/* Maxima computer algebra system */[39m
 
 [32m/* symbolic constants */[39m
@@ -3418,7 +3418,7 @@ foo (x, y, z) :=
 "
 `;
 
-exports[`should color mel correctly 1`] = `
+exports[`highlight() should color mel correctly 1`] = `
 "[34mproc[39m [34mstring[39m[] getSelectedLights()
 
 {
@@ -3447,7 +3447,7 @@ exports[`should color mel correctly 1`] = `
 "
 `;
 
-exports[`should color mercury correctly 1`] = `
+exports[`highlight() should color mercury correctly 1`] = `
 "[32m% \\"Hello World\\" in Mercury.[39m
 :- [34mmodule[39m hello.
 
@@ -3475,7 +3475,7 @@ filter(P, [X | Xs], Ys, Zs) :-
 "
 `;
 
-exports[`should color mipsasm correctly 1`] = `
+exports[`highlight() should color mipsasm correctly 1`] = `
 "[90m.text[39m
 [90m.global[39m AckermannFunc
 
@@ -3501,7 +3501,7 @@ LABEL_IF:   [34mbne [39m    $[36ma0[39m, $[36mzero[39m, LABEL_ELSE_IF
 "
 `;
 
-exports[`should color mizar correctly 1`] = `
+exports[`highlight() should color mizar correctly 1`] = `
 "[32m::: ## Lambda calculus[39m
 
 [34menviron[39m
@@ -3590,7 +3590,7 @@ A6: v1 is_a_proper_prefix_of v [34mby[39m TREES_1:def 2;
 [34mend[39m;"
 `;
 
-exports[`should color mojolicious correctly 1`] = `
+exports[`highlight() should color mojolicious correctly 1`] = `
 "%layout [31m'bootstrap'[39m;
 % title [31m\\"Import your subs\\"[39m;
 %= form_for [31m'/settings/import'[39m => ([31mmethod =>[39m [31m'post'[39m, [31menctype =>[39m [31m'multipart/form-data'[39m) => begin
@@ -3614,7 +3614,7 @@ exports[`should color mojolicious correctly 1`] = `
 "
 `;
 
-exports[`should color monkey correctly 1`] = `
+exports[`highlight() should color monkey correctly 1`] = `
 "[90m#IMAGE_FILES=\\"*.png|*.jpg\\"[39m[90m[39m
 [90m#SOUND_FILES=\\"*.wav|*.ogg\\"[39m[90m[39m
 [90m#MUSIC_FILES=\\"*.wav|*.ogg\\"[39m[90m[39m
@@ -3655,7 +3655,7 @@ exports[`should color monkey correctly 1`] = `
 "
 `;
 
-exports[`should color moonscript correctly 1`] = `
+exports[`highlight() should color moonscript correctly 1`] = `
 "[36mprint[39m [31m\\"I am #{[36mmath[31m.random! * [32m100[31m}% sure.\\"[39m
 [33m[39m
 [33mmy_function = (name=[31m\\"something\\"[33m, height=[32m100[33m) ->[39m
@@ -3696,7 +3696,7 @@ inv\\\\add_item [31m\\"pants\\"[39m
 "
 `;
 
-exports[`should color n1ql correctly 1`] = `
+exports[`highlight() should color n1ql correctly 1`] = `
 "[34mSELECT[39m *
 [34mFROM[39m \`beer-sample\`
 [34mWHERE[39m brewery_id [34mIS[39m [34mNOT[39m [34mMISSING[39m [34mAND[39m [36mtype[39m=[31m\\"beer\\"[39m
@@ -3719,7 +3719,7 @@ exports[`should color n1ql correctly 1`] = `
 "
 `;
 
-exports[`should color nginx correctly 1`] = `
+exports[`highlight() should color nginx correctly 1`] = `
 "user  www www;
 worker_processes  [32m2[39m;
 pid /var/run/nginx.pid;
@@ -3770,7 +3770,7 @@ http {
 "
 `;
 
-exports[`should color nimrod correctly 1`] = `
+exports[`highlight() should color nimrod correctly 1`] = `
 "[34mimport[39m module1, module2, module3
 [34mfrom[39m module4 [34mimport[39m [34mnil[39m
 
@@ -3795,7 +3795,7 @@ exports[`should color nimrod correctly 1`] = `
 "
 `;
 
-exports[`should color nix correctly 1`] = `
+exports[`highlight() should color nix correctly 1`] = `
 "{ stdenv, foo, bar ? [34mfalse[39m, ... }:
 
 [32m/*[39m
@@ -3823,7 +3823,7 @@ exports[`should color nix correctly 1`] = `
 "
 `;
 
-exports[`should color nsis correctly 1`] = `
+exports[`highlight() should color nsis correctly 1`] = `
 "[32m/*[39m
 [32m  NSIS Scheme[39m
 [32m  for highlight.js[39m
@@ -3864,7 +3864,7 @@ exports[`should color nsis correctly 1`] = `
 "
 `;
 
-exports[`should color objectivec correctly 1`] = `
+exports[`highlight() should color objectivec correctly 1`] = `
 "[90m#import [90m<UIKit/UIKit.h>[90m[39m
 [90m#import [90m\\"Dependency.h\\"[90m[39m
 
@@ -3881,7 +3881,7 @@ exports[`should color objectivec correctly 1`] = `
 "
 `;
 
-exports[`should color ocaml correctly 1`] = `
+exports[`highlight() should color ocaml correctly 1`] = `
 "[32m(* This is a[39m
 [32mmultiline, [32m(* nested *)[32m comment *)[39m
 [34mtype[39m point = { x: [36mfloat[39m; y: [36mfloat[39m };;
@@ -3908,7 +3908,7 @@ exports[`should color ocaml correctly 1`] = `
 "
 `;
 
-exports[`should color openscad correctly 1`] = `
+exports[`highlight() should color openscad correctly 1`] = `
 "[90m[90muse[90m <write.scad>[39m
 [90m[90minclude[90m <../common/base.scad>[39m
 
@@ -3926,7 +3926,7 @@ foobar();
 [36mecho[39m([31m\\"done\\"[39m);"
 `;
 
-exports[`should color oxygene correctly 1`] = `
+exports[`highlight() should color oxygene correctly 1`] = `
 "[34mnamespace[39m LinkedList;
 
 [34minterface[39m
@@ -3986,7 +3986,7 @@ exports[`should color oxygene correctly 1`] = `
 "
 `;
 
-exports[`should color parser3 correctly 1`] = `
+exports[`highlight() should color parser3 correctly 1`] = `
 "[90m@CLASS[39m
 base
 
@@ -4024,7 +4024,7 @@ class
 "
 `;
 
-exports[`should color perl correctly 1`] = `
+exports[`highlight() should color perl correctly 1`] = `
 "[32m# loads object[39m
 [33m[34msub[33m load[39m
 [33m[39m{
@@ -4069,7 +4069,7 @@ exports[`should color perl correctly 1`] = `
 [32m[39m"
 `;
 
-exports[`should color pf correctly 1`] = `
+exports[`highlight() should color pf correctly 1`] = `
 "[32m# from the PF FAQ: http://www.openbsd.org/faq/pf/example1.html[39m
 
 [32m# macros[39m
@@ -4116,7 +4116,7 @@ comp3=[31m\\"192.168.0.3\\"[39m
 "
 `;
 
-exports[`should color php correctly 1`] = `
+exports[`highlight() should color php correctly 1`] = `
 "[34mrequire_once[39m [31m'Zend/Uri/Http.php'[39m;
 
 [34mnamespace[39m Location\\\\Web;
@@ -4172,7 +4172,7 @@ exports[`should color php correctly 1`] = `
 [32m[39m"
 `;
 
-exports[`should color pony correctly 1`] = `
+exports[`highlight() should color pony correctly 1`] = `
 "[34muse[39m [31m\\"collections\\"[39m
 
 [34m[34mclass[34m StopWatch[39m
@@ -4196,7 +4196,7 @@ exports[`should color pony correctly 1`] = `
 "
 `;
 
-exports[`should color powershell correctly 1`] = `
+exports[`highlight() should color powershell correctly 1`] = `
 "$initialDate = [datetime][31m'2013/1/8'[39m
 
 $rollingDate = $initialDate
@@ -4211,7 +4211,7 @@ $rollingDate = $initialDate
 "
 `;
 
-exports[`should color processing correctly 1`] = `
+exports[`highlight() should color processing correctly 1`] = `
 "[34mimport[39m java.util.LinkedList;
 [34mimport[39m java.awt.Point;
 
@@ -4232,7 +4232,7 @@ exports[`should color processing correctly 1`] = `
 "
 `;
 
-exports[`should color profile correctly 1`] = `
+exports[`highlight() should color profile correctly 1`] = `
 "       [32m261917242[39m function calls in [32m686.251[39m CPU seconds
 
        [34mncalls[39m  [34mtottime[39m  [34mfilename[39m:lineno(function)
@@ -4244,7 +4244,7 @@ exports[`should color profile correctly 1`] = `
 "
 `;
 
-exports[`should color prolog correctly 1`] = `
+exports[`highlight() should color prolog correctly 1`] = `
 "mergesort([],[]). [32m% special case[39m
 mergesort([A],[A]).
 mergesort([A,B|R],S) :-
@@ -4259,7 +4259,7 @@ split([A,B|R],[A|Ra],[B|Rb]) :-  split(R,Ra,Rb).
 "
 `;
 
-exports[`should color protobuf correctly 1`] = `
+exports[`highlight() should color protobuf correctly 1`] = `
 "[34mpackage[39m languages.protobuf;
 
 [34moption[39m java_package = [31m\\"org.highlightjs.languages.protobuf\\"[39m;
@@ -4285,7 +4285,7 @@ exports[`should color protobuf correctly 1`] = `
 }"
 `;
 
-exports[`should color puppet correctly 1`] = `
+exports[`highlight() should color puppet correctly 1`] = `
 "[32m# EC2 sample[39m
 
 [34mclass[39m ec2utils {
@@ -4322,7 +4322,7 @@ exports[`should color puppet correctly 1`] = `
 "
 `;
 
-exports[`should color purebasic correctly 1`] = `
+exports[`highlight() should color purebasic correctly 1`] = `
 "[32m; PureBASIC 5 - Syntax Highlighting Example[39m
 
 [34mEnumeration[39m Test 3 [34mStep[39m 10
@@ -4355,7 +4355,7 @@ StrangeProcedureCall ([31m\\"This command is split \\"[39m +
 "
 `;
 
-exports[`should color python correctly 1`] = `
+exports[`highlight() should color python correctly 1`] = `
 "[90m@requires_authorization[39m
 [33m[34mdef[33m somefunc(param1=[31m''[33m, param2=[32m0[33m):[39m
     [31mr'''A docstring'''[39m
@@ -4371,7 +4371,7 @@ exports[`should color python correctly 1`] = `
 "
 `;
 
-exports[`should color q correctly 1`] = `
+exports[`highlight() should color q correctly 1`] = `
 "[34mselect[39m time, price [34mby[39m date,stock [34mfrom[39m quote [36mwhere[39m price=([36mmax[39m;price)[36mfby[39m stock
 data:[36mraze[39m [36mvalue[39m [36mflip[39m trade
 [34mselect[39m vwap:size [36mwavg[39m price [34mby[39m [32m5[39m [36mxbar[39m time.minute [34mfrom[39m aapl [36mwhere[39m date within (.z.d[32m-10[39m;.z.d)
@@ -4383,7 +4383,7 @@ nor:{$[x=[32m2[39m*n:x div [32m2[39m;[36mraze[39m sqrt[[32m-2[39m*log n?
 mode:{[36mwhere[39m g=[36mmax[39m g:[36mcount[39m [36meach[39m [36mgroup[39m x}		[32m// mode function[39m"
 `;
 
-exports[`should color qml correctly 1`] = `
+exports[`highlight() should color qml correctly 1`] = `
 "[32m/****************************************************************************[39m
 [32m** QML with Highlight.js                                                  **/[39m
 [34mimport[39m QtQuick [32m2.5[39m [32m// good version[39m
@@ -4436,7 +4436,7 @@ Window {
 "
 `;
 
-exports[`should color r correctly 1`] = `
+exports[`highlight() should color r correctly 1`] = `
 "[34mlibrary[39m(ggplot2)
 
 centre <- [34mfunction[39m(x, type, [34m...[39m) {
@@ -4509,7 +4509,7 @@ foo %union% bar
 "
 `;
 
-exports[`should color rib correctly 1`] = `
+exports[`highlight() should color rib correctly 1`] = `
 "[34mFrameBegin[39m [32m0[39m
 [34mDisplay[39m [31m\\"Scene\\"[39m [31m\\"framebuffer\\"[39m [31m\\"rgb\\"[39m
 [34mOption[39m [31m\\"searchpath\\"[39m [31m\\"shader\\"[39m [31m\\"+&:/home/kew\\"[39m
@@ -4538,7 +4538,7 @@ exports[`should color rib correctly 1`] = `
 "
 `;
 
-exports[`should color roboconf correctly 1`] = `
+exports[`highlight() should color roboconf correctly 1`] = `
 "[32m# This is a comment[39m
 [34mimport[39m toto.graph;
 
@@ -4596,7 +4596,7 @@ mysql {
 "
 `;
 
-exports[`should color routeros correctly 1`] = `
+exports[`highlight() should color routeros correctly 1`] = `
 "[32m# Берем список DNS серверов из /ip dns[39m
  # Проверяем их доступность, 
 [32m# и только рабочие прописываем в настройки DHCP сервера[39m
@@ -4617,7 +4617,7 @@ exports[`should color routeros correctly 1`] = `
 "
 `;
 
-exports[`should color rsl correctly 1`] = `
+exports[`highlight() should color rsl correctly 1`] = `
 "[90m#define TEST_DEFINE 3.14[39m
 [32m/*  plastic surface shader[39m
 [32m *[39m
@@ -4636,7 +4636,7 @@ exports[`should color rsl correctly 1`] = `
 "
 `;
 
-exports[`should color ruby correctly 1`] = `
+exports[`highlight() should color ruby correctly 1`] = `
 "[32m# The Greeter class[39m
 [34m[34mclass[34m Greeter[39m
   [33m[34mdef[33m initialize(name)[39m
@@ -4653,14 +4653,14 @@ g.salute
 "
 `;
 
-exports[`should color ruby-double-colon correctly 1`] = `
+exports[`highlight() should color ruby-double-colon correctly 1`] = `
 "[33m[34mdef[33m f(a = [34mself[33m.attr)[39m
   A::B.new(a)
 [34mend[39m
 "
 `;
 
-exports[`should color ruleslanguage correctly 1`] = `
+exports[`highlight() should color ruleslanguage correctly 1`] = `
 "[32m//This is a comment[39m
 [34mABORT[39m [31m\\"You experienced an abort.\\"[39m;
 [34mWARN[39m [31m\\"THIS IS A WARNING\\"[39m;
@@ -4700,7 +4700,7 @@ EMPTY_HNDL = [34mINTDCREATEHANDLE[39m([31m'05/03/2006 00:00:00'[39m, [31m'0
 "
 `;
 
-exports[`should color rust correctly 1`] = `
+exports[`highlight() should color rust correctly 1`] = `
 "[90m#[derive(Debug)][39m
 [34mpub[39m [34m[34menum[34m State[39m {
     Start,
@@ -4720,7 +4720,7 @@ exports[`should color rust correctly 1`] = `
 "
 `;
 
-exports[`should color scala correctly 1`] = `
+exports[`highlight() should color scala correctly 1`] = `
 "[32m/**[39m
 [32m * A person has a name and an age.[39m
 [32m */[39m
@@ -4782,7 +4782,7 @@ exports[`should color scala correctly 1`] = `
 "
 `;
 
-exports[`should color scheme correctly 1`] = `
+exports[`highlight() should color scheme correctly 1`] = `
 "[32m;; Calculation of Hofstadter's male and female sequences as a list of pairs[39m
 
 ([34mdefine[39m ([34mhofstadter-male-female[39m n)
@@ -4814,7 +4814,7 @@ exports[`should color scheme correctly 1`] = `
 "
 `;
 
-exports[`should color scilab correctly 1`] = `
+exports[`highlight() should color scilab correctly 1`] = `
 "[32m// A comment[39m
 [33m[34mfunction[33m I = foo(dims, varargin)[39m
   d=[[32m1[39m; matrix(dims([32m1[39m:$[32m-1[39m),[32m-1[39m,[32m1[39m)]
@@ -4832,7 +4832,7 @@ foo_matrix = [[32m1[39m, [32m2[39m, [32m3[39m; [32m4[39m, [32m5[39m, 
 "
 `;
 
-exports[`should color scss correctly 1`] = `
+exports[`highlight() should color scss correctly 1`] = `
 "@[34mimport[39m [31m\\"compass/reset\\"[39m;
 
 [32m// variables[39m
@@ -4908,7 +4908,7 @@ a {
 }"
 `;
 
-exports[`should color shell correctly 1`] = `
+exports[`highlight() should color shell correctly 1`] = `
 "[90m$[39m [36mecho[39m $EDITOR
 vim
 [90m$[39m git checkout master
@@ -4923,7 +4923,7 @@ done!
 "
 `;
 
-exports[`should color smali correctly 1`] = `
+exports[`highlight() should color smali correctly 1`] = `
 "[34m.class[39m[34m public[39m [34mLcom/test/Preferences;[39m
 [34m.super[39m [34mLandroid/preference/PreferenceActivity;[39m
 [34m.source[39m [31m\\"Preferences.java\\"[39m
@@ -5002,7 +5002,7 @@ exports[`should color smali correctly 1`] = `
 "
 `;
 
-exports[`should color smalltalk correctly 1`] = `
+exports[`highlight() should color smalltalk correctly 1`] = `
 "[36m[2mObject[22m[39m>>method: num
     [32m\\"comment 123\\"[39m
     | var1 var2 |
@@ -5045,7 +5045,7 @@ heapExample
 "
 `;
 
-exports[`should color sml correctly 1`] = `
+exports[`highlight() should color sml correctly 1`] = `
 "[34mstructure[39m [36m[2mList[22m[39m : [36m[2mLIST[22m[39m =
   [34mstruct[39m
 
@@ -5075,7 +5075,7 @@ exports[`should color sml correctly 1`] = `
 "
 `;
 
-exports[`should color sqf correctly 1`] = `
+exports[`highlight() should color sqf correctly 1`] = `
 "[32m/***[39m
 [32m	Arma Scripting File[39m
 [32m	Edition: 1.66[39m
@@ -5095,7 +5095,7 @@ _unit [36maddAction[39m [[31m\\"Eat Energy Bar\\"[39m, {
 "
 `;
 
-exports[`should color sql correctly 1`] = `
+exports[`highlight() should color sql correctly 1`] = `
 "[34mCREATE[39m [34mTABLE[39m [31m\\"topic\\"[39m (
     [31m\\"id\\"[39m [36mserial[39m [34mNOT[39m [34mNULL[39m PRIMARY [34mKEY[39m,
     [31m\\"forum_id\\"[39m [36minteger[39m [34mNOT[39m [34mNULL[39m,
@@ -5111,7 +5111,7 @@ exports[`should color sql correctly 1`] = `
 "
 `;
 
-exports[`should color stan correctly 1`] = `
+exports[`highlight() should color stan correctly 1`] = `
 "[32m// Multivariate Regression Example[39m
 [32m// Taken from stan-reference-2.8.0.pdf p.66[39m
 
@@ -5154,7 +5154,7 @@ model {
 "
 `;
 
-exports[`should color stata correctly 1`] = `
+exports[`highlight() should color stata correctly 1`] = `
 "[34mprogram[39m define gr_log
 [34mversion[39m 6.0
 
@@ -5197,7 +5197,7 @@ a [34mglobal[39m \${dir_base} $dir_base em\${b}[34med[39m
 [34mmata[39m: [34mmata[39m mlib [36mindex[39m"
 `;
 
-exports[`should color step21 correctly 1`] = `
+exports[`highlight() should color step21 correctly 1`] = `
 "[90mISO-10303-21;[39m
 [34mHEADER[39m;
 FILE_DESCRIPTION(([31m''[39m),[31m'2;1'[39m);
@@ -5234,7 +5234,7 @@ FILE_SCHEMA(([31m'CONFIG_CONTROL_DESIGN'[39m));
 "
 `;
 
-exports[`should color stylus correctly 1`] = `
+exports[`highlight() should color stylus correctly 1`] = `
 "@import [31m\\"nib\\"[39m
 
 [32m// variables[39m
@@ -5263,7 +5263,7 @@ button
 "
 `;
 
-exports[`should color subunit correctly 1`] = `
+exports[`highlight() should color subunit correctly 1`] = `
 "[34mprogress: [39m28704
 [34mtime:[39m [31m2016-07-05 12:17:02.290433Z[39m
 [34mtest: [39mbzrlib.doc.api.DocFileTest(/usr/lib64/python2.7/site-packages/bzrlib/doc/api/branch.txt)
@@ -5285,7 +5285,7 @@ exports[`should color subunit correctly 1`] = `
 "
 `;
 
-exports[`should color swift correctly 1`] = `
+exports[`highlight() should color swift correctly 1`] = `
 "[34mimport[39m Foundation
 
 [90m@objc[39m [34m[34mclass[34m Person: Entity [39m{
@@ -5304,7 +5304,7 @@ exports[`should color swift correctly 1`] = `
 "
 `;
 
-exports[`should color taggerscript correctly 1`] = `
+exports[`highlight() should color taggerscript correctly 1`] = `
 "[34m$if[39m([34m$is_video[39m(),video,[34m$if[39m([34m$is_lossless[39m(),lossless,lossy))/
 [34m$if[39m([34m$is_video[39m(),
 [32m$noop(Video track)[39m
@@ -5320,7 +5320,7 @@ Music Videos/%artist%/%artist% - %title%),
 "
 `;
 
-exports[`should color tap correctly 1`] = `
+exports[`highlight() should color tap correctly 1`] = `
 "[32m# Hardware architecture: x86_64[39m
 [32m# Timestamp: 2016-06-16 06:23 (GMT+1)[39m
 [32m# [39m
@@ -5348,7 +5348,7 @@ ok[32m 19 [39m- zdtm/static/pty02
 "
 `;
 
-exports[`should color tcl correctly 1`] = `
+exports[`highlight() should color tcl correctly 1`] = `
 "[34mpackage[39m json
 
 [34msource[39m helper.tcl
@@ -5378,7 +5378,7 @@ exports[`should color tcl correctly 1`] = `
 "
 `;
 
-exports[`should color tex correctly 1`] = `
+exports[`highlight() should color tex correctly 1`] = `
 "[90m\\\\[34mdocumentclass[90m[31m{article}[90m[39m
 [90m\\\\[34musepackage[90m[31m[koi8-r][90m[31m{inputenc}[90m[39m
 [90m\\\\[34mhoffset[90m=[32m0pt[90m[39m
@@ -5399,7 +5399,7 @@ $$
 "
 `;
 
-exports[`should color thrift correctly 1`] = `
+exports[`highlight() should color thrift correctly 1`] = `
 "[34mnamespace[39m * thrift.test
 
 [32m/**[39m
@@ -5442,7 +5442,7 @@ exports[`should color thrift correctly 1`] = `
 }"
 `;
 
-exports[`should color tp correctly 1`] = `
+exports[`highlight() should color tp correctly 1`] = `
 "[34m/PROG[39m  ALL
 [34m/ATTR[39m
 OWNER		= MNEDITOR;
@@ -5602,7 +5602,7 @@ L [36mP[[32m1[36m][39m [32m100mm/sec[39m [34mCNT[39m[32m100[39m [34mV
 "
 `;
 
-exports[`should color twig correctly 1`] = `
+exports[`highlight() should color twig correctly 1`] = `
 "{% [34m[34mif[34m[39m posts|[34mlength[39m %}
   {% [34m[34mfor[34m[39m article in articles %}
   &lt;div&gt;
@@ -5627,7 +5627,7 @@ exports[`should color twig correctly 1`] = `
 "
 `;
 
-exports[`should color typescript correctly 1`] = `
+exports[`highlight() should color typescript correctly 1`] = `
 "[34mclass[39m MyClass {
   [34mpublic[39m [34mstatic[39m myValue: [36mstring[39m;
   [34mconstructor[39m(init: [36mstring[39m) {
@@ -5645,7 +5645,7 @@ myArray.forEach([33m() =>[39m { }); [32m// fat arrow syntax[39m
 "
 `;
 
-exports[`should color vala correctly 1`] = `
+exports[`highlight() should color vala correctly 1`] = `
 "[34musing[39m [36mDBus[39m;
 
 [34m[34mnamespace[34m Test [39m{
@@ -5695,7 +5695,7 @@ Regex regex = /foo/;
 "
 `;
 
-exports[`should color vbnet correctly 1`] = `
+exports[`highlight() should color vbnet correctly 1`] = `
 "Import System
 Import System.IO
 [90m#Const DEBUG = True[39m
@@ -5741,7 +5741,7 @@ Import System.IO
 "
 `;
 
-exports[`should color vbscript correctly 1`] = `
+exports[`highlight() should color vbscript correctly 1`] = `
 "[32m' creating configuration storage and initializing with default values[39m
 [34mSet[39m cfg = [36mCreateObject[39m([31m\\"Scripting.Dictionary\\"[39m)
 
@@ -5773,7 +5773,7 @@ exports[`should color vbscript correctly 1`] = `
 [34mnext[39m"
 `;
 
-exports[`should color vbscript-html correctly 1`] = `
+exports[`highlight() should color vbscript-html correctly 1`] = `
 "[90m<[34mbody[90m>[39m
 <%
 [34mIf[39m i <  [32m10[39m [34mThen[39m
@@ -5784,7 +5784,7 @@ exports[`should color vbscript-html correctly 1`] = `
 "
 `;
 
-exports[`should color verilog correctly 1`] = `
+exports[`highlight() should color verilog correctly 1`] = `
 "[90m\`[90mtimescale[90m 1ns / 1ps[39m
 
 [32m/**[39m
@@ -5846,7 +5846,7 @@ exports[`should color verilog correctly 1`] = `
 "
 `;
 
-exports[`should color vhdl correctly 1`] = `
+exports[`highlight() should color vhdl correctly 1`] = `
 "[32m/*[39m
 [32m * RS-trigger with assynch. reset[39m
 [32m */[39m
@@ -5891,7 +5891,7 @@ exports[`should color vhdl correctly 1`] = `
 "
 `;
 
-exports[`should color vim correctly 1`] = `
+exports[`highlight() should color vim correctly 1`] = `
 "[34mif[39m foo > [32m2[39m || [36mhas[39m([31m\\"gui_running\\"[39m)
   [34msyntax[39m [34mon[39m
   [34mset[39m hlsearch
@@ -5912,7 +5912,7 @@ exports[`should color vim correctly 1`] = `
 "
 `;
 
-exports[`should color x86asm correctly 1`] = `
+exports[`highlight() should color x86asm correctly 1`] = `
 "[90msection[39m .text
 [90mextern[39m  _MessageBoxA@[32m16[39m
 [90m%if[39m     __NASM_VERSION_ID__ >= [32m0x02030000[39m
@@ -5956,7 +5956,7 @@ caption:[36mdb[39m      [31m'SEGV'[39m,[32m0[39m
 "
 `;
 
-exports[`should color xl correctly 1`] = `
+exports[`highlight() should color xl correctly 1`] = `
 "[34mimport[39m [36mAnimate[39m
 [34mimport[39m SeasonsGreetingsTheme
 [34mimport[39m [31m\\"myhelper.xl\\"[39m
@@ -5988,7 +5988,7 @@ exports[`should color xl correctly 1`] = `
 "
 `;
 
-exports[`should color xml correctly 1`] = `
+exports[`highlight() should color xml correctly 1`] = `
 "[90m<!DOCTYPE html>[39m
 [90m<[34mtitle[90m>[39mTitle[90m</[34mtitle[90m>[39m
 
@@ -6005,7 +6005,7 @@ exports[`should color xml correctly 1`] = `
 "
 `;
 
-exports[`should color xml-groovy-julia correctly 1`] = `
+exports[`highlight() should color xml-groovy-julia correctly 1`] = `
 "[90m<[34mSOAP-ENV:Envelope[90m [36mxmlns:SOAP-ENV[90m=[31m\\"...\\"[90m [36mxmlns:ns1[90m=[31m\\"...\\"[90m [36mxmlns:xsi[90m=[31m\\"...\\"[90m>[39m
   [90m<[34mSOAP-ENV:Body[90m>[39m
 
@@ -6014,7 +6014,7 @@ exports[`should color xml-groovy-julia correctly 1`] = `
 "
 `;
 
-exports[`should color xml-js correctly 1`] = `
+exports[`highlight() should color xml-js correctly 1`] = `
 "[90m<[34miframe[90m [36mx[90m=[31m\\"y\\"[90m>[39m[90m</[34miframe[90m>[39m
 "
 `;
