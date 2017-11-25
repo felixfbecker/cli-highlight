@@ -30,6 +30,7 @@ jobs:
       script:
         - npm run build
         - npm run semantic-release
+      after_sucess: skip
       before_deploy:
         - npm run typedoc
       deploy:
