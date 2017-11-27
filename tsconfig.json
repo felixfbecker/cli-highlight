@@ -3,10 +3,16 @@
     "target": "es5",
     "lib": ["es5", "es2015.promise", "dom"],
     "module": "commonjs",
-    "noImplicitAny": true,
     "outDir": "dist",
     "declaration": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true
   },
   "exclude": ["node_modules", "dist", "src/test"]
 }

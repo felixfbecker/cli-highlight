@@ -61,13 +61,14 @@ if (!file && !(process.stdin as tty.ReadStream).isTTY) {
 } else {
     yargs.showHelp()
     process.exit(1)
+    throw new Error()
 }
 
-Promise.all([codePromise, argv.theme ? fs.readFile(argv.theme, 'utf8') : undefined])
+Promise.all<string, string | undefined>([codePromise, argv.theme ? fs.readFile(argv.theme, 'utf8') : undefined])
     .then(([code, theme]) => {
         const options: HighlightOptions = {
             ignoreIllegals: true,
-            theme: theme && parse(theme),
+            theme: (theme && parse(theme)) || undefined,
         }
         if (file) {
             const ext = path.extname(file).substr(1)
