@@ -14,7 +14,8 @@
     "highlight": "./bin/highlight"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=4.0.0",
+    "npm": ">=5.0.0"
   },
   "scripts": {
     "test": "jest",

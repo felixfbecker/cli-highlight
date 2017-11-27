@@ -1,6 +1,7 @@
 language: node_js
 
 node_js:
+  - '4'
   - '8'
 
 env:
@@ -11,6 +12,9 @@ env:
 cache:
   directories:
     - $HOME/.npm
+
+before_install:
+  - npm install -g npm@^5
 
 install:
   - npm install
@@ -25,8 +29,8 @@ after_success:
 
 jobs:
   include:
-    - stage: test
     - stage: release
+      node_js: '8'
       script:
         - npm run build
         - npm run semantic-release
