@@ -21,7 +21,7 @@ yargs
         nargs: 1,
         description: 'Set the langugage explicitely\nIf omitted will try to auto-detect',
     })
-    .version(() => require('../../package.json').version)
+    .version()
     .help('help')
     .alias('help', 'h')
     .alias('version', 'v')
