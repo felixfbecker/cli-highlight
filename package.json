@@ -86,7 +86,7 @@
   },
   "devDependencies": {
     "@sourcegraph/prettierrc": "^2.0.0",
-    "@sourcegraph/tslint-config": "^9.0.3",
+    "@sourcegraph/tslint-config": "^10.0.0",
     "@types/highlight.js": "^9.12.1",
     "@types/jest": "^21.1.8",
     "@types/mz": "0.0.32",
