@@ -56,9 +56,6 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "release": {
-    "verifyConditions": "@semantic-release/github"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/felixfbecker/cli-highlight.git"
