@@ -1,8 +1,8 @@
 language: node_js
 
 node_js:
-  - '4'
   - '8'
+  - '10'
 
 env:
   global:
@@ -14,10 +14,10 @@ cache:
     - $HOME/.npm
 
 before_install:
-  - npm install -g npm@^5
+  - npm install -g npm@^6
 
 install:
-  - npm install
+  - npm ci
 
 script:
   - npm run lint
