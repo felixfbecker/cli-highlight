@@ -1,0 +1,5 @@
+{
+  "extends": ["config:base"],
+  "pinVersions": false,
+  "rebaseStalePrs": true
+}
