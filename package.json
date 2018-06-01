@@ -84,7 +84,7 @@
     "@sourcegraph/prettierrc": "^2.1.1",
     "@sourcegraph/tslint-config": "^11.0.1",
     "@types/highlight.js": "^9.12.1",
-    "@types/jest": "^22.0.0",
+    "@types/jest": "^23.0.0",
     "@types/mz": "0.0.32",
     "@types/node": "^8.0.53",
     "@types/yargs": "^11.0.0",
