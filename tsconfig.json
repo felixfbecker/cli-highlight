@@ -13,6 +13,9 @@
     "noImplicitThis": true,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noUnusedLocals": true,
     "baseUrl": ".",
     "paths": {
       "parse5": ["./node_modules/parse5/lib/index.d.ts"]
