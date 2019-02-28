@@ -1,4 +1,3 @@
-import c from 'chalk'
 import * as fs from 'fs'
 import { highlight, listLanguages, supportsLanguage } from '../index'
 
