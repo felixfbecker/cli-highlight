@@ -280,7 +280,12 @@ export interface JsonTheme extends Tokens<Style | Style[]> {}
  * };
  * ```
  */
-export interface Theme extends Tokens<(codePart: string) => string> {}
+export interface Theme extends Tokens<(codePart: string) => string> {
+    /**
+     * things not matched by any token
+     */
+    default?: (codePart: string) => string
+}
 
 /**
  * Identity function for tokens that should not be styled (returns the input string as-is).
@@ -498,6 +503,11 @@ export const DEFAULT_THEME: Theme = {
      * deleted line in a diff
      */
     deletion: chalk.red,
+
+    /**
+     * things not matched by any token
+     */
+    default: plain,
 }
 
 /**

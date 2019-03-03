@@ -61,16 +61,19 @@ Detailed API documenation can be found [here](http://cli-highlight.surge.sh/).
 
 ## Themes
 You can write your own theme in a JSON file and pass it with `--theme`.
-The key must be one of the [highlight.js CSS class names](http://highlightjs.readthedocs.io/en/latest/css-classes-reference.html)
+The key must be one of the [highlight.js CSS class names](http://highlightjs.readthedocs.io/en/latest/css-classes-reference.html) or `"default"`,
 and the value must be one or an array of [Chalk styles](https://github.com/chalk/chalk#styles) to be applied to that token.
 
 ```json
 {
   "keyword": "blue",
   "built_in": ["cyan", "dim"],
-  "string": "red"
+  "string": "red",
+  "default": "gray"
 }
 ```
+
+The style for `"default"` will be applied to any substrings not handled by highlight.js. The specifics depend on the language but this typically includes things like commas in parameter lists, semicolons at the end of lines, etc.
 
 The theme is combined with the [default theme](http://cli-highlight.surge.sh/globals.html#default_theme).
 The default theme is still not colored a lot or optimized for many languages, PRs welcome!

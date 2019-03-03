@@ -2,17 +2,22 @@ import * as hljs from 'highlight.js'
 import * as parse5 from 'parse5'
 import { DEFAULT_THEME, plain, Theme } from './theme'
 
-function colorizeNode(node: parse5.AST.HtmlParser2.Node, theme: Theme = {}): string {
+function colorizeNode(node: parse5.AST.HtmlParser2.Node, theme: Theme = {}, context?: string): string {
     switch (node.type) {
         case 'text': {
-            return (node as parse5.AST.HtmlParser2.TextNode).data
+            const text = (node as parse5.AST.HtmlParser2.TextNode).data
+            if (context === undefined) {
+                return (theme.default || DEFAULT_THEME.default || plain)(text)
+            } else {
+                return text
+            }
         }
         case 'tag': {
             const hljsClass = /hljs-(\w+)/.exec((node as parse5.AST.HtmlParser2.Element).attribs.class)
             if (hljsClass) {
                 const token = hljsClass[1]
                 const nodeData = (node as parse5.AST.HtmlParser2.Element).childNodes
-                    .map(node => colorizeNode(node, theme))
+                    .map(node => colorizeNode(node, theme, token))
                     .join('')
                 return ((theme as any)[token] || (DEFAULT_THEME as any)[token] || plain)(nodeData)
             }
