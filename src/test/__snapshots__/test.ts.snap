@@ -229,13 +229,13 @@ exports[`highlight() should color Arduino correctly 1`] = `
 [34mint[39m led = [32m13[39m;
 
 [32m// the setup routine runs once when you press reset:[39m
-[34mvoid[39m [36msetup[39m() {
+[33m[34mvoid[33m setup() [39m{
   [32m// initialize the digital pin as an output.[39m
   [36mpinMode[39m(led, [34mOUTPUT[39m);     
 }
 
 [32m// the loop routine runs over and over again forever:[39m
-[34mvoid[39m [36mloop[39m() {
+[33m[34mvoid[33m loop() [39m{
   [36mdigitalWrite[39m(led, [34mHIGH[39m);   [32m// turn the LED on (HIGH is the voltage level)[39m
   [36mdelay[39m([32m1000[39m);               [32m// wait for a second[39m
   [36mdigitalWrite[39m(led, [34mLOW[39m);    [32m// turn the LED off by making the voltage LOW[39m
@@ -339,7 +339,7 @@ exports[`highlight() should color AspectJ correctly 1`] = `
 
 exports[`highlight() should color AutoHotkey correctly 1`] = `
 "[32m; hotkeys and hotstrings[39m
-#a::WinSet, AlwaysOnTop, Toggle, [34mA[39m
+#a::WinSet, AlwaysOnTop, Toggle, A
 #Space::
 [36m  MsgBox,[39m Percent sign (\`%) need to be escaped.
   Run [31m\\"C:\\\\Program Files\\\\some\\\\program.exe\\"[39m
@@ -462,21 +462,21 @@ BE_VERBOSE=[34mfalse[39m
 `;
 
 exports[`highlight() should color Brainfuck correctly 1`] = `
-"[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m
+"++[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m
 [ [32m3*10[39m [32mand[39m [32m10*10[39m
-  [34m-[39m>[34m+[39m[34m+[39m[34m+[39m>[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m<<
+  [34m-[39m>++[34m+[39m>++[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m<<
 ]>>
 [ [32mfilling[39m [32mcells[39m
-  [34m-[39m>[34m+[39m[34m+[39m>>[34m+[39m[34m+[39m>[34m+[39m[34m+[39m>[34m+[39m>[34m+[39m[34m+[39m>>[34m+[39m[34m+[39m>[34m+[39m[34m+[39m>[34m+[39m[34m+[39m>[34m+[39m[34m+[39m>[34m+[39m[34m+[39m>[34m+[39m[34m+[39m>[34m+[39m[34m+[39m>[34m+[39m[34m+[39m>[34m+[39m[34m+[39m>[34m+[39m[34m+[39m>[34m+[39m[34m+[39m[<[32m/[39m]<[<]<[<]>>
+  [34m-[39m>++>>++>++>[34m+[39m>++>>++>++>++>++>++>++>++>++>++>++>++[<[32m/[39m]<[<]<[<]>>
 ]<
-[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m<<
+++[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m<<
 [ [32mrough[39m [32mcodes[39m [32mcorrection[39m [32mloop[39m
-  [34m-[39m>>>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m[34m+[39m[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m[<]<
+  [34m-[39m>>>[34m+[39m>[34m+[39m>[34m+[39m>++[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m>[34m+[39m[<]<
 ]
 [32mmore[39m [32maccurate[39m [32mсodes[39m [32mcorrection[39m
->>>[34m+[39m[34m+[39m>
-[34m-[39m[34m-[39m>[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>[34m-[39m[34m-[39m[34m-[39m[34m-[39m[34m-[39m[34m-[39m>[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>[34m+[39m[34m+[39m>[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>[34m-[39m[34m-[39m[34m-[39m>[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>[34m-[39m[34m-[39m[34m-[39m[34m-[39m[34m-[39m[34m-[39m>[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>
-[34m+[39m[34m+[39m>[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>[34m-[39m[34m-[39m[34m-[39m[34m-[39m[34m-[39m[34m-[39m>[34m+[39m[34m+[39m[34m+[39m
+>>>++>
+-->++[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>--[34m-[39m[34m-[39m[34m-[39m[34m-[39m>++[34m+[39m[34m+[39m[34m+[39m[34m+[39m>++>++[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>++[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>++[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>--[34m-[39m>++[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>--[34m-[39m[34m-[39m[34m-[39m[34m-[39m>++[34m+[39m[34m+[39m[34m+[39m[34m+[39m>
+++>++[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>++[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m[34m+[39m>--[34m-[39m[34m-[39m[34m-[39m[34m-[39m>++[34m+[39m
 [32mrewind[39m [32mand[39m [32moutput[39m
 [<]>[[31m.[39m>]
 "
@@ -528,14 +528,14 @@ exports[`highlight() should color XQuery correctly 1`] = `
   $map?([31m'G'[39m,[31m'B'[39m)  [32m(: 3. returns the values associated with the key 'G' and 'B' :)[39m
 ),
 
-([31m'A'[39m, [31m'B'[39m, [31m'C'[39m) => count(),
+([31m'A'[39m, [31m'B'[39m, [31m'C'[39m) =>[36m count[39m(),
 
-[34mfor[39m $country [34min[39m db:open([31m'factbook'[39m)//country
+[34mfor[39m $country [34min[39m [36mdb:open[39m([31m'factbook'[39m)//country
 [34mwhere[39m $country/@population > [32m100000000[39m
 [34mlet[39m $name := $country/name[[32m1[39m]
 [34mfor[39m $city [34min[39m $country//city[population > [32m1000000[39m]
 [34mgroup[39m [34mby[39m $name
-[34mreturn[39m <country name=[31m'{ $name }'[39m>{ $city/name }</country>
+[34mreturn[39m [90m<[34mcountry[90m [36mname[90m=[31m'{ $name }'[90m>[39m{ $city/name }[90m</[34mcountry[90m>[39m
 
 )
 "
@@ -557,9 +557,9 @@ exports[`highlight() should color YAML correctly 1`] = `
   - [32m21.0[39m
   - [36m[2m!!str[22m[39m [32m123[39m
 [36m\\"quoted_key\\":[39m [90m&foobar[39m
-[36m  bar:[39m [31mfoo[39m
-[36m  foo:[39m
-[36m  \\"foo\\":[39m [31mbar[39m
+  [36mbar:[39m [31mfoo[39m
+  [36mfoo:[39m
+  [36m\\"foo\\":[39m [31mbar[39m
 
 [36mreference:[39m [90m*foobar[39m
 
@@ -577,8 +577,8 @@ exports[`highlight() should color YAML correctly 1`] = `
 
 [36marray_nested:[39m
 - [31ma[39m
-[36m- b:[39m [32m1[39m
-[36m  c:[39m [32m2[39m
+- [36mb:[39m [32m1[39m
+  [36mc:[39m [32m2[39m
 - [31mb[39m
 - [31mcomment[39m
 "
@@ -794,28 +794,28 @@ exports[`highlight() should color clean correctly 1`] = `
 
 NrOfPrimes :== [32m3000[39m
 
-primes :: [Int]
+primes :: [[36mInt[39m]
 primes = pr [34mwhere[39m pr = [[32m5[39m : sieve [32m7[39m [32m4[39m pr]
 
-sieve :: Int !Int [Int] -> [Int]
+sieve :: [36mInt[39m ![36mInt[39m [[36mInt[39m] -> [[36mInt[39m]
 sieve g i prs
 | isPrime prs g (toInt (sqrt (toReal g))) = [g : sieve\` g i prs]
 | [34motherwise[39m                               = sieve (g + i) ([32m6[39m - i) prs
 
-sieve\` :: Int Int [Int] -> [Int]
+sieve\` :: [36mInt[39m [36mInt[39m [[36mInt[39m] -> [[36mInt[39m]
 sieve\` g i prs = sieve (g + i) ([32m6[39m - i) prs
 
-isPrime :: [Int] !Int Int -> Bool
+isPrime :: [[36mInt[39m] ![36mInt[39m [36mInt[39m -> [36mBool[39m
 isPrime [f:r] pr bd
 | f>bd        =  [34mTrue[39m
 | pr rem f==[32m0[39m =  [34mFalse[39m
 | [34motherwise[39m   =  isPrime r pr bd
 
-select :: [x] Int -> x
+select :: [x] [36mInt[39m -> x
 select [f:r] [32m1[39m = f
 select [f:r] n = select r (n - [32m1[39m)
 
-Start :: Int
+Start :: [36mInt[39m
 Start = select [[32m2[39m, [32m3[39m : primes] NrOfPrimes
 "
 `;
@@ -1061,7 +1061,7 @@ exports[`highlight() should color crystal correctly 1`] = `
 
 employee = Employee.new [31m\\"John\\"[39m
 employee.greet         [32m# => \\"Hi, I'm John\\"[39m
-employee.[34mis_a?[39m(Person) [32m# => true[39m
+employee.is_a?(Person) [32m# => true[39m
 
 [90m@[Link([90m\\"m\\"[90m)][39m
 [34m[34mlib[34m C[39m
@@ -1090,7 +1090,7 @@ exports[`highlight() should color cs correctly 1`] = `
     [34mclass[39m Program : IInterface
     {
         [33m[34mpublic[33m [34mstatic[33m List<[34mint[33m> JustDoIt([34mint[33m count)[39m
-[33m        [39m{
+        {
             Console.WriteLine([31m$\\"Hello {Name}!\\"[39m);
             [34mreturn[39m [34mnew[39m List<[34mint[39m>([34mnew[39m [34mint[39m[] { [32m1[39m, [32m2[39m, [32m3[39m })
         }
@@ -1569,7 +1569,7 @@ guy.name
 [31m[39m
 [31m  \\"[39m[31m\\"\\"[39m
   [33m[34mdef[33m start_link[39m [34mdo[39m
-    :gen_server.start_link({:local, :list}, __MODULE_[32m_[39m, [], [])
+    :gen_server.start_link({:local, :list}, __MODULE__, [], [])
   [34mend[39m
 
   [32m### GenServer API[39m
@@ -1911,7 +1911,7 @@ exports[`highlight() should color gauss correctly 1`] = `
 
 s = [31m\\"{% test string %}\\"[39m;
 
-[33m[34mfn[33m twopi=[36mpi[33m*[32m2[33m[39m;
+[33m[34mfn[33m twopi[39m=[36mpi[39m*[32m2[39m;
 
 [32m/* Takes in multiple numbers.[39m
 [32m   Output sum */[39m
@@ -2946,29 +2946,29 @@ exports[`highlight() should color lasso correctly 1`] = `
 
 exports[`highlight() should color ldif correctly 1`] = `
 "[32m# Example LDAP user[39m
-dn: uid=user.0,ou=People,dc=example,dc=com
-objectClass: top
-objectClass: person
-objectClass: organizationalPerson
-objectClass: inetOrgPerson
-givenName: Morris
-sn: Day
-cn: Morris Day
-initials: MD
-employeeNumber: 0
-uid: user.0
-mail: user.0@example.com
-userPassword: password
-telephoneNumber: +1 042 100 3866
-homePhone: +1 039 680 4135
-pager: +1 284 199 0966
-mobile: +1 793 707 0251
-street: 90280 Spruce Street
-l: Minneapolis
-st: MN
-postalCode: 50401
-postalAddress: Morris Day$90280 Spruce Street$Minneapolis, MN  50401
-description: This is the description for Morris Day.
+[36mdn:[39m [31muid=user.0,ou=People,dc=example,dc=com[39m
+[36mobjectClass:[39m [31mtop[39m
+[36mobjectClass:[39m [31mperson[39m
+[36mobjectClass:[39m [31morganizationalPerson[39m
+[36mobjectClass:[39m [31minetOrgPerson[39m
+[36mgivenName:[39m [31mMorris[39m
+[36msn:[39m [31mDay[39m
+[36mcn:[39m [31mMorris[39m [31mDay[39m
+[36minitials:[39m [31mMD[39m
+[36memployeeNumber:[39m [32m0[39m
+[36muid:[39m [31muser.0[39m
+[36mmail:[39m [31muser.0@example.com[39m
+[36muserPassword:[39m [31mpassword[39m
+[36mtelephoneNumber:[39m [31m+1[39m [32m042[39m [32m100[39m [32m3866[39m
+[36mhomePhone:[39m [31m+1[39m [32m039[39m [32m680[39m [32m4135[39m
+[36mpager:[39m [31m+1[39m [32m284[39m [32m199[39m [32m0966[39m
+[36mmobile:[39m [31m+1[39m [32m793[39m [32m707[39m [32m0251[39m
+[36mstreet:[39m [32m90280[39m [31mSpruce[39m [31mStreet[39m
+[36ml:[39m [31mMinneapolis[39m
+[36mst:[39m [31mMN[39m
+[36mpostalCode:[39m [32m50401[39m
+[36mpostalAddress:[39m [31mMorris[39m [31mDay$90280[39m [31mSpruce[39m [31mStreet$Minneapolis,[39m [31mMN[39m  [32m50401[39m
+[36mdescription:[39m [31mThis[39m [31mis[39m [31mthe[39m [31mdescription[39m [31mfor[39m [31mMorris[39m [31mDay.[39m
 "
 `;
 
@@ -3089,43 +3089,43 @@ exports[`highlight() should color livecodeserver correctly 1`] = `
 
 exports[`highlight() should color livescript correctly 1`] = `
 "[32m# take the first n objects from a list[39m
-[33mtake = (n, [x, ...xs]:list) -->[39m
-  | n <= [32m0[39m     => []
-  | empty list => []
-  | [34motherwise[39m  => [x] ++ take n - [32m1[39m, xs
+[31mtake[39m [31m=[39m [31m(n,[39m [31m[x,[39m [31m...xs]:list)[39m [31m-->[39m
+  [31m|[39m [31mn[39m [31m<=[39m [32m0[39m     [31m=>[39m [31m[][39m
+  [31m|[39m [31mempty[39m [31mlist[39m [31m=>[39m [31m[][39m
+  [31m|[39m [31motherwise[39m  [31m=>[39m [31m[x][39m [31m++[39m [31mtake[39m [31mn[39m - [32m1[39m[31m,[39m [31mxs[39m
 
-take [32m2[39m, [[32m1[39m, [32m2[39m, [32m3[39m, [32m4[39m, [32m5[39m]
+[31mtake[39m [32m2[39m[31m,[39m [31m[1,[39m [32m2[39m[31m,[39m [32m3[39m[31m,[39m [32m4[39m[31m,[39m [32m5[39m[31m][39m
 
 [32m# Curried functions[39m
-take-three = take [32m3[39m
-take-three [[32m6[39m, [32m7[39m, [32m8[39m, [32m9[39m, [32m10[39m]
+[31mtake-three[39m [31m=[39m [31mtake[39m [32m3[39m
+[31mtake-three[39m [31m[6,[39m [32m7[39m[31m,[39m [32m8[39m[31m,[39m [32m9[39m[31m,[39m [32m10[39m[31m][39m
 
 [32m# Function composition[39m
-last-three = reverse >> take-three >> reverse
-last-three [[32m1[39m [34mto[39m [32m8[39m]
+[31mlast-three[39m [31m=[39m [31mreverse[39m [31m>>[39m [31mtake-three[39m [31m>>[39m [31mreverse[39m
+[31mlast-three[39m [31m[1[39m [31mto[39m [32m8[39m[31m][39m
 
 [32m# List comprehensions and piping[39m
-t1 =
-  * id: [32m1[39m
-    name: [31m'george'[39m
-  * id: [32m2[39m
-    name: [31m'mike'[39m
-  * id: [32m3[39m
-    name: [31m'donald'[39m
+[31mt1[39m [31m=[39m
+  [31m*[39m [36mid:[39m [32m1[39m
+    [36mname:[39m [31m'george'[39m
+  [31m*[39m [36mid:[39m [32m2[39m
+    [36mname:[39m [31m'mike'[39m
+  [31m*[39m [36mid:[39m [32m3[39m
+    [36mname:[39m [31m'donald'[39m
 
-t2 =
-  * id: [32m2[39m
-    age: [32m21[39m
-  * id: [32m1[39m
-    age: [32m20[39m
-  * id: [32m3[39m
-    age: [32m26[39m
-[{id:id1, name, age}
-  [34mfor[39m {id:id1, name} [34min[39m t1
-  [34mfor[39m {id:id2, age} [34min[39m t2
-  where id1 [34mis[39m id2]
-  |> sort-[34mby[39m [31m\\\\id[39m
-  |> JSON.stringify
+[31mt2[39m [31m=[39m
+  [31m*[39m [36mid:[39m [32m2[39m
+    [36mage:[39m [32m21[39m
+  [31m*[39m [36mid:[39m [32m1[39m
+    [36mage:[39m [32m20[39m
+  [31m*[39m [36mid:[39m [32m3[39m
+    [36mage:[39m [32m26[39m
+[31m[{id:id1,[39m [31mname,[39m [31mage}[39m
+  [31mfor[39m [31m{id:id1,[39m [31mname}[39m [31min[39m [31mt1[39m
+  [31mfor[39m [31m{id:id2,[39m [31mage}[39m [31min[39m [31mt2[39m
+  [31mwhere[39m [31mid1[39m [31mis[39m [31mid2][39m
+  [31m|>[39m [31msort-by[39m [31m\\\\id[39m
+  [31m|>[39m [31mJSON.stringify[39m
 "
 `;
 
@@ -3312,27 +3312,27 @@ exports[`highlight() should color matlab correctly 1`] = `
 "n = [32m20[39m; [32m% number of points[39m
 points = [random([31m'unid'[39m, [32m100[39m, n, [32m1[39m), random([31m'unid'[39m, [32m100[39m, n, [32m1[39m)];
 len = [36mzeros[39m([32m1[39m, n - [32m1[39m);
-points = sortrows(points);
+points = [36msortrows[39m(points);
 [32m%% Initial set of points[39m
-plot(points(:,[32m1[39m),points(:,[32m2[39m));
+[36mplot[39m(points(:,[32m1[39m),points(:,[32m2[39m));
 [34mfor[39m [36mi[39m = [32m1[39m: n[32m-1[39m
     len([36mi[39m) = points([36mi[39m + [32m1[39m, [32m1[39m) - points([36mi[39m, [32m1[39m);
 [34mend[39m
-[34mwhile[39m(max(len) > [32m2[39m * min(len))
-    [d, i] = max(len);
+[34mwhile[39m([36mmax[39m(len) > [32m2[39m * [36mmin[39m(len))
+    [d, [36mi[39m] = [36mmax[39m(len);
     k = on_margin(points, [36mi[39m, d, [32m-1[39m);
     m = on_margin(points, [36mi[39m + [32m1[39m, d, [32m1[39m);
     xm = [32m0[39m; ym = [32m0[39m;
 [32m%% New point[39m
     [34mif[39m([36mi[39m == [32m1[39m || [36mi[39m + [32m1[39m == n)
-        xm = mean(points([i,i+[32m1[39m],[32m1[39m))
-        ym = mean(points([i,i+[32m1[39m],[32m2[39m))
+        xm = [36mmean[39m(points([[36mi[39m,[36mi[39m+[32m1[39m],[32m1[39m))
+        ym = [36mmean[39m(points([[36mi[39m,[36mi[39m+[32m1[39m],[32m2[39m))
     [34melse[39m
-        [xm, ym] = dlg1(points([k, i, i + [32m1[39m, m], [32m1[39m), ...
-            points([k, i, i + [32m1[39m, m], [32m2[39m))
+        [xm, ym] = dlg1(points([k, [36mi[39m, [36mi[39m + [32m1[39m, m], [32m1[39m), ...
+            points([k, [36mi[39m, [36mi[39m + [32m1[39m, m], [32m2[39m))
     [34mend[39m
 
-    points = [ points([32m1[39m:i, :); [xm, ym]; points([36mi[39m + [32m1[39m:[34mend[39m, :)];
+    points = [ points([32m1[39m:[36mi[39m, :); [xm, ym]; points([36mi[39m + [32m1[39m:[34mend[39m, :)];
 [34mend[39m
 [32m[39m
 [32m%{[39m
@@ -3841,7 +3841,7 @@ exports[`highlight() should color nsis correctly 1`] = `
 [34mRequestExecutionLevel[39m [34muser[39m
 [34mCRCCheck[39m [34mon[39m
 
-[34m!ifdef[39m \${x64}
+[34m!if[39mdef \${x64}
   [34mInstallDir[39m [31m\\"$PROGRAMFILES64\\\\installer_name\\"[39m
 [34m!else[39m
   [34mInstallDir[39m [31m\\"$PROGRAMFILES\\\\installer_name\\"[39m
@@ -3858,8 +3858,8 @@ exports[`highlight() should color nsis correctly 1`] = `
 [32m; Functions[39m
 [33m[34mFunction[33m .onInit[39m
   [34mDetailPrint[39m [31m\\"The install button reads $(^InstallBtn)\\"[39m
-  [34mDetailPrint[39m [31m'Here comes a$\\\\n$\\\\rline-break!'[39m
-  [34mDetailPrint[39m [31m\`Escape the dollar-sign: $$\`[39m
+  [34mDetailPrint[39m [31m'Here comes a[90m$\\\\n[31m[90m$\\\\r[31mline-break!'[39m
+  [34mDetailPrint[39m [31m\`Escape the dollar-sign: [90m$$[31m\`[39m
 [34mFunctionEnd[39m
 "
 `;
@@ -4175,23 +4175,23 @@ exports[`highlight() should color php correctly 1`] = `
 exports[`highlight() should color pony correctly 1`] = `
 "[34muse[39m [31m\\"collections\\"[39m
 
-[34m[34mclass[34m StopWatch[39m
+[34mclass[39m [36m[2mStopWatch[22m[39m
   [31m\\"\\"\\"[39m
 [31m  A simple stopwatch class for performance micro-benchmarking[39m
 [31m  \\"\\"\\"[39m
   [34mvar[39m _s: [36m[2mU64[22m[39m = [32m0[39m
 
-  [33m[34mfun[33m delta(): [36m[2mU64[22m[33m =>[39m
+  [34mfun[39m delta(): [36m[2mU64[22m[39m =>
     [36m[2mTime[22m[39m.nanos() - _s
 
-[34m[34mactor[34m LonelyPony[39m
+[34mactor[39m [36m[2mLonelyPony[22m[39m
   [31m\\"\\"\\"[39m
 [31m  A simple manifestation of the lonely pony problem[39m
 [31m  \\"\\"\\"[39m
   [34mvar[39m env: [36m[2mEnv[22m[39m
   [34mlet[39m sw: [36m[2mStopWatch[22m[39m = [36m[2mStopWatch[22m[39m
 
-  [33m[34mnew[33m create(env': [36m[2mEnv[22m[33m) =>[39m
+  [34mnew[39m create(env': [36m[2mEnv[22m[39m) =>
     env = env
 "
 `;
@@ -5102,7 +5102,7 @@ exports[`highlight() should color sql correctly 1`] = `
     [31m\\"subject\\"[39m [36mvarchar[39m([32m255[39m) [34mNOT[39m [34mNULL[39m
 );
 [34mALTER[39m [34mTABLE[39m [31m\\"topic\\"[39m
-[34mADD[39m [34mCONSTRAINT[39m forum_id FOREIGN [34mKEY[39m ([31m\\"forum_id\\"[39m)
+[34mADD[39m [34mCONSTRAINT[39m forum_id [34mFOREIGN[39m [34mKEY[39m ([31m\\"forum_id\\"[39m)
 [34mREFERENCES[39m [31m\\"forum\\"[39m ([31m\\"id\\"[39m);
 
 [32m-- Initials[39m
@@ -5189,12 +5189,12 @@ a [34mglobal[39m \${dir_base} $dir_base em\${b}[34med[39m
     [34mcap[39m [34mreg[39m y x1, robust
     [34mlocal[39m x = [36mln[39m(4)
     [34mlocal[39m x =[36mln[39m(4)
-    [34mlocal[39m ln = [36mln[39m
+    [34mlocal[39m ln = ln
   }
 }
  
 [32m* add mlibs in the new adopath to the index[39m
-[34mmata[39m: [34mmata[39m mlib [36mindex[39m"
+[34mmata[39m: [34mmata[39m mlib index"
 `;
 
 exports[`highlight() should color step21 correctly 1`] = `
@@ -5289,8 +5289,8 @@ exports[`highlight() should color swift correctly 1`] = `
 "[34mimport[39m Foundation
 
 [90m@objc[39m [34m[34mclass[34m Person: Entity [39m{
-  [34mvar[39m name: [36m[2mString[22m[39m!
-  [34mvar[39m age:  [36m[2mInt[22m[39m!
+  [34mvar[39m name: [36m[2mString![22m[39m
+  [34mvar[39m age:  [36m[2mInt![22m[39m
 
   [34minit[39m(name: [36m[2mString[22m[39m, age: [36m[2mInt[22m[39m) {
     [32m/* [32m/* ... */[32m */[39m
@@ -5362,7 +5362,7 @@ exports[`highlight() should color tcl correctly 1`] = `
     [34mreturn[39m $result
 }
 
-[34mset[39m a [31m'a'[39m; [34mset[39m b [31m\\"bcdef\\"[39m; [34mset[39m lst [[34mlist[39m [31m\\"item\\"[39m]
+[34mset[39m a 'a'; [34mset[39m b [31m\\"bcdef\\"[39m; [34mset[39m lst [[34mlist[39m [31m\\"item\\"[39m]
 [34mputs[39m [[34mllength[39m $a$b]
 
 [34mset[39m ::my::tid($id) $::my::tid(def)
@@ -5498,7 +5498,7 @@ L [36mPR[[36mR[[32m1[36m][36m][39m [34mmax_speed[39m [34mCNT[39m[32m1
   [36mR[[32m1[36m][39m=[36mSO[[32m1[36m:Cycle start][39m [34mDIV[39m [36mSI[[32m2[36m:Remote][39m    ;
   [36mR[[32m1[36m][39m=[36mUO[[32m1[36m:Cmd enabled][39m [34mMOD[39m [36mUI[[32m1[36m:*IMSTP][39m    ;
   [32m! mixed logic ;[39m
-  [36mDO[[32m1[36m][39m=([36mDI[[32m1[36m][39m [34mAND[39m [36mAR[[32m1[36m][39m [34mAND[39m [36mF[[32m1[36m][39m [34mOR[39m [36mTIMER[[32m1[36m][39m>TIMER_OVERFLOW[[32m1[39m]) ;
+  [36mDO[[32m1[36m][39m=([36mDI[[32m1[36m][39m [34mAND[39m [36mAR[[32m1[36m][39m [34mAND[39m [36mF[[32m1[36m][39m [34mOR[39m [36mTIMER[[32m1[36m][39m>[36mTIMER_OVERFLOW[[32m1[36m][39m) ;
   [36mF[[32m1[36m][39m=([34mON[39m) ;
   [36mJOINT_MAX_SPEED[[32m1[36m][39m=[32m5[39m ;
   [34mLINEAR_MAX_SPEED[39m=[32m5[39m ;
