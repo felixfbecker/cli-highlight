@@ -6,7 +6,7 @@ node_js:
 
 env:
   global:
-   - FORCE_COLOR=1
+   - FORCE_COLOR=3
    - OUTPUT_CODE_SAMPLES=1
 
 cache:
