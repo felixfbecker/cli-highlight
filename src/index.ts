@@ -1,11 +1,13 @@
 import * as hljs from 'highlight.js'
 import * as parse5 from 'parse5'
+import htmlparser2Adapter from 'parse5-htmlparser2-tree-adapter'
+import * as HtmlParser2 from 'parse5-htmlparser2-tree-adapter'
 import { DEFAULT_THEME, plain, Theme } from './theme'
 
-function colorizeNode(node: parse5.AST.HtmlParser2.Node, theme: Theme = {}, context?: string): string {
+function colorizeNode(node: HtmlParser2.Node, theme: Theme = {}, context?: string): string {
     switch (node.type) {
         case 'text': {
-            const text = (node as parse5.AST.HtmlParser2.TextNode).data
+            const text = (node as HtmlParser2.TextNode).data
             if (context === undefined) {
                 return (theme.default || DEFAULT_THEME.default || plain)(text)
             } else {
@@ -13,10 +15,10 @@ function colorizeNode(node: parse5.AST.HtmlParser2.Node, theme: Theme = {}, cont
             }
         }
         case 'tag': {
-            const hljsClass = /hljs-(\w+)/.exec((node as parse5.AST.HtmlParser2.Element).attribs.class)
+            const hljsClass = /hljs-(\w+)/.exec((node as HtmlParser2.Element).attribs.class)
             if (hljsClass) {
                 const token = hljsClass[1]
-                const nodeData = (node as parse5.AST.HtmlParser2.Element).childNodes
+                const nodeData = (node as HtmlParser2.Element).childNodes
                     .map(node => colorizeNode(node, theme, token))
                     .join('')
                 return ((theme as any)[token] || (DEFAULT_THEME as any)[token] || plain)(nodeData)
@@ -24,7 +26,7 @@ function colorizeNode(node: parse5.AST.HtmlParser2.Node, theme: Theme = {}, cont
 
             // Return the data itself when the class name isn't prefixed with a highlight.js token prefix.
             // This is common in instances of sublanguages (JSX, Markdown Code Blocks, etc.)
-            return (node as parse5.AST.HtmlParser2.Element).childNodes.map(node => colorizeNode(node, theme)).join('')
+            return (node as HtmlParser2.Element).childNodes.map(node => colorizeNode(node, theme)).join('')
         }
     }
     throw new Error('Invalid node type ' + node.type)
@@ -32,8 +34,8 @@ function colorizeNode(node: parse5.AST.HtmlParser2.Node, theme: Theme = {}, cont
 
 function colorize(code: string, theme: Theme = {}): string {
     const fragment = parse5.parseFragment(code, {
-        treeAdapter: parse5.treeAdapters.htmlparser2,
-    }) as parse5.AST.HtmlParser2.DocumentFragment
+        treeAdapter: htmlparser2Adapter,
+    }) as HtmlParser2.DocumentFragment
     return fragment.childNodes.map(node => colorizeNode(node, theme)).join('')
 }
 
