@@ -5,3 +5,4 @@ typings/
 typedoc/
 .nyc_output/
 coverage/
+.DS_Store

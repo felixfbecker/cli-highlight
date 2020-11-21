@@ -14,7 +14,7 @@
 
 ## Example
 
-[![Example Test Output](media/tests.png)](https://travis-ci.org/felixfbecker/cli-highlight)
+![Example Output](media/screenshot.svg)
 
 ## CLI Usage
 Output a file
