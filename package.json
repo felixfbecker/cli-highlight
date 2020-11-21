@@ -97,7 +97,7 @@
   },
   "homepage": "https://github.com/felixfbecker/cli-highlight#readme",
   "dependencies": {
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "highlight.js": "^10.0.0",
     "mz": "^2.4.0",
     "parse5": "^5.1.1",
