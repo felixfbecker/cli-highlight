@@ -19,6 +19,8 @@ jobs:
       - run: npm run tslint
       - run: npm run build
       - run: npm test
+        env:
+          OUTPUT_CODE_SAMPLES: true
       - run: bash <(curl -s https://codecov.io/bash)
         if: always()
       - name: release
