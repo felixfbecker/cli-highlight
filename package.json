@@ -102,7 +102,7 @@
     "mz": "^2.4.0",
     "parse5": "^5.1.1",
     "parse5-htmlparser2-tree-adapter": "^5.1.1",
-    "yargs": "^15.0.0"
+    "yargs": "^16.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
