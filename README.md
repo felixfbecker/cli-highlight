@@ -5,7 +5,7 @@
 
 [![npm](https://img.shields.io/npm/v/cli-highlight.svg)](https://www.npmjs.com/package/cli-highlight)
 [![downloads](https://img.shields.io/npm/dm/cli-highlight.svg)](https://www.npmjs.com/package/cli-highlight)
-[![build](https://travis-ci.org/felixfbecker/cli-highlight.svg?branch=main)](https://travis-ci.org/felixfbecker/cli-highlight)
+[![CI status](https://github.com/felixfbecker/cli-highlight/workflows/build/badge.svg?branch=main)](https://github.com/felixfbecker/cli-highlight/actions)
 [![codecov](https://codecov.io/gh/felixfbecker/cli-highlight/branch/main/graph/badge.svg)](https://codecov.io/gh/felixfbecker/cli-highlight)
 ![node](http://img.shields.io/node/v/cli-highlight.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
