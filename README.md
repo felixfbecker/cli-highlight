@@ -5,12 +5,12 @@
 
 [![npm](https://img.shields.io/npm/v/cli-highlight.svg)](https://www.npmjs.com/package/cli-highlight)
 [![downloads](https://img.shields.io/npm/dm/cli-highlight.svg)](https://www.npmjs.com/package/cli-highlight)
-[![build](https://travis-ci.org/felixfbecker/cli-highlight.svg?branch=master)](https://travis-ci.org/felixfbecker/cli-highlight)
-[![codecov](https://codecov.io/gh/felixfbecker/cli-highlight/branch/master/graph/badge.svg)](https://codecov.io/gh/felixfbecker/cli-highlight)
+[![build](https://travis-ci.org/felixfbecker/cli-highlight.svg?branch=main)](https://travis-ci.org/felixfbecker/cli-highlight)
+[![codecov](https://codecov.io/gh/felixfbecker/cli-highlight/branch/main/graph/badge.svg)](https://codecov.io/gh/felixfbecker/cli-highlight)
 ![node](http://img.shields.io/node/v/cli-highlight.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![license](https://img.shields.io/npm/l/cli-highlight.svg)](https://github.com/felixfbecker/cli-highlight/blob/master/LICENSE.txt)
+[![license](https://img.shields.io/npm/l/cli-highlight.svg)](https://github.com/felixfbecker/cli-highlight/blob/main/LICENSE.txt)
 
 ## Example
 
