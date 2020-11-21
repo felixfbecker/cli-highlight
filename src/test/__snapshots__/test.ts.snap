@@ -64,30 +64,30 @@ exports[`highlight() should color ARM Assembly correctly 1`] = `
 
 .global connect
 connect:
-    [34mmov [39m    [36mr3[39m, [32m#2[39m              [32m; s->sin_family = AF_INET[39m
-    [34mstrh [39m   [36mr3[39m, [[36msp[39m]
-    [34mldr [39m    [36mr3[39m, =server_port    [32m; s->sin_port = server_port[39m
-    [34mldr [39m    [36mr3[39m, [[36mr3[39m]
-    [34mstrh [39m   [36mr3[39m, [[36msp[39m, [32m#2[39m]
-    [34mldr [39m    [36mr3[39m, =server_addr    [32m; s->sin_addr = server_addr[39m
-    [34mldr [39m    [36mr3[39m, [[36mr3[39m]
-    [34mstr [39m    [36mr3[39m, [[36msp[39m, [32m#4[39m]
-    [34mmov [39m    [36mr3[39m, [32m#0[39m              [32m; bzero(&s->sin_zero)[39m
-    [34mstr [39m    [36mr3[39m, [[36msp[39m, [32m#8[39m]
-    [34mstr [39m    [36mr3[39m, [[36msp[39m, [32m#12[39m]
-    [34mmov [39m    [36mr1[39m, [36msp[39m      [32m; const struct sockaddr *addr = sp[39m
+    [34mmov[39m     [36mr3[39m, [32m#2[39m              [32m; s->sin_family = AF_INET[39m
+    [34mstrh[39m    [36mr3[39m, [[36msp[39m]
+    [34mldr[39m     [36mr3[39m, =server_port    [32m; s->sin_port = server_port[39m
+    [34mldr[39m     [36mr3[39m, [[36mr3[39m]
+    [34mstrh[39m    [36mr3[39m, [[36msp[39m, [32m#2[39m]
+    [34mldr[39m     [36mr3[39m, =server_addr    [32m; s->sin_addr = server_addr[39m
+    [34mldr[39m     [36mr3[39m, [[36mr3[39m]
+    [34mstr[39m     [36mr3[39m, [[36msp[39m, [32m#4[39m]
+    [34mmov[39m     [36mr3[39m, [32m#0[39m              [32m; bzero(&s->sin_zero)[39m
+    [34mstr[39m     [36mr3[39m, [[36msp[39m, [32m#8[39m]
+    [34mstr[39m     [36mr3[39m, [[36msp[39m, [32m#12[39m]
+    [34mmov[39m     [36mr1[39m, [36msp[39m      [32m; const struct sockaddr *addr = sp[39m
 
-    [34mldr [39m    [36mr7[39m, =connect_call
-    [34mldr [39m    [36mr7[39m, [[36mr7[39m]
-    [34mswi [39m    [32m#0[39m
+    [34mldr[39m     [36mr7[39m, =connect_call
+    [34mldr[39m     [36mr7[39m, [[36mr7[39m]
+    [34mswi[39m     [32m#0[39m
 
-    [34madd [39m    [36msp[39m, [36msp[39m, [32m#16[39m
-    [34mpop [39m    {[36mr0[39m}        [32m; pop sockfd[39m
+    [34madd[39m     [36msp[39m, [36msp[39m, [32m#16[39m
+    [34mpop[39m     {[36mr0[39m}        [32m; pop sockfd[39m
 
-    [34mpop [39m    {[36mr7[39m}
-    [34mpop [39m    {[36mfp[39m, [36mip[39m, [36mlr[39m}
-    [34mmov [39m    [36msp[39m, [36mip[39m
-    [34mbx [39m     [36mlr[39m
+    [34mpop[39m     {[36mr7[39m}
+    [34mpop[39m     {[36mfp[39m, [36mip[39m, [36mlr[39m}
+    [34mmov[39m     [36msp[39m, [36mip[39m
+    [34mbx[39m      [36mlr[39m
 
 .data
 socket_call:   [90m.long[39m [32m281[39m
@@ -185,7 +185,7 @@ RewriteRule . index.php[90m [NC,L][39m
 ExpiresActive [34mOn[39m
 ExpiresByType application/x-javascript  [31m\\"access plus 1 days\\"[39m
 
-Order Deny,Allow
+Order [34mDeny[39m,[34mAllow[39m
 Allow from [34mAll[39m
 
 <Location /maps/>
@@ -483,7 +483,7 @@ exports[`highlight() should color Brainfuck correctly 1`] = `
 `;
 
 exports[`highlight() should color HTML correctly 1`] = `
-"[90m<!DOCTYPE html>[39m
+"[90m<!DOCTYPE [90mhtml[39m[90m>[39m
 [90m<[34mhtml[39m[90m>[39m
     [90m<[34mhead[39m[90m>[39m
         [90m<[34mtitle[39m[90m>[39mHello World![90m</[34mtitle[39m[90m>[39m
@@ -585,7 +585,7 @@ exports[`highlight() should color YAML correctly 1`] = `
 `;
 
 exports[`highlight() should color Zephir correctly 1`] = `
-"[33m[34mfunction[39m[33m testBefore(<Test> a, var b = [32m5[39m[33m, int c = [32m10[39m[33m)[39m
+"[33m[34mfunction[39m[33m testBefore(<Test> a, [34mvar[39m[33m b = [32m5[39m[33m, [34mint[39m[33m c = [32m10[39m[33m)[39m
 [33m[39m{
     a->method1();
 
@@ -613,25 +613,25 @@ exports[`highlight() should color Zephir correctly 1`] = `
     }
 
     [32m// See fn is allowed like shortcut[39m
-    [34mpublic[39m fn method2() -> <Test>
-    {
+    [34mpublic[39m [33m[34mfn[39m[33m method2() -> <Test>[39m
+[33m    [39m{
         call_user_func([33m[34mfunction[39m[33m() [39m{ [34mecho[39m [31m\\"hello\\"[39m; });
 
 
         [[32m1[39m, [32m2[39m, [32m3[39m, [32m4[39m, [32m5[39m]->walk(
-            [33m[34mfunction[39m[33m(int! x) [39m{
+            [33m[34mfunction[39m[33m([34mint[39m[33m! x) [39m{
                 [34mreturn[39m x * x;
             }
         );
 
         [[32m1[39m, [32m2[39m, [32m3[39m, [32m4[39m, [32m5[39m]->walk(
-            [33m[34mfunction[39m[33m(_, int key) [39m{ [34mecho[39m key; }
+            [33m[34mfunction[39m[33m(_, [34mint[39m[33m key) [39m{ [34mecho[39m key; }
         );
 
         [34marray[39m input = [[32m1[39m, [32m2[39m, [32m3[39m, [32m4[39m, [32m5[39m];
 
         input->walk(
-            [33m[34mfunction[39m[33m(_, int key) [39m{ [34mecho[39m key; }
+            [33m[34mfunction[39m[33m(_, [34mint[39m[33m key) [39m{ [34mecho[39m key; }
         );
 
 
@@ -1109,7 +1109,7 @@ exports[`highlight() should color csp correctly 1`] = `
 `;
 
 exports[`highlight() should color css correctly 1`] = `
-"@[34mfont-face[39m {
+"[34m@font-face[39m {
   font-family: Chunkfive; src: [36murl[39m([31m'Chunkfive.otf'[39m);
 }
 
@@ -1118,8 +1118,8 @@ body, .usertext {
   font-family: Chunkfive, sans;
 }
 
-@[34mimport[39m url(print.css);
-@[34mmedia[39m print {
+[34m@import[39m url(print.css);
+[34m@media[39m print {
   a[href^=http]::after {
     content: [36mattr[39m(href)
   }
@@ -1181,9 +1181,9 @@ exports[`highlight() should color dart correctly 1`] = `
 
 [34mpart[39m [31m'app2.dart'[39m;
 
-[32m/**[39m
-[32m * Class description and [[31mlink[39m[32m]([4mhttp://dartlang.org/[24m).[39m
-[32m */[39m
+[32m/[1m**[22m[39m
+[32m[1m [3m* Class description and [[31mlink[39m[32m]([4mhttp://dartlang.org/[24m).[23m[22m[39m
+[32m[1m[3m *[23m/[22m[39m
 [90m@Awesome[39m([31m'it works!'[39m)
 [34m[34mclass[39m[34m SomeClass<S [34mextends[39m[34m Iterable> [34mextends[39m[34m BaseClass<S> [34mimplements[39m[34m Comparable [39m{
   [34mfactory[39m SomeClass([36mnum[39m param);
@@ -1192,7 +1192,7 @@ exports[`highlight() should color dart correctly 1`] = `
     [36mdouble[39m z = [32m0.0[39m;
   }
 
-  [32m/// [1m**Sum**[22m function[39m
+  [32m/// [1m**[22mSum[1m** function[22m[39m
   [36mint[39m sum([36mint[39m a, [36mint[39m b) => a + b;
 
   [36mElementList[39m els() => [36mquerySelectorAll[39m([31m'.dart'[39m);
@@ -1552,22 +1552,22 @@ guy = Person.new first_name: [31m\\"Guy\\"[39m
 guy.name
 
 [34m[34mdefmodule[39m[34m ListServer[39m [34mdo[39m
-  @moduledoc [31m\\"\\"[39m[31m\\"[39m
+  @moduledoc [31m\\"\\"\\"[39m
 [31m  This module provides an easy to use ListServer, useful for keeping[39m
 [31m  lists of things.[39m
-[31m  \\"[39m[31m\\"\\"[39m
+[31m  \\"\\"\\"[39m
   [34muse[39m GenServer.Behaviour
   [34malias[39m Foo.Bar
 
   [32m### Public API[39m
-  @doc [31m\\"\\"[39m[31m\\"[39m
+  @doc [31m\\"\\"\\"[39m
 [31m  Starts and links a new ListServer, returning {:ok, pid}[39m
 [31m[39m
 [31m  ## Example[39m
 [31m[39m
 [31m    iex> {:ok, pid} = ListServer.start_link[39m
 [31m[39m
-[31m  \\"[39m[31m\\"\\"[39m
+[31m  \\"\\"\\"[39m
   [33m[34mdef[39m[33m start_link[39m [34mdo[39m
     :gen_server.start_link({:local, :list}, __MODULE__, [], [])
   [34mend[39m
@@ -3220,8 +3220,8 @@ exports[`highlight() should color lua correctly 1`] = `
     }
 }
 [33m[34mfunction[39m[33m signal_mt.__index:emit(... [32m--[[ Comment in params ]][39m[33m)[39m
-    [34mfor[39m _, slot [34min[39m [36mipairs[39m(self) [34mdo[39m
-        slot(self, ...)
+    [34mfor[39m _, slot [34min[39m [36mipairs[39m([36mself[39m) [34mdo[39m
+        slot([36mself[39m, ...)
     [34mend[39m
 [34mend[39m
 [34mlocal[39m [33m[34mfunction[39m[33m create_signal()[39m
@@ -4057,7 +4057,7 @@ exports[`highlight() should color perl correctly 1`] = `
 
 [90m__DATA__[39m
 [32m@@ layouts/default.html.ep[39m
-[90m<!DOCTYPE html>[39m
+[90m<!DOCTYPE [90mhtml[39m[90m>[39m
 [90m<[34mhtml[39m[90m>[39m
   [90m<[34mhead[39m[90m>[39m[90m<[34mtitle[39m[90m>[39m[90m<[34m%=[39m[90m[39m title [90m%>[39m[90m</[34mtitle[39m[90m>[39m[90m</[34mhead[39m[90m>[39m
   [90m<[34mbody[39m[90m>[39m[90m<[34m%=[39m[90m[39m content [90m%>[39m[90m</[34mbody[39m[90m>[39m
@@ -4083,7 +4083,7 @@ comp3=[31m\\"192.168.0.3\\"[39m
 
 [32m# options[39m
 
-[36mset[39m block-policy return
+[36mset[39m [34mblock-policy[39m return
 [36mset[39m [34mloginterface[39m [34megress[39m
 [36mset[39m [34mskip[39m [34mon[39m lo
 
@@ -4110,7 +4110,7 @@ comp3=[31m\\"192.168.0.3\\"[39m
 
 [36mpass[39m [34min[39m [34mon[39m [34megress[39m [34minet[39m [34mproto[39m tcp [34mto[39m ([34megress[39m) [34mport[39m [32m80[39m [34mrdr-to[39m $comp3
 
-[36mpass[39m [34min[39m [34minet[39m [34mproto[39m icmp [34mall[39m icmp-type $icmp_types
+[36mpass[39m [34min[39m [34minet[39m [34mproto[39m icmp [34mall[39m [34micmp-type[39m $icmp_types
 
 [36mpass[39m [34min[39m [34mon[39m $int_if
 "
@@ -4123,14 +4123,14 @@ exports[`highlight() should color php correctly 1`] = `
 
 [34m[34minterface[39m[34m Factory[39m
 [34m[39m{
-    [34mstatic[39m [33m[34mfunction[39m[33m _factory()[39m;
+    [36mstatic[39m [33m[34mfunction[39m[33m _factory()[39m;
 }
 
 [34mabstract[39m [34m[34mclass[39m[34m URI [34mextends[39m[34m BaseURI [34mimplements[39m[34m Factory[39m
 [34m[39m{
     [34mabstract[39m [33m[34mfunction[39m[33m test()[39m;
 
-    [34mpublic[39m [34mstatic[39m $st1 = [32m1[39m;
+    [34mpublic[39m [36mstatic[39m $st1 = [32m1[39m;
     [34mconst[39m ME = [31m\\"Yo\\"[39m;
     [34mvar[39m $list = [34mNULL[39m;
     [34mprivate[39m $var;
@@ -4140,7 +4140,7 @@ exports[`highlight() should color php correctly 1`] = `
 [32m     *[39m
 [32m     * [32m@return[39m[32m URI[39m
 [32m     */[39m
-    [34mstatic[39m [34mpublic[39m [33m[34mfunction[39m[33m _factory($stats = array(), $uri = [31m'http'[39m[33m)[39m
+    [36mstatic[39m [34mpublic[39m [33m[34mfunction[39m[33m _factory($stats = [34marray[39m[33m(), $uri = [31m'http'[39m[33m)[39m
 [33m    [39m{
         [34mecho[39m [34m__METHOD__[39m;
         $uri = explode([31m':'[39m, $uri, [32m0b10[39m);
@@ -4153,8 +4153,8 @@ exports[`highlight() should color php correctly 1`] = `
             [34mthrow[39m [34mnew[39m Zend_Uri_Exception([31m'Illegal scheme'[39m);
         }
 
-        [34m$this[39m->var = [32m0[39m - [34mself[39m::$st;
-        [34m$this[39m->list = [34mlist[39m([34mArray[39m([31m\\"1\\"[39m=> [32m2[39m, [32m2[39m=>[34mself[39m::ME, [32m3[39m => \\\\Location\\\\Web\\\\URI::class));
+        [34m$this[39m->var = [32m0[39m - [36mself[39m::$st;
+        [34m$this[39m->list = [34mlist[39m([34mArray[39m([31m\\"1\\"[39m=> [32m2[39m, [32m2[39m=>[36mself[39m::ME, [32m3[39m => \\\\Location\\\\Web\\\\URI::class));
 
         [34mreturn[39m [
             [31m'uri'[39m   => $uri,
@@ -4197,7 +4197,7 @@ exports[`highlight() should color pony correctly 1`] = `
 `;
 
 exports[`highlight() should color powershell correctly 1`] = `
-"$initialDate = [datetime][31m'2013/1/8'[39m
+"$initialDate = [[36mdatetime[39m][31m'2013/1/8'[39m
 
 $rollingDate = $initialDate
 
@@ -4206,8 +4206,8 @@ $rollingDate = $initialDate
     $results = $client.DownloadString([31m\\"http://not.a.real.url\\"[39m)
     [36mWrite-Host[39m [31m\\"$rollingDate.ToShortDateString() - $results\\"[39m
     $rollingDate = $rollingDate.AddDays([32m21[39m)
-    $username = [System.Environment]::UserName
-} [34muntil[39m ($rollingDate -ge [datetime][31m'2013/12/31'[39m)
+    $username = [[36m[2mSystem.Environment[22m[39m]::UserName
+} [34muntil[39m ($rollingDate -ge [[36mdatetime[39m][31m'2013/12/31'[39m)
 "
 `;
 
@@ -4833,28 +4833,28 @@ foo_matrix = [[32m1[39m, [32m2[39m, [32m3[39m; [32m4[39m, [32m5[39m, 
 `;
 
 exports[`highlight() should color scss correctly 1`] = `
-"@[34mimport[39m [31m\\"compass/reset\\"[39m;
+"[34m@import[39m [31m\\"compass/reset\\"[39m;
 
 [32m// variables[39m
 $colorGreen: [32m#008000[39m;
 $colorGreenDark: darken($colorGreen, [32m10[39m);
 
-@[34mmixin[39m container {
+[34m@mixin[39m container {
     max-width: [32m980px[39m;
 }
 
 [32m// mixins with parameters[39m
-@[34mmixin[39m button($color:green) {
-    @[34mif[39m ($color == green) {
+[34m@mixin[39m button($color:green) {
+    [34m@if[39m ($color == green) {
         background-color: [32m#008000[39m;
     }
-    @[34melse[39m if ($color == red) {
+    [34m@else[39m if ($color == red) {
         background-color: [32m#B22222[39m;
     }
 }
 
 button {
-    @[34minclude[39m button(red);
+    [34m@include[39m button(red);
 }
 
 div,
@@ -4886,7 +4886,7 @@ ul {
 }
 
 .banner {
-    @[34mextend[39m .container;
+    [34m@extend[39m .container;
 }
 
 a {
@@ -4895,15 +4895,15 @@ a {
   &:visited { color: [32m#c458cb[39m; }
 }
 
-@[34mfor[39m $i from 1 through 5 {
+[34m@for[39m $i from [32m1[39m through [32m5[39m {
     .span#{$i} {
         width: [32m20px[39m*$i;
     }
 }
 
-@[34mmixin[39m mobile {
-  @[34mmedia[39m screen and (max-width : 600px) {
-    @[34mcontent[39m;
+[34m@mixin[39m mobile {
+  [34m@media[39m screen [34mand[39m (max-width : [32m600px[39m) {
+    [34m@content[39m;
   }
 }"
 `;
@@ -5116,41 +5116,41 @@ exports[`highlight() should color stan correctly 1`] = `
 [32m// Taken from stan-reference-2.8.0.pdf p.66[39m
 
 data {
-  int<lower=[32m0[39m> N;             [32m// num individuals[39m
-  int<lower=[32m1[39m> K;             [32m// num ind predictors[39m
-  int<lower=[32m1[39m> J;             [32m// num groups[39m
-  int<lower=[32m1[39m> L;             [32m// num group predictors[39m
-  int<lower=[32m1[39m,upper=J> jj[N]; [32m// group for individual[39m
-  matrix[N,K] x;              [32m// individual predictors[39m
-  row_vector[L] u[J];         [32m// group predictors[39m
-  vector[N] y;                [32m// outcomes[39m
+  [34mint[39m<[34mlower[39m=[32m0[39m> N;             [32m// num individuals[39m
+  [34mint[39m<[34mlower[39m=[32m1[39m> K;             [32m// num ind predictors[39m
+  [34mint[39m<[34mlower[39m=[32m1[39m> J;             [32m// num groups[39m
+  [34mint[39m<[34mlower[39m=[32m1[39m> L;             [32m// num group predictors[39m
+  [34mint[39m<[34mlower[39m=[32m1[39m,[34mupper[39m=J> jj[N]; [32m// group for individual[39m
+  [34mmatrix[39m[N,K] x;              [32m// individual predictors[39m
+  [34mrow_vector[39m[L] u[J];         [32m// group predictors[39m
+  [34mvector[39m[N] y;                [32m// outcomes[39m
 }
 parameters {
-  corr_matrix[K] Omega;       [32m// prior correlation[39m
-  vector<lower=[32m0[39m>[K] tau;     [32m// prior scale[39m
-  matrix[L,K] gamma;          [32m// group coeffs[39m
-  vector[K] beta[J];          [32m// indiv coeffs by group[39m
-  real<lower=[32m0[39m> sigma;        [32m// prediction error scale[39m
+  [34mcorr_matrix[39m[K] Omega;       [32m// prior correlation[39m
+  [34mvector[39m<[34mlower[39m=[32m0[39m>[K] tau;     [32m// prior scale[39m
+  [34mmatrix[39m[L,K] gamma;          [32m// group coeffs[39m
+  [34mvector[39m[K] beta[J];          [32m// indiv coeffs by group[39m
+  [34mreal[39m<[34mlower[39m=[32m0[39m> sigma;        [32m// prediction error scale[39m
 }
 model {
-  tau ~ cauchy([32m0[39m,[32m2.5[39m);
-  Omega ~ lkj_corr([32m2[39m);
-  to_vector(gamma) ~ normal([32m0[39m, [32m5[39m);
+  tau ~ [34mcauchy[39m([32m0[39m,[32m2.5[39m);
+  Omega ~ [34mlkj_corr[39m([32m2[39m);
+  [36mto_vector[39m(gamma) ~ [34mnormal[39m([32m0[39m, [32m5[39m);
   {
-    row_vector[K] u_gamma[J];
+    [34mrow_vector[39m[K] u_gamma[J];
     [34mfor[39m (j [34min[39m [32m1[39m:J)
       u_gamma[j] <- u[j] * gamma;
-    beta ~ multi_normal(u_gamma, quad_form_diag(Omega, tau));
+    beta ~ [34mmulti_normal[39m(u_gamma, [36mquad_form_diag[39m(Omega, tau));
   }
   {
-    vector[N] x_beta_jj;
+    [34mvector[39m[N] x_beta_jj;
     [34mfor[39m (n [34min[39m [32m1[39m:N)
       x_beta_jj[n] <- x[n] * beta[jj[n]];
-    y ~ normal(x_beta_jj, sigma);
+    y ~ [34mnormal[39m(x_beta_jj, sigma);
   }
 }
 
-[32m# [32mNote:[39m[32m Octothorpes indicate comments, too![39m
+[32m# Note: Octothorpes indicate comments, too![39m
 "
 `;
 
@@ -5989,7 +5989,7 @@ exports[`highlight() should color xl correctly 1`] = `
 `;
 
 exports[`highlight() should color xml correctly 1`] = `
-"[90m<!DOCTYPE html>[39m
+"[90m<!DOCTYPE [90mhtml[39m[90m>[39m
 [90m<[34mtitle[39m[90m>[39mTitle[90m</[34mtitle[39m[90m>[39m
 
 [90m<[34mstyle[39m[90m>[39mbody {width: [32m500px[39m;}[90m</[34mstyle[39m[90m>[39m
