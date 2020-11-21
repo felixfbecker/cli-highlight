@@ -54,6 +54,25 @@
       "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
     }
   },
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      [
+        "@eclass/semantic-release-surge",
+        {
+          "alias": "cli-highlight.surge.sh",
+          "assets": "./typedoc/",
+          "buildScriptName": "typedoc"
+        }
+      ]
+    ]
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -88,7 +107,8 @@
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "@sourcegraph/prettierrc": "^3.0.0",
+    "@eclass/semantic-release-surge": "^1.0.7",
+    "@sourcegraph/prettierrc": "^3.0.3",
     "@sourcegraph/tslint-config": "^11.0.1",
     "@types/highlight.js": "^9.12.1",
     "@types/jest": "^24.0.9",
@@ -99,8 +119,8 @@
     "@types/yargs": "^13.0.0",
     "husky": "^3.0.0",
     "jest": "^24.1.0",
-    "prettier": "^1.12.1",
-    "semantic-release": "^15.13.4",
+    "prettier": "^2.2.0",
+    "semantic-release": "^17.2.4",
     "ts-jest": "^24.0.0",
     "tslint": "^5.8.0",
     "typedoc": "^0.15.0",
