@@ -1,6 +1,6 @@
 name: build
 
-on: [push]
+on: [push, pull_request]
 
 env:
   FORCE_COLOR: 3
@@ -22,7 +22,7 @@ jobs:
       - run: bash <(curl -s https://codecov.io/bash)
         if: always()
       - name: release
-        if: github.ref == 'refs/heads/master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
