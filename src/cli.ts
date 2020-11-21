@@ -1,8 +1,8 @@
 import * as fs from 'mz/fs'
 import * as path from 'path'
 import * as tty from 'tty'
-import yargs = require('yargs')
-import { highlight, HighlightOptions, supportsLanguage } from './index'
+import yargs from 'yargs'
+import { highlight, HighlightOptions, supportsLanguage } from '.'
 import { parse } from './theme'
 
 yargs
@@ -61,7 +61,6 @@ if (!file && !(process.stdin as tty.ReadStream).isTTY) {
 } else {
     yargs.showHelp()
     process.exit(1)
-    throw new Error()
 }
 
 Promise.all<string, string | undefined>([codePromise, argv.theme ? fs.readFile(argv.theme, 'utf8') : undefined])
@@ -71,20 +70,20 @@ Promise.all<string, string | undefined>([codePromise, argv.theme ? fs.readFile(a
             theme: (theme && parse(theme)) || undefined,
         }
         if (file) {
-            const ext = path.extname(file).substr(1)
-            if (ext && supportsLanguage(ext)) {
-                options.language = ext
+            const extension = path.extname(file).slice(1)
+            if (extension && supportsLanguage(extension)) {
+                options.language = extension
             }
         }
         options.language = argv.language
         return new Promise<void>((resolve, reject) =>
-            process.stdout.write(highlight(code, options), (err: any) => (err ? reject(err) : resolve()))
+            process.stdout.write(highlight(code, options), (error: any) => (error ? reject(error) : resolve()))
         )
     })
     .then(() => {
         process.exit(0)
     })
-    .catch((err: any) => {
-        console.error(err)
+    .catch((error: any) => {
+        console.error(error)
         process.exit(1)
     })

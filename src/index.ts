@@ -1,6 +1,7 @@
 import * as hljs from 'highlight.js'
 import * as parse5 from 'parse5'
 import htmlparser2Adapter from 'parse5-htmlparser2-tree-adapter'
+// eslint-disable-next-line no-duplicate-imports
 import * as HtmlParser2 from 'parse5-htmlparser2-tree-adapter'
 import { DEFAULT_THEME, plain, Theme } from './theme'
 
@@ -10,9 +11,8 @@ function colorizeNode(node: HtmlParser2.Node, theme: Theme = {}, context?: strin
             const text = (node as HtmlParser2.TextNode).data
             if (context === undefined) {
                 return (theme.default || DEFAULT_THEME.default || plain)(text)
-            } else {
-                return text
             }
+            return text
         }
         case 'tag': {
             const hljsClass = /hljs-(\w+)/.exec((node as HtmlParser2.Element).attribs.class)
@@ -49,8 +49,8 @@ export interface HighlightOptions {
     language?: string
 
     /**
-     *  When present and evaluates to a true value, forces highlighting to finish even in case of
-     *  detecting illegal syntax for the language instead of throwing an exception.
+     * When present and evaluates to a true value, forces highlighting to finish even in case of
+     * detecting illegal syntax for the language instead of throwing an exception.
      */
     ignoreIllegals?: boolean
 

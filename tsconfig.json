@@ -22,5 +22,5 @@
       "parse5": ["./node_modules/parse5/lib/index.d.ts"],
     },
   },
-  "exclude": ["node_modules", "dist", "src/test"],
+  "exclude": ["node_modules", "dist"],
 }

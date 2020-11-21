@@ -291,7 +291,7 @@ export interface Theme extends Tokens<(codePart: string) => string> {
  * Identity function for tokens that should not be styled (returns the input string as-is).
  * See [[Theme]] for an example.
  */
-export const plain = (codePart: string) => codePart
+export const plain = (codePart: string): string => codePart
 
 /**
  * The default theme. It is possible to override just individual keys.
@@ -519,7 +519,7 @@ export function fromJson(json: JsonTheme): Theme {
         const style: string | string[] = (json as any)[key]
         if (Array.isArray(style)) {
             ;(theme as any)[key] = style.reduce(
-                (prev: typeof chalk, curr: string) => (curr === 'plain' ? plain : (prev as any)[curr]),
+                (previous: typeof chalk, current: string) => (current === 'plain' ? plain : (previous as any)[current]),
                 chalk
             )
         } else {
