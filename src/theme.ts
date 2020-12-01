@@ -1,7 +1,4 @@
-import { Chalk, default as _chalk, Level } from 'chalk'
-
-// Always enable at least basic color support, even if not auto-detected
-const chalk = new _chalk.Instance({ level: Math.max(_chalk.level, 1) as Level })
+import chalk, { Chalk } from 'chalk'
 
 /**
  * A generic interface that holds all available language tokens.
