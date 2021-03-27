@@ -4,7 +4,7 @@ exports[`highlight() should color 1C Enterprise correctly 1`] = `
 "[90m#[90mЗагрузитьИзФайла[39m[90m ext_module.txt [32m// директива 7.7[39m[90m[39m
 [90m#[90mЕсли[39m[90m [90mКлиент[39m[90m [90mИЛИ[39m[90m [90mНаКлиенте[39m[90m [90mТогда[39m[90m [32m// инструкции препроцессора[39m[90m[39m
 	[90m&[90mНаКлиентеНаСервереБезКонтекста[39m[90m [32m// директивы компиляции[39m[90m[39m
-	[33m[34mФункция[39m[33m ТолстыйКлиентОбычноеПриложение([34mЗнач[39m[33m Параметр[32m1[39m[33m = [34mНеопределено[39m[33m, [32m// комментарий[39m[33m[39m
+	[33mФункция ТолстыйКлиентОбычноеПриложение([34mЗнач[39m[33m Параметр[32m1[39m[33m = [34mНеопределено[39m[33m, [32m// комментарий[39m[33m[39m
 [33m		Параметр2 = [31m\\"\\"[39m[33m, ПараметрN = [32m123.45[39m[33m, ПарамNN[39m) [34mЭкспорт[39m [32m// еще комментарий[39m
 		[34mПопытка[39m
 			Результат_Булевы_Значения = [34mНовый[39m [36m[2mСтруктура[22m[39m([31m\\"П1, П2\\"[39m, [34mИстина[39m, [34mЛожь[39m, [34mNULL[39m, [34mНеопределено[39m);
@@ -29,7 +29,7 @@ exports[`highlight() should color 1C Enterprise correctly 1`] = `
 		[34mКонецПопытки[39m;
 		~МеткаGOTO: [32m// еще комментарий[39m
 		ВД = [34mВидДвиженияБухгалтерии[39m.Дебет;
-	[33m[34mКонецФункции[39m[33m[39m [32m// ТолстыйКлиентОбычноеПриложение()[39m
+	[33mКонецФункции[39m [32m// ТолстыйКлиентОбычноеПриложение()[39m
 [90m#[90mКонецЕсли[39m[90m[39m"
 `;
 
@@ -444,7 +444,7 @@ exports[`highlight() should color BNF correctly 1`] = `
 
 exports[`highlight() should color Bash correctly 1`] = `
 "[90m#!/bin/bash[39m
-[90m[39m
+
 [32m###### CONFIG[39m
 ACCEPTED_HOSTS=[31m\\"/root/.hag_accepted.conf\\"[39m
 BE_VERBOSE=[34mfalse[39m
@@ -509,10 +509,10 @@ exports[`highlight() should color JSON correctly 1`] = `
 
 exports[`highlight() should color SQL correctly 1`] = `
 "[32m-- Create a table[39m
-[34mCREATE[39m [34mTABLE[39m [31m\\"topic\\"[39m (
-    [31m\\"id\\"[39m [36mserial[39m [34mNOT[39m [34mNULL[39m PRIMARY [34mKEY[39m,
-    [31m\\"forum_id\\"[39m [36minteger[39m [34mNOT[39m [34mNULL[39m,
-    [31m\\"subject\\"[39m [36mvarchar[39m([32m255[39m) [34mNOT[39m [34mNULL[39m
+[34mCREATE[39m [34mTABLE[39m \\"topic\\" (
+    \\"id\\" serial [34mNOT[39m [34mNULL[39m [34mPRIMARY[39m KEY,
+    \\"forum_id\\" [36m[2minteger[22m[39m [34mNOT[39m [34mNULL[39m,
+    \\"subject\\" [36m[2mvarchar[22m[39m([32m255[39m) [34mNOT[39m [34mNULL[39m
 );
 "
 `;
@@ -646,11 +646,11 @@ exports[`highlight() should color Zephir correctly 1`] = `
 exports[`highlight() should color axapta correctly 1`] = `
 "[34m[34mclass[39m[34m ExchRateLoadBatch [34mextends[39m[34m RunBaseBatch [39m{
   ExchRateLoad rbc;
-  [34mcontainer[39m currencies;
-  [34mboolean[39m actual;
-  [34mboolean[39m overwrite;
-  [34mdate[39m beg;
-  [34mdate[39m end;
+  [36mcontainer[39m currencies;
+  [36mboolean[39m actual;
+  [36mboolean[39m overwrite;
+  [36mdate[39m beg;
+  [36mdate[39m end;
 
   [90m#define.CurrentVersion(5)[39m
 
@@ -662,9 +662,9 @@ exports[`highlight() should color axapta correctly 1`] = `
   [90m#endmacro[39m
 }
 
-[34mpublic[39m [34mboolean[39m unpack([34mcontainer[39m packedClass) {
-  [34mcontainer[39m       base;
-  [34mboolean[39m         ret;
+[34mpublic[39m [36mboolean[39m unpack([36mcontainer[39m packedClass) {
+  [36mcontainer[39m       base;
+  [36mboolean[39m         ret;
   Integer         version    = runbase::getVersion(packedClass);
 
   [34mswitch[39m (version) {
@@ -942,11 +942,11 @@ exports[`highlight() should color cos correctly 1`] = `
 [32m/*[39m
 [32m * Sub-languages support:[39m
 [32m */[39m
-&sql( [34mSELECT[39m * [34mFROM[39m Cinema.Film [34mWHERE[39m [34mLength[39m > [32m2[39m )
+&sql( [34mSELECT[39m * [34mFROM[39m Cinema.Film [34mWHERE[39m Length > [32m2[39m )
 &js<[34mfor[39m ([34mvar[39m i = [32m0[39m; i < [36mString[39m([31m\\"test\\"[39m).split([31m\\"\\"[39m).length); ++i) {
     [36mconsole[39m.log(i);
 }>
-&html[90m<<![36mDOCTYPE[39m[90m [36mhtml[39m[90m>[39m
+&html<[90m<!DOCTYPE [90mhtml[39m[90m>[39m
 [90m<[34mhtml[39m[90m>[39m
 [90m<[34mhead[39m[90m>[39m [90m<[34mmeta[39m[90m [36mname[39m[90m=[31m\\"test\\"[39m[90m/>[39m [90m</[34mhead[39m[90m>[39m
 [90m<[34mbody[39m[90m>[39mTest[90m</[34mbody[39m[90m>[39m
@@ -963,10 +963,10 @@ exports[`highlight() should color cpp correctly 1`] = `
 
   [32m/* An annoying \\"Hello World\\" example */[39m
   [34mfor[39m ([34mauto[39m i = [32m0[39m; i < [32m0xFFFF[39m; i++)
-    [36mcout[39m << [31m\\"Hello, World!\\"[39m << [36mendl[39m;
+    cout << [31m\\"Hello, World!\\"[39m << endl;
 
   [34mchar[39m c = [31m'\\\\n'[39m;
-  [36munordered_map[39m <[36mstring[39m, [36mvector[39m<[36mstring[39m> > m;
+  unordered_map <string, vector<string> > m;
   m[[31m\\"key\\"[39m] = [31m\\"\\\\\\\\\\\\\\\\\\"[39m; [32m// this is an error[39m
 
   [34mreturn[39m [32m-2e3[39m + [32m12l[39m;
@@ -990,7 +990,7 @@ exports[`highlight() should color cpp-comment correctly 1`] = `
 
 
 [32m/* make cpp win deterministically over others with C block comments */[39m
-[36mcout[39m << [36mendl[39m;
+cout << endl;
 "
 `;
 
@@ -1089,10 +1089,10 @@ exports[`highlight() should color cs correctly 1`] = `
     [[90mObsolete([90m\\"...\\"[39m[90m)[39m]
     [34mclass[39m Program : IInterface
     {
-        [33m[34mpublic[39m[33m [34mstatic[39m[33m List<[34mint[39m[33m> JustDoIt([34mint[39m[33m count)[39m
+        [33m[34mpublic[39m[33m [34mstatic[39m[33m List<[36mint[39m[33m> JustDoIt([36mint[39m[33m count)[39m
         {
             Console.WriteLine([31m$\\"Hello {Name}!\\"[39m);
-            [34mreturn[39m [34mnew[39m List<[34mint[39m>([34mnew[39m [34mint[39m[] { [32m1[39m, [32m2[39m, [32m3[39m })
+            [34mreturn[39m [34mnew[39m List<[36mint[39m>([34mnew[39m [36mint[39m[] { [32m1[39m, [32m2[39m, [32m3[39m })
         }
     }
 }
@@ -1426,12 +1426,12 @@ exports[`highlight() should color dsconfig correctly 1`] = `
   [36m--policy-name[39m [31m\\"Another Client Connection Policy\\"[39m \\\\
   [36m--set[39m [31menabled:true [39m[36m--set[39m [31mevaluation-order-index:100 [39m\\\\
   [36m--set[39m [31m'connection-criteria:User.1 Connection Criteria'[39m \\\\
-  [36m--reset[39m [31mmaximum-concurrent-[39m[31mconnections[39m
-[31m[39m[32m# Configure global ACIs[39m
+  [36m--reset[39m [31mmaximum-concurrent-connections[39m
+[32m# Configure global ACIs[39m
 [34mdsconfig[39m [36mset-access-control-handler-prop[39m \\\\
- [36m--add[39m [31mglobal-aci:[39m[31m'(target=\\"ldap:///cn=config\\")(targetattr=\\"*\\")(version 3.0; acl \\"Allow access to the config tree by cn=admin,c=us\\"; allow(all) groupdn=\\"ldap:///cn=directory administrators,ou=groups,c=us\\";)'[39m \\\\
- [36m--add[39m [31mglobal-aci:[39m[31m'(target=\\"ldap:///cn=monitor\\")(targetattr=\\"*\\")(version 3.0; acl \\"Allow access to the monitor tree by cn=admin,c=us\\"; allow(all) groupdn=\\"ldap:///cn=directory administrators,ou=groups,c=us\\";)'[39m \\\\
- [36m--remove[39m [31mglobal-aci:[39m[31m'(target=\\"ldap:///cn=alerts\\")(targetattr=\\"*\\")(version 3.0; acl \\"Allow access to the alerts tree by cn=admin,c=us\\"; allow(all) groupdn=\\"ldap:///cn=directory administrators,ou=groups,c=us\\";)'[39m
+ [36m--add[39m [31mglobal-aci[39m:[31m'(target=\\"ldap:///cn=config\\")(targetattr=\\"*\\")(version 3.0; acl \\"Allow access to the config tree by cn=admin,c=us\\"; allow(all) groupdn=\\"ldap:///cn=directory administrators,ou=groups,c=us\\";)'[39m \\\\
+ [36m--add[39m [31mglobal-aci[39m:[31m'(target=\\"ldap:///cn=monitor\\")(targetattr=\\"*\\")(version 3.0; acl \\"Allow access to the monitor tree by cn=admin,c=us\\"; allow(all) groupdn=\\"ldap:///cn=directory administrators,ou=groups,c=us\\";)'[39m \\\\
+ [36m--remove[39m [31mglobal-aci[39m:[31m'(target=\\"ldap:///cn=alerts\\")(targetattr=\\"*\\")(version 3.0; acl \\"Allow access to the alerts tree by cn=admin,c=us\\"; allow(all) groupdn=\\"ldap:///cn=directory administrators,ou=groups,c=us\\";)'[39m
 [32m# Delete error logger[39m
 [34mdsconfig[39m [36mdelete-log-publisher[39m [36m--publisher-name[39m [31m\\"File-Based Error Logger\\"[39m
 "
@@ -1614,14 +1614,14 @@ view model =
 exports[`highlight() should color erb correctly 1`] = `
 "[32m<%# this is a comment %>[39m
 
-[90m<[34m%[39m[90m[39m @posts.each [34mdo[39m |post| [90m%>[39m
-  [90m<[34mp[39m[90m>[39m[90m<[34m%=[39m[90m[39m link_to post.title, post [90m%>[39m[90m</[34mp[39m[90m>[39m
-[90m<[34m%[39m[90m[39m [34mend[39m [90m%>[39m
+<% @posts.each [34mdo[39m |post| %>
+  [90m<[34mp[39m[90m>[39m<%= link_to post.title, post %>[90m</[34mp[39m[90m>[39m
+<% [34mend[39m %>
 
-[90m<[34m%-[39m[90m[39m available_things = things.select(&:available?) [90m[36m-[39m[90m%>[39m
-[90m<[34m%%[39m[90m[39m- x = [32m1[39m + [32m2[39m -[90m%%>[39m
-[90m<[34m%%[39m[90m[39m value = [31m'real string #{@value}'[39m [90m%%>[39m
-[90m<[34m%%[39m[90m[39m= available_things.inspect [90m%%>[39m
+<%- available_things = things.select(&:available?) -%>
+<%%- x = [32m1[39m + [32m2[39m -%%>
+<%% value = [31m'real string #{@value}'[39m %%>
+<%%= available_things.inspect %%>
 "
 `;
 
@@ -1955,8 +1955,8 @@ N22 [34mG0[39m X[32m5000[39m
 N23 [34mIF[39m [[36m#1[39m [34mLT[39m [32m0.370[39m] [34mGOTO[39m [32m49[39m
 N24 X[32m-0.678[39m Y[32m+.990[39m
 N25 [34mG84.3[39m X[32m-0.1[39m
-N26 [36m#4[39m=[36m#5[39m*[36mCOS[45][39m
-N27 [36m#4[39m=[36m#5[39m*[36mSIN[45][39m
+N26 [36m#4[39m=[36m#5[39m*[36mCOS[[32m45[39m[36m][39m
+N27 [36m#4[39m=[36m#5[39m*[36mSIN[[32m45[39m[36m][39m
 N28 [36mVZOFZ[39m=[32m652.9658[39m
 [90m%[39m
 "
@@ -2183,20 +2183,20 @@ exports[`highlight() should color groovy correctly 1`] = `
 
     [32m/**[39m
 [32m     * description method[39m
-[32m     * [32m@param[39m[32m cl the closure[39m
+[32m     * @param cl the closure[39m
 [32m     */[39m
-    [34mvoid[39m description(Closure cl) { [34mthis[39m.description = cl }
+    [34mvoid[39m description(Closure cl) { [36mthis[39m.description = cl }
 
     [34mvoid[39m version(String name, Closure versionSpec) {
         [34mdef[39m closure = { println [31m\\"hi\\"[39m } [34mas[39m Runnable
 
-        MyList ml = [[32m1[39m, [32m2[39m, [[31ma:[39m [32m1[39m, [31mb:[39m[32m2[39m,[31mc :[39m[32m3[39m]]
+        MyList ml = [[32m1[39m, [32m2[39m, [[36ma:[39m [32m1[39m, [36mb:[39m[32m2[39m,[36mc :[39m[32m3[39m]]
         [34mfor[39m (ch [34min[39m [31m\\"name\\"[39m) {}
 
         [32m// single line comment[39m
-        DownloadPackage pkg = [34mnew[39m DownloadPackage([31mversion:[39m name)
+        DownloadPackage pkg = [34mnew[39m DownloadPackage([36mversion:[39m name)
 
-        check [31mthat:[39m [34mtrue[39m
+        check [36mthat:[39m [34mtrue[39m
 
         label:
         [34mdef[39m clone = versionSpec.rehydrate(pkg, pkg, pkg)
@@ -2234,7 +2234,7 @@ exports[`highlight() should color handlebars correctly 1`] = `
 "[90m<[34mdiv[39m[90m [36mclass[39m[90m=[31m\\"entry\\"[39m[90m>[39m
   [32m{{!-- only show if author exists --}}[39m
   {{#[34mif[39m author}}
-    [90m<[34mh1[39m[90m>[39m{{firstName}} {{lastName}}[90m</[34mh1[39m[90m>[39m
+    [90m<[34mh1[39m[90m>[39m{{[34mfirstName[39m}} {{[34mlastName[39m}}[90m</[34mh1[39m[90m>[39m
   {{/[34mif[39m}}
 [90m</[34mdiv[39m[90m>[39m
 "
@@ -2458,17 +2458,17 @@ exports[`highlight() should color htmlbars correctly 1`] = `
 "[90m<[34mdiv[39m[90m [36mclass[39m[90m=[31m\\"entry\\"[39m[90m>[39m
   [32m{{!-- only output this author names if an author exists --}}[39m
   {{#[34mif[39m author}}
-    {{#[34mplaywright-wrapper[39m [36mplaywright[39m=author [36maction[39m=([36mmut[39m author) [34mas[39m |playwright|}}
-    [90m<[34mh1[39m[90m>[39m{{playwright.firstName}} {{playwright.lastName}}[90m</[34mh1[39m[90m>[39m
+    {{#[34mplaywright-wrapper[39m [36mplaywright[39m=author [36maction[39m=([34mmut[39m author) [34mas[39m |playwright|}}
+    [90m<[34mh1[39m[90m>[39m{{[34mplaywright.firstName[39m}} {{[34mplaywright.lastName[39m}}[90m</[34mh1[39m[90m>[39m
     {{/[34mplaywright-wrapper[39m}}
   {{/[34mif[39m}}
-  {{[36myield[39m}}
+  {{[34myield[39m}}
 [90m</[34mdiv[39m[90m>[39m
 "
 `;
 
 exports[`highlight() should color http correctly 1`] = `
-"[34mPOST[39m [31m/task?id=1[39m HTTP/1.1
+"[34mPOST[39m [31m/task?id=1[39m [90mHTTP/1.1[39m
 Host: example.org
 Content-Type: application/json; charset=utf-8
 Content-Length: 137
@@ -2632,7 +2632,7 @@ exports[`highlight() should color java correctly 1`] = `
 exports[`highlight() should color javascript correctly 1`] = `
 "[33m[34mfunction[39m[33m $initHighlight(block, cls) [39m{
   [34mtry[39m {
-    [34mif[39m (cls.search([31m/\\\\bno\\\\-highlight\\\\b/[39m) != [32m-1[39m)
+    [34mif[39m (cls.search([31m/\\\\bno\\\\-highlight\\\\b/[39m) != -[32m1[39m)
       [34mreturn[39m process(block, [34mtrue[39m, [32m0x0F[39m) +
              [31m\` class=\\"\${cls}\\"\`[39m;
   } [34mcatch[39m (e) {
@@ -2733,17 +2733,17 @@ exports[`highlight() should color julia correctly 1`] = `
 
 [32m# Old-style definitions[39m
 
-[34mimmutable[39m Point{T<:[36mAbstractFloat[39m}
+immutable Point{T<:[36mAbstractFloat[39m}
     index::[36mInt[39m
     x::T
     y::T
 [34mend[39m
 
-[34mabstract[39m A
+abstract A
 
-[34mtype[39m B <: A [34mend[39m
+type B <: A [34mend[39m
 
-[34mtypealias[39m P Point{[36mFloat16[39m}
+typealias P Point{[36mFloat16[39m}
 
 [32m# New-style definitions[39m
 
@@ -2766,7 +2766,7 @@ exports[`highlight() should color julia correctly 1`] = `
 
 [34musing[39m X
 [34mimport[39m Y
-[34mimportall[39m Z
+importall Z
 
 [34mexport[39m a, b, c
 
@@ -2798,7 +2798,7 @@ exports[`highlight() should color julia correctly 1`] = `
 [31m    String[39m
 [31m    \\"\\"\\"[39m
 
-    [90m@assert[39m [34mπ[39m > [34me[39m
+    [90m@assert[39m [34mπ[39m > e
 
     s = [32m1.2[39m
     変数 = [31m\\"variable\\"[39m
@@ -2822,7 +2822,7 @@ exports[`highlight() should color julia correctly 1`] = `
     run([31m\`ls $opt\`[39m)
 
     [34mtry[39m
-        [34mccall[39m(:lib, ([36mPtr[39m{[36mVoid[39m},), [36mRef[39m{[34mC_NULL[39m})
+        [34mccall[39m(:lib, ([36mPtr[39m{Void},), [36mRef[39m{[34mC_NULL[39m})
     [34mcatch[39m
         throw([36mArgumentError[39m([31m\\"wat\\"[39m))
     [34mfinally[39m
@@ -2946,29 +2946,29 @@ exports[`highlight() should color lasso correctly 1`] = `
 
 exports[`highlight() should color ldif correctly 1`] = `
 "[32m# Example LDAP user[39m
-[36mdn:[39m [31muid=user.0,ou=People,dc=example,dc=com[39m
-[36mobjectClass:[39m [31mtop[39m
-[36mobjectClass:[39m [31mperson[39m
-[36mobjectClass:[39m [31morganizationalPerson[39m
-[36mobjectClass:[39m [31minetOrgPerson[39m
-[36mgivenName:[39m [31mMorris[39m
-[36msn:[39m [31mDay[39m
-[36mcn:[39m [31mMorris[39m [31mDay[39m
-[36minitials:[39m [31mMD[39m
-[36memployeeNumber:[39m [32m0[39m
-[36muid:[39m [31muser.0[39m
-[36mmail:[39m [31muser.0@example.com[39m
-[36muserPassword:[39m [31mpassword[39m
-[36mtelephoneNumber:[39m [31m+1[39m [32m042[39m [32m100[39m [32m3866[39m
-[36mhomePhone:[39m [31m+1[39m [32m039[39m [32m680[39m [32m4135[39m
-[36mpager:[39m [31m+1[39m [32m284[39m [32m199[39m [32m0966[39m
-[36mmobile:[39m [31m+1[39m [32m793[39m [32m707[39m [32m0251[39m
-[36mstreet:[39m [32m90280[39m [31mSpruce[39m [31mStreet[39m
-[36ml:[39m [31mMinneapolis[39m
-[36mst:[39m [31mMN[39m
-[36mpostalCode:[39m [32m50401[39m
-[36mpostalAddress:[39m [31mMorris[39m [31mDay$90280[39m [31mSpruce[39m [31mStreet$Minneapolis,[39m [31mMN[39m  [32m50401[39m
-[36mdescription:[39m [31mThis[39m [31mis[39m [31mthe[39m [31mdescription[39m [31mfor[39m [31mMorris[39m [31mDay.[39m
+dn: uid=user.0,ou=People,dc=example,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+givenName: Morris
+sn: Day
+cn: Morris Day
+initials: MD
+employeeNumber: 0
+uid: user.0
+mail: user.0@example.com
+userPassword: password
+telephoneNumber: +1 042 100 3866
+homePhone: +1 039 680 4135
+pager: +1 284 199 0966
+mobile: +1 793 707 0251
+street: 90280 Spruce Street
+l: Minneapolis
+st: MN
+postalCode: 50401
+postalAddress: Morris Day$90280 Spruce Street$Minneapolis, MN  50401
+description: This is the description for Morris Day.
 "
 `;
 
@@ -3002,11 +3002,11 @@ exports[`highlight() should color less correctly 1`] = `
 
 @rhythm: [32m1.5em[39m;
 
-[34m@media[39m screen and (min-resolution: [32m2dppx[39m) {
+[34m@media[39m screen [34mand[39m (min-resolution: [32m2dppx[39m) {
     body {font-size: [32m125%[39m}
 }
 
-section > .foo + #bar:hover [href*=\\"less\\"] {
+section > .foo + #bar:hover [href*=[31m\\"less\\"[39m] {
     margin:     @rhythm [32m0[39m [32m0[39m @rhythm;
     padding:    calc([32m5%[39m + [32m20px[39m);
     background: [32m#f00ba7[39m url([31mhttp://placehold.alpha-centauri/42.png[39m) no-repeat;
@@ -3089,108 +3089,108 @@ exports[`highlight() should color livecodeserver correctly 1`] = `
 
 exports[`highlight() should color livescript correctly 1`] = `
 "[32m# take the first n objects from a list[39m
-[31mtake[39m [31m=[39m [31m(n,[39m [31m[x,[39m [31m...xs]:list)[39m [31m-->[39m
-  [31m|[39m [31mn[39m [31m<=[39m [32m0[39m     [31m=>[39m [31m[][39m
-  [31m|[39m [31mempty[39m [31mlist[39m [31m=>[39m [31m[][39m
-  [31m|[39m [31motherwise[39m  [31m=>[39m [31m[x][39m [31m++[39m [31mtake[39m [31mn[39m - [32m1[39m[31m,[39m [31mxs[39m
+[33mtake = (n, [x, ...xs]:[34mlist[39m[33m) -->[39m
+  | n <= [32m0[39m     => []
+  | empty [34mlist[39m => []
+  | [34motherwise[39m  => [x] ++ take n - [32m1[39m, xs
 
-[31mtake[39m [32m2[39m[31m,[39m [31m[1,[39m [32m2[39m[31m,[39m [32m3[39m[31m,[39m [32m4[39m[31m,[39m [32m5[39m[31m][39m
+take [32m2[39m, [[32m1[39m, [32m2[39m, [32m3[39m, [32m4[39m, [32m5[39m]
 
 [32m# Curried functions[39m
-[31mtake-three[39m [31m=[39m [31mtake[39m [32m3[39m
-[31mtake-three[39m [31m[6,[39m [32m7[39m[31m,[39m [32m8[39m[31m,[39m [32m9[39m[31m,[39m [32m10[39m[31m][39m
+take-three = take [32m3[39m
+take-three [[32m6[39m, [32m7[39m, [32m8[39m, [32m9[39m, [32m10[39m]
 
 [32m# Function composition[39m
-[31mlast-three[39m [31m=[39m [31mreverse[39m [31m>>[39m [31mtake-three[39m [31m>>[39m [31mreverse[39m
-[31mlast-three[39m [31m[1[39m [31mto[39m [32m8[39m[31m][39m
+last-three = reverse >> take-three >> reverse
+last-three [[32m1[39m [34mto[39m [32m8[39m]
 
 [32m# List comprehensions and piping[39m
-[31mt1[39m [31m=[39m
-  [31m*[39m [36mid:[39m [32m1[39m
-    [36mname:[39m [31m'george'[39m
-  [31m*[39m [36mid:[39m [32m2[39m
-    [36mname:[39m [31m'mike'[39m
-  [31m*[39m [36mid:[39m [32m3[39m
-    [36mname:[39m [31m'donald'[39m
+t1 =
+  * id: [32m1[39m
+    name: [31m'george'[39m
+  * id: [32m2[39m
+    name: [31m'mike'[39m
+  * id: [32m3[39m
+    name: [31m'donald'[39m
 
-[31mt2[39m [31m=[39m
-  [31m*[39m [36mid:[39m [32m2[39m
-    [36mage:[39m [32m21[39m
-  [31m*[39m [36mid:[39m [32m1[39m
-    [36mage:[39m [32m20[39m
-  [31m*[39m [36mid:[39m [32m3[39m
-    [36mage:[39m [32m26[39m
-[31m[{id:id1,[39m [31mname,[39m [31mage}[39m
-  [31mfor[39m [31m{id:id1,[39m [31mname}[39m [31min[39m [31mt1[39m
-  [31mfor[39m [31m{id:id2,[39m [31mage}[39m [31min[39m [31mt2[39m
-  [31mwhere[39m [31mid1[39m [31mis[39m [31mid2][39m
-  [31m|>[39m [31msort-by[39m [31m\\\\id[39m
-  [31m|>[39m [31mJSON.stringify[39m
+t2 =
+  * id: [32m2[39m
+    age: [32m21[39m
+  * id: [32m1[39m
+    age: [32m20[39m
+  * id: [32m3[39m
+    age: [32m26[39m
+[{id:id1, name, age}
+  [34mfor[39m {id:id1, name} [34min[39m t1
+  [34mfor[39m {id:id2, age} [34min[39m t2
+  where id1 [34mis[39m id2]
+  |> sort-[34mby[39m [31m\\\\id[39m
+  |> [36mJSON[39m.stringify
 "
 `;
 
 exports[`highlight() should color llvm correctly 1`] = `
 "[32m; ModuleID = 'test.c'[39m
-[32m[39m[34mtarget[39m [34mdatalayout[39m = [31m\\"e-m:e-i64:64-f80:128-n8:16:32:64-S128\\"[39m
+[34mtarget[39m [34mdatalayout[39m = [31m\\"e-m:e-i64:64-f80:128-n8:16:32:64-S128\\"[39m
 [34mtarget[39m [34mtriple[39m = [31m\\"x86_64-unknown-linux-gnu\\"[39m
 
-%struct._IO_FILE = [34mtype[39m { [34mi32[39m, [34mi8[39m*, [34mi8[39m*, [34mi8[39m*, [34mi8[39m*, [34mi8[39m*, [34mi8[39m*, [34mi8[39m*, [34mi8[39m*, [34mi8[39m*, [34mi8[39m*, [34mi8[39m*, %struct._IO_marker*, %struct._IO_FILE*, [34mi32[39m, [34mi32[39m, [34mi64[39m, [34mi16[39m, [34mi8[39m, [[32m1[39m [34mx[39m [34mi8[39m], [34mi8[39m*, [34mi64[39m, [34mi8[39m*, [34mi8[39m*, [34mi8[39m*, [34mi8[39m*, [34mi64[39m, [34mi32[39m, [[32m20[39m [34mx[39m [34mi8[39m] }
-%struct._IO_marker = [34mtype[39m { %struct._IO_marker*, %struct._IO_FILE*, [34mi32[39m }
-%struct.what = [34mtype[39m { [34mi8[39m, [34mi16[39m }
+%struct._IO_FILE = [34mtype[39m { [36m[2mi32[22m[39m, [36m[2mi8[22m[39m*, [36m[2mi8[22m[39m*, [36m[2mi8[22m[39m*, [36m[2mi8[22m[39m*, [36m[2mi8[22m[39m*, [36m[2mi8[22m[39m*, [36m[2mi8[22m[39m*, [36m[2mi8[22m[39m*, [36m[2mi8[22m[39m*, [36m[2mi8[22m[39m*, [36m[2mi8[22m[39m*, %struct._IO_marker*, %struct._IO_FILE*, [36m[2mi32[22m[39m, [36m[2mi32[22m[39m, [36m[2mi64[22m[39m, [36m[2mi16[22m[39m, [36m[2mi8[22m[39m, [[32m1[39m [34mx[39m [36m[2mi8[22m[39m], [36m[2mi8[22m[39m*, [36m[2mi64[22m[39m, [36m[2mi8[22m[39m*, [36m[2mi8[22m[39m*, [36m[2mi8[22m[39m*, [36m[2mi8[22m[39m*, [36m[2mi64[22m[39m, [36m[2mi32[22m[39m, [[32m20[39m [34mx[39m [36m[2mi8[22m[39m] }
+%struct._IO_marker = [34mtype[39m { %struct._IO_marker*, %struct._IO_FILE*, [36m[2mi32[22m[39m }
+%struct.what = [34mtype[39m { [36m[2mi8[22m[39m, [36m[2mi16[22m[39m }
 
-@.str = [34mprivate[39m [34munnamed_addr[39m [34mconstant[39m [[32m6[39m [34mx[39m [34mi8[39m] [34mc[39m[31m\\"foo()\\\\00\\"[39m, [34malign[39m [32m1[39m
-@e_long = [34mcommon[39m [34mglobal[39m [34mi64[39m [32m0[39m, [34malign[39m [32m8[39m
+@.str = [34mprivate[39m [34munnamed_addr[39m [34mconstant[39m [[32m6[39m [34mx[39m [36m[2mi8[22m[39m] [34mc[39m[31m\\"foo()\\\\00\\"[39m, [34malign[39m [32m1[39m
+@e_long = [34mcommon[39m [34mglobal[39m [36m[2mi64[22m[39m [32m0[39m, [34malign[39m [32m8[39m
 @g_double = [34mcommon[39m [34mglobal[39m [34mdouble[39m [32m0.000000e+00[39m, [34malign[39m [32m8[39m
-@.str.1 = [34mprivate[39m [34munnamed_addr[39m [34mconstant[39m [[32m7[39m [34mx[39m [34mi8[39m] [34mc[39m[31m\\"oooooh\\\\00\\"[39m, [34malign[39m [32m1[39m
-@func_ptr = [34mcommon[39m [34mglobal[39m [34mi32[39m (...)* [34mnull[39m, [34malign[39m [32m8[39m
+@.str.1 = [34mprivate[39m [34munnamed_addr[39m [34mconstant[39m [[32m7[39m [34mx[39m [36m[2mi8[22m[39m] [34mc[39m[31m\\"oooooh\\\\00\\"[39m, [34malign[39m [32m1[39m
+@func_ptr = [34mcommon[39m [34mglobal[39m [36m[2mi32[22m[39m (...)* [34mnull[39m, [34malign[39m [32m8[39m
 @stderr = [34mexternal[39m [34mglobal[39m %struct._IO_FILE*, [34malign[39m [32m8[39m
 
 [32m; Function Attrs: nounwind uwtable[39m
-[32m[39m[34mdefine[39m [34mi32[39m @foo() #0 {
-  %1 = [34mcall[39m [34mi32[39m @puts([34mi8[39m* [34mgetelementptr[39m [34minbounds[39m ([[32m6[39m [34mx[39m [34mi8[39m], [[32m6[39m [34mx[39m [34mi8[39m]* @.str, [34mi32[39m [32m0[39m, [34mi32[39m [32m0[39m))
-  [34mret[39m [34mi32[39m [32m0[39m
+[34mdefine[39m [36m[2mi32[22m[39m @foo() #0 {
+  %1 = [34mcall[39m [36m[2mi32[22m[39m @puts([36m[2mi8[22m[39m* [34mgetelementptr[39m [34minbounds[39m ([[32m6[39m [34mx[39m [36m[2mi8[22m[39m], [[32m6[39m [34mx[39m [36m[2mi8[22m[39m]* @.str, [36m[2mi32[22m[39m [32m0[39m, [36m[2mi32[22m[39m [32m0[39m))
+  [34mret[39m [36m[2mi32[22m[39m [32m0[39m
 }
 
-[34mdeclare[39m [34mi32[39m @puts([34mi8[39m*) #1
+[34mdeclare[39m [36m[2mi32[22m[39m @puts([36m[2mi8[22m[39m*) #1
 
 [32m; Function Attrs: nounwind uwtable[39m
-[32m[39m[34mdefine[39m [34mi32[39m @main([34mi32[39m %argc, [34mi8[39m** %argv) #0 {
-  %1 = [34malloca[39m [34mi32[39m, [34malign[39m [32m4[39m
-  %2 = [34malloca[39m [34mi32[39m, [34malign[39m [32m4[39m
-  %3 = [34malloca[39m [34mi8[39m**, [34malign[39m [32m8[39m
+[34mdefine[39m [36m[2mi32[22m[39m @main([36m[2mi32[22m[39m %argc, [36m[2mi8[22m[39m** %argv) #0 {
+  %1 = [34malloca[39m [36m[2mi32[22m[39m, [34malign[39m [32m4[39m
+  %2 = [34malloca[39m [36m[2mi32[22m[39m, [34malign[39m [32m4[39m
+  %3 = [34malloca[39m [36m[2mi8[22m[39m**, [34malign[39m [32m8[39m
 
 [32m; <label>:7                                       ; preds = %0[39m
-[32m[39m  %8 = [34mgetelementptr[39m [34minbounds[39m %struct.what, %struct.what* %X, [34mi32[39m [32m0[39m, [34mi32[39m [32m0[39m
-  [34mstore[39m [34mi8[39m [32m1[39m, [34mi8[39m* %8, [34malign[39m [32m2[39m
-  [34mstore[39m [34mi8[39m [32m49[39m, [34mi8[39m* %b_char, [34malign[39m [32m1[39m
-  %9 = [34mgetelementptr[39m [34minbounds[39m %struct.what, %struct.what* %X, [34mi32[39m [32m0[39m, [34mi32[39m [32m1[39m
+  %8 = [34mgetelementptr[39m [34minbounds[39m %struct.what, %struct.what* %X, [36m[2mi32[22m[39m [32m0[39m, [36m[2mi32[22m[39m [32m0[39m
+  [34mstore[39m [36m[2mi8[22m[39m [32m1[39m, [36m[2mi8[22m[39m* %8, [34malign[39m [32m2[39m
+  [34mstore[39m [36m[2mi8[22m[39m [32m49[39m, [36m[2mi8[22m[39m* %b_char, [34malign[39m [32m1[39m
+  %9 = [34mgetelementptr[39m [34minbounds[39m %struct.what, %struct.what* %X, [36m[2mi32[22m[39m [32m0[39m, [36m[2mi32[22m[39m [32m1[39m
   [34mstore[39m [34mdouble[39m [32m1.000000e+01[39m, [34mdouble[39m* @g_double, [34malign[39m [32m8[39m
-  [34mstore[39m [34mi8[39m* [34mgetelementptr[39m [34minbounds[39m ([[32m7[39m [34mx[39m [34mi8[39m], [[32m7[39m [34mx[39m [34mi8[39m]* @.str.1, [34mi32[39m [32m0[39m, [34mi32[39m [32m0[39m), [34mi8[39m** %cp_char_ptr, [34malign[39m [32m8[39m
-  [34mstore[39m [34mi32[39m (...)* [34mbitcast[39m ([34mi32[39m ()* @foo [34mto[39m [34mi32[39m (...)*), [34mi32[39m (...)** @func_ptr, [34malign[39m [32m8[39m
-  %10 = [34mcall[39m [34mi32[39m @puts([34mi8[39m* [34mgetelementptr[39m [34minbounds[39m ([[32m8[39m [34mx[39m [34mi8[39m], [[32m8[39m [34mx[39m [34mi8[39m]* @.str.2, [34mi32[39m [32m0[39m, [34mi32[39m [32m0[39m))
-  [34mstore[39m [34mi32[39m [32m10[39m, [34mi32[39m* %1, [34malign[39m [32m4[39m
+  [34mstore[39m [36m[2mi8[22m[39m* [34mgetelementptr[39m [34minbounds[39m ([[32m7[39m [34mx[39m [36m[2mi8[22m[39m], [[32m7[39m [34mx[39m [36m[2mi8[22m[39m]* @.str.1, [36m[2mi32[22m[39m [32m0[39m, [36m[2mi32[22m[39m [32m0[39m), [36m[2mi8[22m[39m** %cp_char_ptr, [34malign[39m [32m8[39m
+  [34mstore[39m [36m[2mi32[22m[39m (...)* [34mbitcast[39m ([36m[2mi32[22m[39m ()* @foo [34mto[39m [36m[2mi32[22m[39m (...)*), [36m[2mi32[22m[39m (...)** @func_ptr, [34malign[39m [32m8[39m
+  %10 = [34mcall[39m [36m[2mi32[22m[39m @puts([36m[2mi8[22m[39m* [34mgetelementptr[39m [34minbounds[39m ([[32m8[39m [34mx[39m [36m[2mi8[22m[39m], [[32m8[39m [34mx[39m [36m[2mi8[22m[39m]* @.str.2, [36m[2mi32[22m[39m [32m0[39m, [36m[2mi32[22m[39m [32m0[39m))
+  [34mstore[39m [36m[2mi32[22m[39m [32m10[39m, [36m[2mi32[22m[39m* %1, [34malign[39m [32m4[39m
   [34mbr[39m label %66
 
 [32m; <label>:63                                      ; preds = %11[39m
-[32m[39m  %64 = [34mload[39m %struct._IO_FILE*, %struct._IO_FILE** @stderr, [34malign[39m [32m8[39m
-  %65 = [34mcall[39m [34mi32[39m @fputs([34mi8[39m* [34mgetelementptr[39m [34minbounds[39m ([[32m11[39m [34mx[39m [34mi8[39m], [[32m11[39m [34mx[39m [34mi8[39m]* @.str.9, [34mi32[39m [32m0[39m, [34mi32[39m [32m0[39m), %struct._IO_FILE* %64)
-  [34mstore[39m [34mi32[39m [32m-1[39m, [34mi32[39m* %1, [34malign[39m [32m4[39m
+  %64 = [34mload[39m %struct._IO_FILE*, %struct._IO_FILE** @stderr, [34malign[39m [32m8[39m
+  %65 = [34mcall[39m [36m[2mi32[22m[39m @fputs([36m[2mi8[22m[39m* [34mgetelementptr[39m [34minbounds[39m ([[32m11[39m [34mx[39m [36m[2mi8[22m[39m], [[32m11[39m [34mx[39m [36m[2mi8[22m[39m]* @.str.9, [36m[2mi32[22m[39m [32m0[39m, [36m[2mi32[22m[39m [32m0[39m), %struct._IO_FILE* %64)
+  [34mstore[39m [36m[2mi32[22m[39m [32m-1[39m, [36m[2mi32[22m[39m* %1, [34malign[39m [32m4[39m
   [34mbr[39m label %66
 
 [32m; <label>:66                                      ; preds = %63, %46, %7[39m
-[32m[39m  %67 = [34mload[39m [34mi32[39m, [34mi32[39m* %1, [34malign[39m [32m4[39m
-  [34mret[39m [34mi32[39m %67
+  %67 = [34mload[39m [36m[2mi32[22m[39m, [36m[2mi32[22m[39m* %1, [34malign[39m [32m4[39m
+  [34mret[39m [36m[2mi32[22m[39m %67
 }
 
-[34mdeclare[39m [34mi32[39m @printf([34mi8[39m*, ...) #1
+[34mdeclare[39m [36m[2mi32[22m[39m @printf([36m[2mi8[22m[39m*, ...) #1
 
-[34mdeclare[39m [34mi32[39m @fputs([34mi8[39m*, %struct._IO_FILE*) #1
+[34mdeclare[39m [36m[2mi32[22m[39m @fputs([36m[2mi8[22m[39m*, %struct._IO_FILE*) #1
 
 [34mattributes[39m #0 = { [34mnounwind[39m [34muwtable[39m [31m\\"disable-tail-calls\\"[39m=[31m\\"false\\"[39m [31m\\"less-precise-fpmad\\"[39m=[31m\\"false\\"[39m [31m\\"no-frame-pointer-elim\\"[39m=[31m\\"true\\"[39m [31m\\"no-frame-pointer-elim-non-leaf\\"[39m [31m\\"no-infs-fp-math\\"[39m=[31m\\"false\\"[39m [31m\\"no-nans-fp-math\\"[39m=[31m\\"false\\"[39m [31m\\"stack-protector-buffer-size\\"[39m=[31m\\"8\\"[39m [31m\\"target-cpu\\"[39m=[31m\\"x86-64\\"[39m [31m\\"target-features\\"[39m=[31m\\"+fxsr,+mmx,+sse,+sse2\\"[39m [31m\\"unsafe-fp-math\\"[39m=[31m\\"false\\"[39m [31m\\"use-soft-float\\"[39m=[31m\\"false\\"[39m }
 
-!llvm.ident = !{![32m0[39m}
+!llvm.ident = !{!0}
 
-![32m0[39m = !{![31m\\"clang version 3.8.0 (tags/RELEASE_380/final)\\"[39m}
+!0 = !{![31m\\"clang version 3.8.0 (tags/RELEASE_380/final)\\"[39m}
 "
 `;
 
@@ -3295,16 +3295,16 @@ exports[`highlight() should color mathematica correctly 1`] = `
 
 [32m(* Mathematica Package *)[39m
 
-[34mBeginPackage[39m[[31m\\"SomePkg\`\\"[39m]
+[36mBeginPackage[39m[[31m\\"SomePkg\`\\"[39m]
 
-[34mBegin[39m[[31m\\"\`Private\`\\"[39m]
+[36mBegin[39m[[31m\\"\`Private\`\\"[39m]
 
-SomeFn[ns_List] := [34mFold[39m[[34mFunction[39m[{x, y}, x + y], [32m0[39m, [34mMap[39m[# * [32m2[39m &, ns]];
-[34mPrint[39m[[34m$ActivationKey[39m];
+SomeFn[[36m[2mns_List[22m[39m] := [36mFold[39m[[36mFunction[39m[{x, y}, x + y], [32m0[39m, [36mMap[39m[[36m[2m#[22m[39m * [32m2[39m &, ns]];
+[36mPrint[39m[[36m$ActivationKey[39m];
 
-[34mEnd[39m[] [32m(* End Private Context *)[39m
+[36mEnd[39m[] [32m(* End Private Context *)[39m
 
-[34mEndPackage[39m[]
+[36mEndPackage[39m[]
 "
 `;
 
@@ -3603,7 +3603,7 @@ exports[`highlight() should color mojolicious correctly 1`] = `
 % [34mfor[39m [34mmy[39m $item (@$subs) {
 % [34mmy[39m ($dir, $align) = ($item->{rtl}) ? ([31m'rtl'[39m, [31m'right'[39m) : ([31m'ltr'[39m, [31m'left'[39m);
 [90m<[34mdt[39m[90m [36malign[39m[90m=[31m\\"<%=[39m[90m[39m $align [90m[31m%>\\"[39m[90m>[39m[90m<[34ma[39m[90m [36mhref[39m[90m=[31m\\"<%=[39m[90m[39m $item->{[31m'xmlUrl'[39m} [90m[31m%>\\"[39m[90m>[39m[90m<[34mi[39m[90m [36mclass[39m[90m=[31m\\"icon-rss\\"[39m[90m>[39m[90m</[34mi[39m[90m>[39m rss[90m</[34ma[39m[90m>[39m
-[90m<[34ma[39m[90m [36mdir[39m[90m=[31m\\"<%=[39m[90m[39m $dir [90m[31m%>\\"[39m[90m [36mhref[39m[90m=[31m\\"<%=[39m[90m[39m $item->{htmlUrl} [90m[31m%>\\"[39m[90m>[39m[90m<[34m%==[39m[90m[39m $item->{title} [90m%>[39m[90m</[34ma[39m[90m>[39m
+[90m<[34ma[39m[90m [36mdir[39m[90m=[31m\\"<%=[39m[90m[39m $dir [90m[31m%>\\"[39m[90m [36mhref[39m[90m=[31m\\"<%=[39m[90m[39m $item->{htmlUrl} [90m[31m%>\\"[39m[90m>[39m<%== $item->{title} %>[90m</[34ma[39m[90m>[39m
 [90m</[34mdt[39m[90m>[39m
 [90m<[34mdd[39m[90m>[39m[90m<[34mb[39m[90m>[39mCategories[90m</[34mb[39m[90m>[39m
 %= [34mjoin[39m [31mq{, }[39m, [34msort[39m @{ $item->{categories} || [] };
@@ -3853,14 +3853,14 @@ exports[`highlight() should color nsis correctly 1`] = `
 [32m; Sections[39m
 [33m[34mSection[39m[33m \\"section_name\\" section_index[39m
   [34mnsExec::ExecToLog[39m [31m\\"calc.exe\\"[39m
-[34mSectionEnd[39m
+SectionEnd
 
 [32m; Functions[39m
 [33m[34mFunction[39m[33m .onInit[39m
   [34mDetailPrint[39m [31m\\"The install button reads $(^InstallBtn)\\"[39m
   [34mDetailPrint[39m [31m'Here comes a[90m$\\\\n[39m[31m[90m$\\\\r[39m[31mline-break!'[39m
   [34mDetailPrint[39m [31m\`Escape the dollar-sign: [90m$$[39m[31m\`[39m
-[34mFunctionEnd[39m
+FunctionEnd
 "
 `;
 
@@ -4059,8 +4059,8 @@ exports[`highlight() should color perl correctly 1`] = `
 [32m@@ layouts/default.html.ep[39m
 [90m<!DOCTYPE [90mhtml[39m[90m>[39m
 [90m<[34mhtml[39m[90m>[39m
-  [90m<[34mhead[39m[90m>[39m[90m<[34mtitle[39m[90m>[39m[90m<[34m%=[39m[90m[39m title [90m%>[39m[90m</[34mtitle[39m[90m>[39m[90m</[34mhead[39m[90m>[39m
-  [90m<[34mbody[39m[90m>[39m[90m<[34m%=[39m[90m[39m content [90m%>[39m[90m</[34mbody[39m[90m>[39m
+  [90m<[34mhead[39m[90m>[39m[90m<[34mtitle[39m[90m>[39m<%= title %>[90m</[34mtitle[39m[90m>[39m[90m</[34mhead[39m[90m>[39m
+  [90m<[34mbody[39m[90m>[39m<%= content %>[90m</[34mbody[39m[90m>[39m
 [90m</[34mhtml[39m[90m>[39m
 [90m__END__[39m
 
@@ -4360,7 +4360,7 @@ exports[`highlight() should color python correctly 1`] = `
 [33m[34mdef[39m[33m somefunc(param1=[31m''[39m[33m, param2=[32m0[39m[33m):[39m
     [31mr'''A docstring'''[39m
     [34mif[39m param1 > param2: [32m# interesting[39m
-        [34mprint[39m [31m'Gre\\\\'ater'[39m
+        [36mprint[39m [31m'Gre\\\\'ater'[39m
     [34mreturn[39m (param2 - param1 + [32m1[39m + [32m0b10l[39m) [34mor[39m [34mNone[39m
 
 [34m[34mclass[39m[34m SomeClass:[39m
@@ -4437,39 +4437,39 @@ Window {
 `;
 
 exports[`highlight() should color r correctly 1`] = `
-"[34mlibrary[39m(ggplot2)
+"library(ggplot2)
 
-centre <- [34mfunction[39m(x, type, [34m...[39m) {
+centre <- [34mfunction[39m(x, type, ...) {
   [34mswitch[39m(type,
          mean = mean(x),
          median = median(x),
-         trimmed = mean(x, trim = [32m.1[39m))
+         trimmed = mean(x, trim = .[32m1[39m))
 }
 
 myVar1
-myVar.2
+myVar.[32m2[39m
 data$x
 foo [31m\\"bar\\"[39m baz
 [32m# test \\"test\\"[39m
 [31m\\"test # test\\"[39m
 
-([32m123[39m) ([32m1[39m) ([32m10[39m) ([32m0.1[39m) ([32m.2[39m) ([32m1e-7[39m)
+([32m123[39m) ([32m1[39m) ([32m10[39m) ([32m0.1[39m) (.[32m2[39m) ([32m1e-7[39m)
 ([32m1.2e+7[39m) ([32m2e[39m) ([32m3e+10[39m) ([32m0x0[39m) ([32m0xa[39m)
-([32m0xabcdef1234567890[39m) ([32m123L[39m) ([32m1L[39m)
-([32m0x10L[39m) ([32m10000000L[39m) ([32m1e6L[39m) ([32m1.[39m[32m1L[39m)
-([32m1e-3L[39m) ([32m4123.381E-10i[39m)
-([32m3.[39m) ([32m3.[39mE10) [32m# [32mBUG:[39m[32m .E10 should be part of number[39m
+([32m0xabcdef1234567890[39m) ([32m123[39mL) ([32m1[39mL)
+([32m0x10[39mL) ([32m10000000[39mL) ([32m1e[39m6L) ([32m1.1[39mL)
+([32m1e-3[39mL) ([32m4123.381E-10i[39m)
+([32m3.[39m) ([32m3.E[39m10) [32m# [32mBUG:[39m[32m .E10 should be part of number[39m
 
 [32m# Numbers in some different contexts[39m
-[32m1L[39m
+[32m1[39mL
 [32m0x40[39m
-[32m.234[39m
+.[32m234[39m
 [32m3.[39m
-[32m1L[39m + [32m30[39m
+[32m1[39mL + [32m30[39m
 plot(cars, xlim=[32m20[39m)
 plot(cars, xlim=[32m0x20[39m)
 foo<-[32m30[39m
-my.data.3 <- read() [32m# not a number[39m
+my.data.[32m3[39m <- read() [32m# not a number[39m
 c([32m1[39m,[32m2[39m,[32m3[39m)
 [32m1[39m%%[32m2[39m
 
@@ -4486,15 +4486,15 @@ c([32m1[39m,[32m2[39m,[32m3[39m)
 [31msingle quotes #'[39m
 
 [32m# keywords[39m
-[34mNULL[39m, [34mNA[39m, [34mTRUE[39m, [34mFALSE[39m, [34mInf[39m, [34mNaN[39m, [34mNA_integer_[39m,
-[34mNA_real_[39m, [34mNA_character_[39m, [34mNA_complex_[39m, [34mfunction[39m,
-[34mwhile[39m, [34mrepeat[39m, [34mfor[39m, [34mif[39m, [34min[39m, [34melse[39m, [34mnext[39m, [34mbreak[39m,
-[34m...[39m, ..1, ..2
+NULL, NA, TRUE, FALSE, Inf, [34mNaN[39m, NA_integer_,
+NA_real_, NA_character_, NA_complex_, [34mfunction[39m,
+[34mwhile[39m, repeat, [34mfor[39m, [34mif[39m, [34min[39m, [34melse[39m, next, [34mbreak[39m,
+..., ..[32m1[39m, ..[32m2[39m
 
 [32m# not keywords[39m
 the quick brown fox jumped over the lazy dogs
-null na true false inf nan na_integer_ na_real_
-na_character_ na_complex_ Function While Repeat
+[34mnull[39m na [34mtrue[39m [34mfalse[39m inf nan na_integer_ na_real_
+na_character_ na_complex_ [36mFunction[39m While Repeat
 For If In Else Next Break .. .... [31m\\"NULL\\"[39m \`NULL\` [31m'NULL'[39m
 
 [32m# operators[39m
@@ -4504,7 +4504,7 @@ For If In Else Next Break .. .... [31m\\"NULL\\"[39m \`NULL\` [31m'NULL'[39m
 [32m# infix operator[39m
 foo %union% bar
 %[31m\\"test\\"[39m%
-\`\\"test\\"\`
+\`[31m\\"test\\"[39m\`
 
 "
 `;
@@ -4860,14 +4860,14 @@ button {
 div,
 .navbar,
 #header,
-input[type=\\"input\\"] {
+input[type=[31m\\"input\\"[39m] {
     font-family: [31m\\"Helvetica Neue\\"[39m, Arial, sans-serif;
     width: auto;
     margin: [32m0[39m auto;
     display: block;
 }
 
-.row-12 > [class*=\\"spans\\"] {
+.row-12 > [class*=[31m\\"spans\\"[39m] {
     border-left: [32m1px[39m solid [32m#B5C583[39m;
 }
 
@@ -5096,17 +5096,17 @@ _unit [36maddAction[39m [[31m\\"Eat Energy Bar\\"[39m, {
 `;
 
 exports[`highlight() should color sql correctly 1`] = `
-"[34mCREATE[39m [34mTABLE[39m [31m\\"topic\\"[39m (
-    [31m\\"id\\"[39m [36mserial[39m [34mNOT[39m [34mNULL[39m PRIMARY [34mKEY[39m,
-    [31m\\"forum_id\\"[39m [36minteger[39m [34mNOT[39m [34mNULL[39m,
-    [31m\\"subject\\"[39m [36mvarchar[39m([32m255[39m) [34mNOT[39m [34mNULL[39m
+"[34mCREATE[39m [34mTABLE[39m \\"topic\\" (
+    \\"id\\" serial [34mNOT[39m [34mNULL[39m [34mPRIMARY[39m KEY,
+    \\"forum_id\\" [36m[2minteger[22m[39m [34mNOT[39m [34mNULL[39m,
+    \\"subject\\" [36m[2mvarchar[22m[39m([32m255[39m) [34mNOT[39m [34mNULL[39m
 );
-[34mALTER[39m [34mTABLE[39m [31m\\"topic\\"[39m
-[34mADD[39m [34mCONSTRAINT[39m forum_id [34mFOREIGN[39m [34mKEY[39m ([31m\\"forum_id\\"[39m)
-[34mREFERENCES[39m [31m\\"forum\\"[39m ([31m\\"id\\"[39m);
+[34mALTER[39m [34mTABLE[39m \\"topic\\"
+[34mADD[39m [34mCONSTRAINT[39m forum_id [34mFOREIGN[39m KEY (\\"forum_id\\")
+[34mREFERENCES[39m \\"forum\\" (\\"id\\");
 
 [32m-- Initials[39m
-[34minsert[39m [34minto[39m [31m\\"topic\\"[39m ([31m\\"forum_id\\"[39m, [31m\\"subject\\"[39m)
+[34minsert[39m [34minto[39m \\"topic\\" (\\"forum_id\\", \\"subject\\")
 [34mvalues[39m ([32m2[39m, [31m'D''artagnian'[39m);
 "
 `;
@@ -5235,7 +5235,7 @@ FILE_SCHEMA(([31m'CONFIG_CONTROL_DESIGN'[39m));
 `;
 
 exports[`highlight() should color stylus correctly 1`] = `
-"@import [31m\\"nib\\"[39m
+"[34m@import[39m [31m\\"nib\\"[39m
 
 [32m// variables[39m
 $green = [32m#008000[39m
@@ -5258,7 +5258,7 @@ button
 #content, .content
   font Tahoma, Chunkfive, sans-serif
   background url([31m'hatch.png'[39m)
-  color [32m#F0F0F0[39m !important
+  color [32m#F0F0F0[39m [90m!important[39m
   width [32m100%[39m
 "
 `;
@@ -5288,16 +5288,16 @@ exports[`highlight() should color subunit correctly 1`] = `
 exports[`highlight() should color swift correctly 1`] = `
 "[34mimport[39m Foundation
 
-[90m@objc[39m [34m[34mclass[39m[34m Person: Entity [39m{
-  [34mvar[39m name: [36m[2mString![22m[39m
-  [34mvar[39m age:  [36m[2mInt![22m[39m
+[34m@objc[39m [34m[34mclass[39m[34m Person: Entity [39m{
+  [34mvar[39m name: [36m[2mString[22m[39m!
+  [34mvar[39m age:  [36m[2mInt[22m[39m!
 
-  [34minit[39m(name: [36m[2mString[22m[39m, age: [36m[2mInt[22m[39m) {
+  [33m[34minit[39m[33m(name: [36m[2mString[22m[39m[33m, age: [36m[2mInt[22m[39m[33m)[39m {
     [32m/* [32m/* ... */[39m[32m */[39m
   }
 
   [32m// Return a descriptive string for this person[39m
-  [33m[34mfunc[39m[33m description(offset: Int = [32m0[39m[33m)[39m -> [36m[2mString[22m[39m {
+  [33m[34mfunc[39m[33m description(offset: [36m[2mInt[22m[39m[33m = [32m0[39m[33m)[39m -> [36m[2mString[22m[39m {
     [34mreturn[39m [31m\\"\\\\(name) is \\\\(age + offset) years old\\"[39m
   }
 }
@@ -5379,23 +5379,23 @@ exports[`highlight() should color tcl correctly 1`] = `
 `;
 
 exports[`highlight() should color tex correctly 1`] = `
-"[90m\\\\[34mdocumentclass[39m[90m[31m{article}[39m[90m[39m
-[90m\\\\[34musepackage[39m[90m[31m[koi8-r][39m[90m[31m{inputenc}[39m[90m[39m
-[90m\\\\[34mhoffset[39m[90m=[32m0pt[39m[90m[39m
-[90m\\\\[34mvoffset[39m[90m=[32m.3em[39m[90m[39m
-[90m\\\\[34mtolerance[39m[90m=[32m400[39m[90m[39m
-[90m\\\\[34mnewcommand[39m[90m[31m{\\\\eTiX}[39m[90m[31m{\\\\TeX}[39m[90m[39m
-[90m\\\\[34mbegin[39m[90m[31m{document}[39m[90m[39m
-[90m\\\\[34msection*[39m[90m[31m{Highlight.js}[39m[90m[39m
-[90m\\\\[34mbegin[39m[90m[31m{table}[39m[90m[31m[c|c][39m[90m[39m
-$[90m\\\\[34mfrac[39m[90m[39m 12[90m\\\\[34m,[39m[90m[39m + [90m\\\\[34m,[39m[90m[39m [90m\\\\[34mfrac[39m[90m[39m 1{x^3}[90m\\\\[34mtext[39m[90m[31m{Hello \\\\! world}[39m[90m[39m$ & [90m\\\\[34mtextbf[39m[90m[31m{Goodbye\\\\~ world}[39m[90m[39m [90m\\\\[34m\\\\[39m[90m[39m[90m\\\\[34meTiX[39m[90m[39m $ [90m\\\\[34mpi[39m[90m=[32m400[39m[90m[39m $
-[90m\\\\[34mend[39m[90m[31m{table}[39m[90m[39m
-Ch[90m\\\\[34m'[39m[90m[39merie, [90m\\\\[34mc[39m[90m[31m{c}[39m[90m[39ma ne me pla[90m\\\\[34m^[39m[90m[39m[90m\\\\[34mi[39m[90m[39m t pas! [32m% comment \\\\b[39m
-G[90m\\\\[34m\\"[39m[90m[39motterd[90m\\\\[34m\\"[39m[90m[39mammerung~45[90m\\\\[34m%[39m[90m=[32m34[39m[90m[39m.
+"\\\\documentclass{article}
+\\\\usepackage[koi8-r]{inputenc}
+\\\\hoffset=0pt
+\\\\voffset=.3em
+\\\\tolerance=400
+\\\\newcommand{\\\\eTiX}{\\\\TeX}
+\\\\begin{document}
+\\\\section*{Highlight.js}
+\\\\begin{table}[c|c]
+$\\\\frac 12\\\\, + \\\\, \\\\frac 1{x^3}\\\\text{Hello \\\\! world}$ & \\\\textbf{Goodbye\\\\~ world} \\\\\\\\\\\\eTiX $ \\\\pi=400 $
+\\\\end{table}
+Ch\\\\'erie, \\\\c{c}a ne me pla\\\\^\\\\i t pas! % comment \\\\b
+G\\\\\\"otterd\\\\\\"ammerung~45\\\\%=34.
 $$
-    [90m\\\\[34mint[39m[90m[39m[90m\\\\[34mlimits[39m[90m[39m_{0}^{[90m\\\\[34mpi[39m[90m[39m}[90m\\\\[34mfrac[39m[90m[31m{4}[39m[90m[31m{x-7}[39m[90m=[32m3[39m[90m[39m
+    \\\\int\\\\limits_{0}^{\\\\pi}\\\\frac{4}{x-7}=3
 $$
-[90m\\\\[34mend[39m[90m[31m{document}[39m[90m[39m
+\\\\end{document}
 "
 `;
 
@@ -5628,16 +5628,16 @@ exports[`highlight() should color twig correctly 1`] = `
 `;
 
 exports[`highlight() should color typescript correctly 1`] = `
-"[34mclass[39m MyClass {
+"[34m[34mclass[39m[34m MyClass [39m{
   [34mpublic[39m [34mstatic[39m myValue: [36mstring[39m;
-  [34mconstructor[39m(init: [36mstring[39m) {
-    [34mthis[39m.myValue = init;
+  [33mconstructor(init: [36mstring[39m[33m)[39m {
+    [36mthis[39m.myValue = init;
   }
 }
 [34mimport[39m fs = [36mrequire[39m([31m\\"fs\\"[39m);
-[34mmodule[39m MyModule {
+[36mmodule[39m MyModule {
   [34mexport[39m [34minterface[39m MyInterface [34mextends[39m Other {
-    myProperty: [36many[39m;
+    [36mmyProperty[39m: [36many[39m;
   }
 }
 [34mdeclare[39m magicNumber [36mnumber[39m;
@@ -5698,39 +5698,39 @@ Regex regex = /foo/;
 exports[`highlight() should color vbnet correctly 1`] = `
 "Import System
 Import System.IO
-[90m#Const DEBUG = True[39m
+[90m#[90mConst[39m[90m DEBUG = True[39m
 
 [34mNamespace[39m Highlighter.Test
-  [32m[32m'''[39m[32m [32m<summary>[39m[32mThis is an example class.[32m</summary>[39m[32m[39m
+  [32m''' [32m<summary>[39m[32mThis is an example class.[32m</summary>[39m[32m[39m
   [34mPublic[39m [34mClass[39m Program
-    [34mProtected[39m [34mShared[39m hello [34mAs[39m [36mInteger[39m = [32m3[39m
-    [34mPrivate[39m [34mConst[39m ABC [34mAs[39m [36mBoolean[39m = [34mFalse[39m
+    [34mProtected[39m [34mShared[39m hello [34mAs[39m [36m[2mInteger[22m[39m = [32m3[39m
+    [34mPrivate[39m [34mConst[39m ABC [34mAs[39m [36m[2mBoolean[22m[39m = [34mFalse[39m
 
 [90m#[90mRegion[39m[90m \\"Code\\"[39m
     [32m' Cheers![39m
     <STAThread()> _
-    [34mPublic[39m [34mShared[39m [34mSub[39m Main([34mByVal[39m args() [34mAs[39m [36mString[39m, [34mParamArray[39m arr [34mAs[39m [36mObject[39m) [34mHandles[39m Form1.Click
+    [34mPublic[39m [34mShared[39m [34mSub[39m Main([34mByVal[39m args() [34mAs[39m [36m[2mString[22m[39m, [34mParamArray[39m arr [34mAs[39m [36m[2mObject[22m[39m) [34mHandles[39m Form1.Click
       [34mOn[39m [34mError[39m [34mResume[39m [34mNext[39m
       [34mIf[39m ABC [34mThen[39m
         [34mWhile[39m ABC : Console.WriteLine() : [34mEnd[39m [34mWhile[39m
-        [34mFor[39m i [34mAs[39m [36mLong[39m = [32m0[39m [34mTo[39m [32m1000[39m [34mStep[39m [32m123[39m
+        [34mFor[39m i [34mAs[39m [36m[2mLong[22m[39m = [32m0[39m [34mTo[39m [32m1000[39m [34mStep[39m [32m123[39m
           [34mTry[39m
             System.Windows.Forms.MessageBox.Show([36mCInt[39m([31m\\"1\\"[39m).ToString())
           [34mCatch[39m ex [34mAs[39m Exception       [32m' What are you doing? Well...[39m
-            [34mDim[39m exp = [36mCType[39m(ex, IOException)
-            [34mREM[39m ORZ
+            [34mDim[39m exp = CType(ex, IOException)
+           [32m REM ORZ[39m
             [34mReturn[39m
           [34mEnd[39m [34mTry[39m
         [34mNext[39m
       [34mElse[39m
-        [34mDim[39m l [34mAs[39m [34mNew[39m System.Collections.List<[36mString[39m>()
+        [34mDim[39m l [34mAs[39m [36mNew[39m System.Collections.List<[36m[2mString[22m[39m>()
         [34mSyncLock[39m l
-          [34mIf[39m [36mTypeOf[39m l [34mIs[39m [36mDecimal[39m [34mAnd[39m l [34mIsNot[39m [34mNothing[39m [34mThen[39m
+          [34mIf[39m [36mTypeOf[39m l [36mIs[39m [36m[2mDecimal[22m[39m [36mAnd[39m l [36mIsNot[39m [34mNothing[39m [34mThen[39m
             [34mRemoveHandler[39m button1.Paint, [34mdelegate[39m
           [34mEnd[39m [34mIf[39m
-          [34mDim[39m d = [34mNew[39m System.Threading.Thread([34mAddressOf[39m ThreadProc)
-          [34mDim[39m a = [34mNew[39m Action([34mSub[39m(x, y) x + y)
-          [34mStatic[39m u = [34mFrom[39m x [34mAs[39m [36mString[39m [34mIn[39m l [34mSelect[39m x.Substring([32m2[39m, [32m4[39m) [34mWhere[39m x.Length > [32m0[39m
+          [34mDim[39m d = [36mNew[39m System.Threading.Thread([36mAddressOf[39m ThreadProc)
+          [34mDim[39m a = [36mNew[39m Action([34mSub[39m(x, y) x + y)
+          [34mStatic[39m u = [34mFrom[39m x [34mAs[39m [36m[2mString[22m[39m [34mIn[39m l [34mSelect[39m x.Substring([32m2[39m, [32m4[39m) [34mWhere[39m x.Length > [32m0[39m
         [34mEnd[39m [34mSyncLock[39m
         [34mDo[39m : Laugh() : [34mLoop[39m [34mUntil[39m hello = [32m4[39m
       [34mEnd[39m [34mIf[39m
