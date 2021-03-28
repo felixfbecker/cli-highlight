@@ -118,7 +118,7 @@
     "@types/parse5-htmlparser2-tree-adapter": "^5.0.1",
     "@types/yargs": "^13.0.0",
     "eslint": "^7.14.0",
-    "husky": "^3.0.0",
+    "husky": "^5.0.0",
     "jest": "^24.1.0",
     "prettier": "^2.2.0",
     "semantic-release": "^17.2.4",
