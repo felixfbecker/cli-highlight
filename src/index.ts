@@ -55,14 +55,6 @@ export interface HighlightOptions {
     ignoreIllegals?: boolean
 
     /**
-     * The continuation is an optional mode stack representing unfinished parsing. When present,
-     * the function will restart parsing from this state instead of initializing a new one.
-     *
-     * See http://highlightjs.readthedocs.io/en/latest/api.html
-     */
-    continuation?: any
-
-    /**
      * Optional array of language names and aliases restricting detection to only those languages.
      */
     languageSubset?: string[]
@@ -94,7 +86,7 @@ export interface HighlightOptions {
 export function highlight(code: string, options: HighlightOptions = {}): string {
     let html: string
     if (options.language) {
-        html = hljs.highlight(options.language, code, options.ignoreIllegals, options.continuation).value
+        html = hljs.highlight(code, { language: options.language, ignoreIllegals: options.ignoreIllegals }).value
     } else {
         html = hljs.highlightAuto(code, options.languageSubset).value
     }
