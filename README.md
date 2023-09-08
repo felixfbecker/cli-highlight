@@ -78,7 +78,7 @@ The theme is combined with the [default theme](http://cli-highlight.surge.sh/glo
 The default theme is still not colored a lot or optimized for many languages, PRs welcome!
 
 ## Supported Languages
-[All languages of highlight.js](https://highlightjs.org/static/demo/) are supported.
+[All languages of highlight.js](https://highlightjs.org/demo/) are supported.
 Check a [CI build](https://travis-ci.org/felixfbecker/cli-highlight) for examples of all the different languages and their highlighting.
 
 ## Contributing
