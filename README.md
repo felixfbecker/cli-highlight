@@ -56,7 +56,7 @@ const db = new Sequelize(process.env.DB, {
 })
 ```
 
-Detailed API documenation can be found [here](http://cli-highlight.surge.sh/).
+Detailed API documentation can be found [here](http://cli-highlight.surge.sh/).
 
 ## Themes
 You can write your own theme in a JSON file and pass it with `--theme`.
