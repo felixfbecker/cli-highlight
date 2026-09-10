@@ -109,7 +109,7 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@eclass/semantic-release-surge": "^1.0.7",
-    "@sourcegraph/eslint-config": "^0.20.16",
+    "@sourcegraph/eslint-config": "^0.37.0",
     "@sourcegraph/prettierrc": "^3.0.3",
     "@types/jest": "^24.0.9",
     "@types/mz": "0.0.32",
